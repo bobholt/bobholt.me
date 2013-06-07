@@ -1,12 +1,13 @@
 {
   "locals": {
-    "url": "http://localhost:8080",
-    "name": "The Wintersmith's blog",
-    "owner": "Someone",
-    "description": "Ramblings of an immor(t)al demigod"
+    "url": "http://bobholt.me/",
+    "name": "Bob Holt",
+    "owner": "Bob Holt",
+    "description": "I make things with JavaScript"
   },
   "plugins": [
-    "./plugins/paginator.coffee"
+    "./plugins/paginator.coffee",
+    "wintersmith-hogan"
   ],
   "require": {
     "moment": "moment",
@@ -21,6 +22,6 @@
     "smartypants": true
   },
   "paginator": {
-    "perPage": 3
+    "perPage": 5
   }
 }

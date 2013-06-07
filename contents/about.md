@@ -2,20 +2,14 @@
 view: none
 ---
 
-Wintersmith is made by [Johan Nordberg][1] and licensed under the [MIT-license][2].
-This footer text can be edited in about.md
+<p>I'm <strong>Bob Holt</strong>, a <strong>JavaScript engineer</strong> based in Boston. I'm a <strong>programmer</strong> at <strong><a href="http://www.bocoup.com/">Bocoup</a></strong>.</p>
+<br />
+<br />
+<p>I'm project lead for <a href="https://github.com/archfirst/keel">Keel</a> and a contributor to <a href="https://github.com/jquery/learn.jquery.com">learn.jquery.com</a>, <a href="https://github.com/archfirst/bullsfirst-jquery-backbone">Bullsfirst</a>, <a href="https://github.com/aurajs/aura">Aura</a>, <a href="https://github.com/roblarsen/CeeJS">CeeJS</a>, and the <a href="https://github.com/h5bp/ant-build-script">HTML5 Boilerplate Ant Build Script</a>.</p>
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-dolore eu fugiat nulla pariatur.
-
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-deserunt mollit anim id est laborum.
-
-
-[1]: http://johan-nordberg.com
-[2]: http://opensource.org/licenses/MIT
+<ul>
+<li><a href="https://github.com/bobholt">Github</a></li>
+<li><a href="http://twitter.com/bobholt/">Twitter</a></li>
+<li><a href="http://gplus.to/bobholt/">Google+</a></li>
+<li><a href="http://www.linkedin.com/in/bobholt">LinkedIn</a></li>
+</ul>
