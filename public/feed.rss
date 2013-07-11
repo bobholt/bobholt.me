@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+  <title>Bob Holt</title>
+  <atom:link href="http://www.bobholt.me/feed/" rel="self" type="application/rss+xml" />
+  <link>http://www.bobholt.me</link>
+  <description>I make things with JavaScript</description>
+	<lastBuildDate>Wed, 15 May 2013 00:00:00 GMT</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+
+		<item>
+		<title>Staffing for HTML5</title>
+      <link>http://www.bobholt.me/2013/05/staffing-for-html5</link>
+      <comments>http://www.bobholt.me/2013/05/staffing-for-html5/#comments</comments>
+      <pubDate>Wed, 15 May 2013 00:00:00 GMT</pubDate>
+      <dc:creator>Bob Holt</dc:creator>
+
+
+      <guid isPermaLink="true">http://www.bobholt.me/2013/05/staffing-for-html5</guid>
+			<description><![CDATA[<p>And now the third installment in the series I have been writing for Sapient Global Markets and posted on Slashdot.</p>
+<p><span class="more"></span></p>
+<div class="rpuEmbedCode">
+<div class="rpuArticle rpuRepost-040bb1613d3c3c4e20a4bdf3317d13ec-top" style="margin:0;padding:0;">
+<script src="https://1.rp-api.com/rjs/repost-article.js?3" type="text/javascript" data-cfasync="false"></script><a href="http://s.tt/1Fxim" class="rpuThumb" rel="norewrite"><img src="//img.1.rp-api.com/thumb/5701062" style="float:left;margin-right:10px;" /></a><a href="http://s.tt/1Fxim" class="rpuTitle" rel="norewrite"><strong>Staffing for HTML5</strong></a> (via <a href="http://s.tt/1Fxim" class="rpuHost" rel="norewrite">slashdot</a>)<p class="rpuSnip">
+The open web platform consists of a number of technologies, from the HTML and CSS required by responsive web design, to the JavaScript that builds applications and powers the advanced HTML5 browser APIs, to server-side languages and technologies that the entire technology stack rests on. As such, there&hellip;
+</p>
+</div>
+</div><!-- put the "tease", "jump" or "more" break here --><hr id="system-readmore" style="display: none;" /><!--more--><!--break--><hr class="at-page-break" style="display: none;"/><div class="rpuEmbedCode">
+<div class="rpuArticle rpuRepostMain rpuRepost-040bb1613d3c3c4e20a4bdf3317d13ec-bottom" style="display:none;">&nbsp;</div>
+<div style="display: none;"><!-- How to customize this embed: http://www.repost.us/article-preview/#!shash=040bb1613d3c3c4e20a4bdf3317d13ec --></div>
+</div>]]></description>
+		</item>
+		<item>
+		<title>Responsive Web Design: Opportunities and Challenges</title>
+      <link>http://www.bobholt.me/2013/03/responsive-web-design-opportunities-and-challenges</link>
+      <comments>http://www.bobholt.me/2013/03/responsive-web-design-opportunities-and-challenges/#comments</comments>
+      <pubDate>Fri, 08 Mar 2013 00:00:00 GMT</pubDate>
+      <dc:creator>Bob Holt</dc:creator>
+
+
+      <guid isPermaLink="true">http://www.bobholt.me/2013/03/responsive-web-design-opportunities-and-challenges</guid>
+			<description><![CDATA[<p>Slashdot picked up the <a href="http://gmblog.sapient.com/?p=1243" title="Responsive Web Design">second installment</a> of my series of HTML5 blog posts I have written for Sapient Global Markets:</p>
+<p><span class="more"></span></p>
+<div class="rpuEmbedCode">
+<div class="rpuArticle rpuRepost-6eb0ddbf041fbb7d07390abfb019305e-top" style="margin:0;padding:0;">
+<script src="https://1.rp-api.com/rjs/repost-article.js?3" type="text/javascript" data-cfasync="false"></script><a href="http://s.tt/1AGFr" class="rpuThumb" rel="norewrite"><img src="//img.1.rp-api.com/thumb/4534931" style="float:left;margin-right:10px;" /></a><a href="http://s.tt/1AGFr" class="rpuTitle" rel="norewrite"><strong>Responsive Web Design: Opportunities and Challenges</strong></a> (via <a href="http://s.tt/1AGFr" class="rpuHost" rel="norewrite">slashdot</a>)<p class="rpuSnip">
+Responsive design is a phrase within Web development that has come to seem more fashionable than useful, but it does have meaning. We will try to clarify what responsive design is, and the benefits it provides. The Beginning In May 2010, inspired by&nbsp;John Allsopp‘s 2000 article “A Dao of Web Design&hellip;
+</p>
+</div>
+<div style="display: none;" class="rpuBrk"><!-- put the "tease", "jump" or "more" break here --><!--more--><!--break--><hr class="at-page-break" /></div>
+<div class="rpuArticle rpuRepostMain rpuRepost-6eb0ddbf041fbb7d07390abfb019305e-bottom" style="display:none;">&nbsp;</div>
+<div style="display: none;"><!-- How to customize this embed: http://www.repost.us/article-preview/#!shash=6eb0ddbf041fbb7d07390abfb019305e --></div>
+</div>]]></description>
+		</item>
+		<item>
+		<title>What We Mean When We Talk About HTML5</title>
+      <link>http://www.bobholt.me/2013/01/what-we-mean-when-we-talk-about-html5</link>
+      <comments>http://www.bobholt.me/2013/01/what-we-mean-when-we-talk-about-html5/#comments</comments>
+      <pubDate>Mon, 28 Jan 2013 00:00:00 GMT</pubDate>
+      <dc:creator>Bob Holt</dc:creator>
+
+
+      <guid isPermaLink="true">http://www.bobholt.me/2013/01/what-we-mean-when-we-talk-about-html5</guid>
+			<description><![CDATA[<p>I recently wrote a <a href="http://gmblog.sapient.com/?p=1106" title="What We Mean When We Talk About HTML5">blog post</a> for Sapient Global Markets on HTML5 for the general business audience. It was picked up by Slashdot today:
+<span class="more"></span></p>
+<div class="rpuEmbedCode">
+  <!--rpuEmbedStart-->
+  <script src="http://1.rp-api.com/rjs/repost-article.js?3" type="text/javascript" data-cfasync="false"></script>
+  <div class="rpuArticle rpuRepost-b011091b10d7afa47462eb68c66d6ed9-top rpuJump-1" style="margin:0;padding:0;">
+    <a href="http://s.tt/1z2Mi" class="rpuThumb" rel="norewrite"><img src="http://img.1.rp-api.com/thumb/4138635" style="float:left;margin-right:10px;" /></a>
+    <a href="http://s.tt/1z2Mi" class="rpuTitle" rel="norewrite"><strong>What We Mean When We Talk About HTML5</strong></a> (via <a href="http://s.tt/1z2Mi" class="rpuHost" rel="norewrite">slashdot</a>)
+    <p class="rpuSnip">
+       HTML5 has generated a great deal of buzz lately. It’s bursting with potential as an application platform that could augment or even outright replace traditional technology stacks. Yet even with its growing awareness, many are still struggling to grasp what HTML5 actually means from a definition standpoint&hellip;
+    </p>
+  </div>
+  <div style="display:none;" class="rpuKeywords">HTML5, web, features, technologies, applications, open web, platform, robust applications, software application, definition, official HTML5 language, HTML5 Boilerplate Ant, Web access spreads, World Wide Web, open web platform., open Web platform, traditional technology stacks, freely available technologies, term, Sapient Global Markets, traditional software application, developers, new multimedia features, user interface developers, limited browser support, W3C, support landscape—recommending solutions, HTML5 definition, HTML5 applications, development, Silverlight, Web application, application platform, Web browser, web applications, definition standpoint, Microsoft Silverlight, development projects, future, great deal, proprietary technologies, latest features, key question, different ideas, particular features, Internet access, desktop computers, mobile devices, Flash, data storage</div>
+  <!-- put the "tease", "jump" or "more" break here --><!--more--><!--break--><div style="display: none;"><hr class="at-page-break" /></div>
+  <div class="rpuArticle rpuRepostMain rpuRepost-b011091b10d7afa47462eb68c66d6ed9-bottom" style="display:none;">&nbsp;</div>
+  <!-- How to customize this embed: http://www.repost.us/article-preview/#!shash=b011091b10d7afa47462eb68c66d6ed9 -->
+  <!--rpuEmbedEnd-->
+</div>]]></description>
+		</item>
+		<item>
+		<title>A Departure</title>
+      <link>http://www.bobholt.me/2012/12/a-departure</link>
+      <comments>http://www.bobholt.me/2012/12/a-departure/#comments</comments>
+      <pubDate>Fri, 07 Dec 2012 00:00:00 GMT</pubDate>
+      <dc:creator>Bob Holt</dc:creator>
+
+
+      <guid isPermaLink="true">http://www.bobholt.me/2012/12/a-departure</guid>
+			<description><![CDATA[<p><img src="/img/2012-12-a-departure/genuine-636x310.jpg" alt="Front Door of Genuine Interactive"></p>
+<p>Today is my last day at Genuine Interactive.</p>
+<p><span class="more"></span></p>
+<p>Don&#39;t bury the lede, right?</p>
+<p>I have accepted a position as Manager of Interactive Development at Sapient Global Markets.</p>
+<p>It&#39;s a very bittersweet departure for me. On the one hand, I have a very exciting new job. On the other hand, Genuine—as my wife likes to point out rather often—has been very good to me, and without the year and change I&#39;ve spent here, I wouldn&#39;t have the opportunity to take a big step forward in my career.</p>
+<p>The fact is that Genuine tends to be very good to all of us. John and Chris go far above and beyond even the most generous ways executives generally treat their employees. They&#39;re giving, fair, loyal, and trusting. Giving my notice felt a bit like a betrayal of that trust. It was certainly the hardest notice I&#39;ve ever had to give.</p>
+<p>So why am I leaving?</p>
+<p>I think Genuine is the best digital agency to work for—certainly in Boston, and possibly anywhere. I have said since I started that I would never leave Genuine for another agency.</p>
+<p>And I&#39;m not.</p>
+<p>I&#39;ll be taking a step away from the digital marketing world and moving more toward full-scale enterprise application development and consulting. I have a feeling that will be a nice change for me and much more in tune with my development philosophy.</p>
+<p>This opportunity sort of came up out of the blue. I certainly wasn&#39;t looking to leave. As many a recruiter can tell you, I don&#39;t pick up the phone when they call. But, on occasion, an organization that is on my general doing-cool-things radar has contacted me directly, and I&#39;d have been a fool to ignore them. Even so, I had a fairly extensive list of requirements—financial, cultural, technological, and more—any organization would have to fulfill to lure me away from Genuine. Luckily for me, but unluckily for Genuine, I suppose, Sapient met all of those requirements.</p>
+<p>My new job is a role that will bring me in contact with many of the same architecture and bleeding-edge JavaScript and HTML5 technologies and best practices for full-scale enterprise application development that we&#39;ve begun to roll out at Genuine, but will allow me to take an even deeper dive into those technologies and best practices and perhaps even develop some new ones of our own.</p>
+<p>Though I&#39;m excited about the future, I still leave with a heavy heart. Not just John and Chris, but the entire Genuine team is a group unlike any other I&#39;ve worked with. I only hope that in my time here, I&#39;ve made some lasting impact on the front-end team in training, development of processes and best practices, and the general development mindset. That would mean more to me than any project (however cool) I ever got to work on.</p>
+<p>And so, thank you to my current and former Genuine colleagues: Adam, Alex, Ali, Ally, Amanda, Amy, Amy, Amy, Andrew, Andrew, Andy, Arlin, Ben, Bill, Bill, Brandon, Brittany, Brittany, Caitlin, Carlos, Carolyn, Cat, Chad, Chris, Chris, Christian, Colby, Craig, Dana, Dennis, DQ, Elliott, Eric, Fitz, Frank, Garrett, Georg, Gwen, Hal, Idaho, Jake, Jake, Jane, Jaqi, Jay, Jenn, Jennifer, Jimbo, Joe, Joe, John, John, Jonathan, Josh, Josh, JP, JR, Julie, Julie, Kate, Kelly, Khan, Kristen, Kyle, Laura, Lauren, Leslie, Lilian, Lindsey, Lindsey, Lisa, Lisa, Maddie, Mahati, Maris, Matt, Matt, Matt, Megan, Mike, Mike, Mike, Mike, Mike, Mike, Mike, Mike, Mike, Nick, Nick, Nicole, OJ, PAM, Perri, Rob, Rob, Robin, Roman, Salem, Sam, Sam, Sam, Shane, Shanna, Stanton, Stephen, Stephen, Tibs, Tim, Tim, Tyler, Vlad, and Will. You all make Genuine the awesome place it is.</p>
+<p>And it is an awesome place to work. And <a title="Genuine Interactive Jobs" href="http://www.genuineinteractive.com/working-here/">hiring</a>. Especially if you&#39;re named Mike.</p>
+]]></description>
+		</item>
+		<item>
+		<title>How We Built It: MIT REAP</title>
+      <link>http://www.bobholt.me/2012/09/how-we-built-it-mit-reap</link>
+      <comments>http://www.bobholt.me/2012/09/how-we-built-it-mit-reap/#comments</comments>
+      <pubDate>Mon, 10 Sep 2012 00:00:00 GMT</pubDate>
+      <dc:creator>Bob Holt</dc:creator>
+
+
+      <guid isPermaLink="true">http://www.bobholt.me/2012/09/how-we-built-it-mit-reap</guid>
+			<description><![CDATA[<p><a title="Genuine Interactive" href="http://www.genuineinteractive.com/">Genuine Interactive</a> recently built a new site for the <a title="MIT REAP" href="http://reap.mit.edu/">MIT Regional Entrepreneurship Acceleration Program</a> (MIT REAP). We tried some new libraries and architecture for the first time, so let&#39;s take a look.</p>
+<p><span class="more"></span></p>
+<h3>Architecture</h3>
+
+<p><a href="/img/2012-09-how-we-built-it-mit-reap/filestructure-e1347411581830.jpg"><img class="alignright size-full wp-image-112" title="MIT REAP JavaScript File Structure" src="/img/2012-09-how-we-built-it-mit-reap/filestructure-e1347411581830.jpg" alt="" style="max-height: 456px; float: right; max-width: 177px;" /></a>The <a title="Using the Revealing Module Pattern" href="http://www.bobholt.me/2012/08/using-the-revealing-module-pattern/">revealing module pattern</a> has been our go-to application pattern for a while. Another recent project used <a href="http://backbonejs.org/">Backbone.js</a>, but with no particular structure. That was a learning experience, but I wasn&#39;t sold. Then I attended BackboneConf, and got excited to try it again.</p>
+<p>Right before we started front-end development on MIT REAP, Addy Osmani and a crack team of developers revealed <a title="Aura" href="http://addyosmani.github.com/aura/">Aura</a>. Aura implements a modular, distributed, event-driven application architecture of the type advocated by <a title="Addy Osmani: Patterns For Large-Scale JavaScript Application Architecture" href="http://addyosmani.com/largescalejavascript/">Addy</a> and <a title="Nicholas Zakas: Scalable JavaScript Application Architecture" href="http://www.slideshare.net/nzakas/scalable-javascript-application-architecture">Nicholas Zakas</a>. Aura gave me an opportunity to work with Backbone while letting us try this distributed architecture and giving us a sensible file structure to work with.</p>
+<p>Excluding the front page, there&#39;s very little JavaScript on this site (some main nav and form flashiness, and some carousels and modals), so it was a good project to try something new. If we ended up needing to rip Aura out and build the site the way we always had, it wouldn&#39;t have been that big of a deal, particularly since we already had a basic proof-of-concept for the map libraries (more on those later) built using the good old revealing module pattern.</p>
+<p>Once we got started with Aura, going back to the old way never even crossed my mind . I&#39;ll likely dig deeper into Aura in a future post, but in short, it provides an easy way of building and wiring together our widgets. Nearly every part of the front page is a separate widget that does what it needs to do and alerts other widgets to user interaction. Fire-and-forget is a fun and easy way to build an application.</p>
+<p>…though the really early version of Aura we used didn&#39;t let us do this as nicely as we might have hoped. The publish/subscribe functionality in this version was completely intertwined with widget start/stop functionality. Publishing an event caused the application to look for and attempt to start a widget by that name. If a widget didn&#39;t exist, it would throw an error. I ended up using <a title="Ben Alman" href="http://benalman.com/">Ben Alman</a>&#39;s <a title="Ben Alman: Tiny PubSub" href="https://gist.github.com/661855">Tiny PubSub gist</a> to get the messaging I needed between widgets. I thought maybe I didn&#39;t understand how this part of Aura worked, but it turns out that it was a <a title="Aura Issue #23" href="https://github.com/addyosmani/aura/issues/23">real issue</a> that Addy has since fixed. I recently updated Aura on another project I&#39;m working on and removed Tiny PubSub.</p>
+<p>Some other tweaks I made were part personal preference and part what I believe are real improvements. I replaced <a title="Underscore" href="http://documentcloud.github.com/underscore/">Underscore</a> in the Backbone implementation with <a title="Lo-Dash" href="https://github.com/bestiejs/lodash">Lo-dash</a> , which is higher-performing drop-in replacement. I also implemented a version of <a title="Rebecca Murphey" href="http://rmurphey.com/">Rebecca Murphey</a>&#39;s <a title="Rebecca Murphey: SuperView" href="https://github.com/rmurphey/srchr-demo/blob/master/app/views/base.js">SuperView</a>, which she showed off at BackboneConf. The SuperView provides several helpful methods for Backbone Views that you always tend to find yourself writing over and over as well as some useful post-render and post-place-at methods. Instead of directly extending the Backbone View object, we extend SuperView and get these awesome methods to use.</p>
+<p>The one thing I found lacking in Aura (and is still a bit of a drawback) was its lack of routing support. We wanted to follow a link from the front page map, but then use the back button and return to the same zoom level and focus area. Aura&#39;s set up breaks Backbone&#39;s built-in routing, which is simple, stable, and powerful, but for a this application, I had no problem using <a title="History.js" href="https://github.com/balupton/History.js/">History.js</a>.</p>
+<p>It looks like the direction Aura will go on the <a title="Aura Issue 93: Route events" href="https://github.com/addyosmani/aura/issues/93">routing issue</a> will be to add it as an optional extension, or more likely, leave it as an exercise for the user to fill in their own routing solution. I&#39;d like to tinker around with Backbone&#39;s routing to see if I can create a plugin that will &#39;fix&#39; the functionality for Aura. Or maybe I&#39;ll just stick with History.js.</p>
+<h3>The Intro Tour</h3>
+
+<p><a href="/img/2012-09-how-we-built-it-mit-reap/tour.jpg"><img class="alignright size-medium wp-image-116" title="MIT REAP Map Tour" src="/img/2012-09-how-we-built-it-mit-reap/tour.jpg" alt="" style="float: right; max-width: 260px; max-height:147px;" /></a>The introductory tour is pretty straightforward. It is essentially a modal that fires events to tell other widgets to highlight themselves by setting their z-index to higher than the translucent overlay. After I put this together, I saw <a title="Joyride: jQuery Tour Plugin" href="http://www.zurb.com/playground/jquery-joyride-feature-tour-plugin">Joyride</a>, a jQuery feature tour plugin, mentioned somewhere. It might have saved us a little time, but it was fairly trivial to build our own from scratch.</p>
+<h3>The Map</h3>
+
+<p><a href="/img/2012-09-how-we-built-it-mit-reap/map.jpg"><img class="alignright size-medium wp-image-120" title="map" src="/img/2012-09-how-we-built-it-mit-reap/map.jpg" alt="" style="float: right; max-width: 260px; max-height: 147px;" /></a>The most functionally interesting front-end feature of the site is the interactive map. This is actually a pretty straightforward implementation of <a title="MapBox" href="http://mapbox.com/">MapBox</a> using the <a title="Leaflet" href="http://leaflet.cloudmade.com/">Leaflet</a> and <a title="MapBox Wax" href="http://mapbox.com/wax/">Wax</a> libraries pretty much exactly as the tutorials show you.</p>
+<p>The one big exception was the dynamic country dots. These are markers that change in size depending on the number inside (which are also a live-text part of the marker). To do this, I ended up using a modified version of the <a title="Workarounds for live text in Leaflet markers" href="http://leaflet.uservoice.com/forums/150880-ideas-and-suggestions-for-leaflet/suggestions/2720350-number-the-markers">workarounds</a> found on the Leaflet forums.</p>
+<p>Lastly, to make the country dots switch out to the granular point icons at higher zooms, I used multiple GeoJSON layers tied to the map&#39;s zoom level. Leaflet has built-in events I was able to tie into to change out GeoJSON layers on map zoom.</p>
+<p>My only complaint about Leaflet was that in the last week or so of active development, they upgraded from 0.3.x to 0.4. That doesn&#39;t sound like a huge jump, but there were some huge breaking changes - especially in GeoJSON layers. Obviously, I didn&#39;t want to change out the library that would break my existing site, but the Leaflet team updated all the documentation on the Leaflet site to the 0.4 version. All of the 0.3.x documentation I needed to fix a couple of last-minute bugs was gone. I spent a lot longer than I would have liked tramping through 0.3.x&#39;s source code figuring out available options and ways to fix my bugs. There&#39;s a link in the <a title="Leaflet API Documentation" href="http://leaflet.cloudmade.com/reference.html">API documentation</a> now for the 0.3 docs, but it&#39;s really just a link to the 0.3 source code on github - not nearly as useful as the all-in-one-place API documentation on the Leaflet site.</p>
+<p>So library developers, my plea to you is this: If you make breaking changes in your library, leave an easy way to reach the previous version&#39;s documentation. You&#39;ll be saving those of us unable to upgrade hours of headaches.</p>
+<h3>Conclusion</h3>
+
+<p>This was really a fun project, made even more fun by the fact that I was able to try so many new libraries. I&#39;m hooked on this distributed event-driven architecture. It just makes sense when you&#39;re working with JavaScript. Events are its whole raison d&#39;être, and building whole applications like this feels natural.</p>
+<p>I felt like I had the time and ability to do some really good work on the map and all the JavaScript on the site. I&#39;m really proud about how it turned out.</p>
+<p>The site is more than just the JavaScript, though. There was a lot of PHP/Drupal work on this site, including interacting with the LinkedIn API in a major way as well some big assists on the HTML/CSS. But those are other people&#39;s blog posts to write.</p>
+]]></description>
+		</item>
+		<item>
+		<title>Using the Revealing Module Pattern</title>
+      <link>http://www.bobholt.me/2012/08/using-the-revealing-module-pattern</link>
+      <comments>http://www.bobholt.me/2012/08/using-the-revealing-module-pattern/#comments</comments>
+      <pubDate>Mon, 27 Aug 2012 00:00:00 GMT</pubDate>
+      <dc:creator>Bob Holt</dc:creator>
+
+
+      <guid isPermaLink="true">http://www.bobholt.me/2012/08/using-the-revealing-module-pattern</guid>
+			<description><![CDATA[<p>The first well-architected JavaScript application I worked on used what is commonly called the Revealing Module Pattern. I&#39;ve used this pattern on projects ranging from 100 to 100,000 lines of code. I think I&#39;ve found its breaking points, but also its sweet spots.</p>
+<p><span class="more"></span></p>
+<p>If you&#39;re unfamiliar with the revealing module pattern, you can find it discussed in a few different places, but Addy Osmani does a pretty good job of giving it a quick overview in his <a title="Addy Osmani: Revealing Module Pattern" href="http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript"><em>Learning JavaScript Design Patterns</em></a> book.</p>
+<p>If you don&#39;t like following links, here&#39;s a super-quick rundown:</p>
+<pre><code class="lang-javascript">(function(){
+
+  &quot;use strict&quot;;
+
+  var MYAPP = window.MYAPP = window.MYAPP || {};
+
+  MYAPP.common = {
+
+    commonVariable: &#39;&#39;,
+
+    commonMethod: function(){ /* ... */ }
+
+  }
+
+  MYAPP.module = function(){
+
+    var moduleVariable = &#39;&#39;;
+
+    var privateFunction = function(){ /* ... */ };
+
+    var init = function(){ /* ... */ };
+
+    return {
+
+      init: init
+
+    }
+
+  };
+
+}());</code></pre>
+<p><small>Edit: Updated line 5. Thanks to Jay Martin, who pointed out I wasn&#39;t exposing MYAPP back to the global namespace if I originally created it within the functional scope (if it fell back to a new object).</small></p>
+<p>The revealing module pattern creates an application made up of modules which expose an interface that an application-level controller can call. I prefer to use&nbsp;Paul Irish&#39;s <a title="Paul Irish: DOM-based Routing" href="http://paulirish.com/2009/markup-based-unobtrusive-comprehensive-dom-ready-execution/">DOM-based Routing</a>, which gives us a nice way to kick off our scripts without loading up a complex routing solution. I leave <code>MYAPP.common</code> as a plain object (no closure) because I expect to use everything in there from anywhere in my application.</p>
+<p>For better code organization, you can break these modules up into multiple files (just remember to minify and concatenate in production). If you find yourself needing to add something other than &#39;init&#39; into your modules&#39; return objects, it&#39;s a good sign you should pull it out into your common object or some other shared object.</p>
+<h3>Use Cases for the Revealing Module Pattern</h3>
+
+<p>A little warning: we&#39;re using this only for our single-use sites or applications—not public APIs or any kind of shared code base. We don&#39;t pretend that the &#39;privacy&#39; granted by the closure is anything more than a convenient illusion. Check out&nbsp;<a title="James Coglan: The Cost of Privacy" href="http://blog.jcoglan.com/2012/01/19/the-cost-of-privacy/">James Coglan&#39;s interesting post</a>&nbsp;arguing against relying on privacy in the module pattern.</p>
+<p>So why do we use it? In the days before AMD/<a href="http://requirejs.org/" title="RequireJS">RequireJS</a>/<a href="http://www.commonjs.org/" title="CommonJS">CommonJS</a>, this was a pretty good way of organizing and modularizing your code. These days, I&#39;m much more likely to use RequireJS along with <a href="http://backbonejs.org/" title="Backbone.js">Backbone.js</a> to do the same thing on a grander scale. But does it still have its place?</p>
+<p>In particular use cases, I think it certainly does. If a project shared more than one of these characteristics, I&#39;d consider it a good candidate for this pattern:</p>
+<h4>A small to mid-size site, somewhere in the 5-10 (give or take) page range</h4>
+
+<p>When paired with the DOM-based Routing solution above, it&#39;s pretty convenient to assign each page of a site to a module. A site of this size makes something like RequireJS often seem like overkill. The common object should carry common things like main navigation and footer functionality.</p>
+<h4>A site with minimal functionality&mdash;perhaps the progressive enhancement approach</h4>
+
+<p>Even when modularizing like this, it&#39;s easy to get lost if a module goes over a couple of hundred lines. Something smaller is easier to keep track of. Maybe you&#39;re just adding fancy hover states or doing some DOM manipulation. This pattern is a good way to get on the road to extracting useful functions instead of passing anonymous callbacks all over your application.</p>
+<h4>A site that shares much of the functionality it does have all throughout</h4>
+
+<p>For example, I&#39;ve seen this pattern used with great success on a site of probably 15-20 pages where we were calling the same functionality (<a title="jQuery Masonry" href="http://isotope.metafizzy.co/">jQuery Masonry</a> and a custom collapsible sidebar) on nearly every page, but with a different configuration on each page. In this case, all the site&#39;s functionality was in the common object, and each page/module&#39;s initialization function only needed to pass its own specific options into a common page initialization method. In this case, each module was no more than 10 lines, but gave us a great deal of control over how each page was laid out and initialized.</p>
+<h4>A site that shares almost none of its functionality</h4>
+
+<p>Sure this seems to contradict the earlier statement. The thing is, this pattern seems to work well on both sides of this seeming dichotomy (it&#39;s the middle of the road that&#39;ll get you here). This is just the inverse of the earlier statement, where instead of loading up your common object with shared functionality, each page of the site/app has completely different functionality. So different in fact, that you will re-use almost none of the code. You tend to see sites like this a lot in my line of work (digital marketing), where a microsite might have a homepage carousel, a 2nd page quiz and a 3rd page contact form with no common thread holding them together.</p>
+<h3>Summary</h3>
+
+<p>Hopefully this has been a coherent overview of the revealing module pattern and when you might want to use it. I probably haven&#39;t started a project with this in the last 4-6 months, instead opting to start using Backbone.js and RequireJS for my code organization/modularization. However, if the right project came along again, I might consider it. I also much prefer that the other developers I work with (some of whom may or may not be ready or willing to jump into AMD just yet) to use this pattern on the projects they take the lead on and not to throw a thousand lines of chained jQuery and anonymous functions into a single file and push it live.</p>
+]]></description>
+		</item>
+		<item>
+		<title>Start it Up</title>
+      <link>http://www.bobholt.me/2012/08/start-it-up</link>
+      <comments>http://www.bobholt.me/2012/08/start-it-up/#comments</comments>
+      <pubDate>Sat, 25 Aug 2012 00:00:00 GMT</pubDate>
+      <dc:creator>Bob Holt</dc:creator>
+
+
+      <guid isPermaLink="true">http://www.bobholt.me/2012/08/start-it-up</guid>
+			<description><![CDATA[<p>Here it is: a new site and new blog. The outdated portfolio is gone, and I’m going to give this JS-related blog thing a go.</p>
+<p><span class="more"></span></p>
+<p>I’ve never blogged about “work stuff” for a couple of reasons:</p>
+<ul>
+<li>There are <a href="http://paulirish.com/" title="Paul Irish">so</a> <a href="http://rmurphey.com/" title="Rebecca Murphey">many</a> <a href="http://www.nczonline.net/" title="Nicholas Zakas">great</a> <a href="http://ejohn.org/category/blog/" title="John Resig">developers</a> out there blogging their hearts out that I always thought I would just be adding noise. Maybe I don’t have anything new to say, but then again, maybe I do. I can’t wait to find out.</li>
+<li>For the first part of my career, I felt like I was developing by the seat of my pants. I think that’s a necessary phase in becoming a coder. I’ve felt over the last year or so like I’ve come out of that phase and now I’m the master of my development destiny. Maybe I can share how I got here and make that phase shorter for someone else.</li>
+</ul>
+<p>These same doubts have kept me from seeking speaking opportunities at meet-ups and conferences. Nobody wants to think they’re throwing out groundbreaking knowledge only to bore the audience to tears with outdated ideas. General encouragement from the JS community to get more speakers has caused me to consider the topics I might present and the places I might present them. In addition, the awesome (and hopefully still active) <a href="http://confnotice.com/" title="ConfNotice">ConfNotice</a> email has helped me to focus even more on topics. I’ll start locally and try branching out and improve as I go.</p>
+<p>See you soon.</p>
+]]></description>
+		</item>
+		<item>
+		<title>How I Got Here</title>
+      <link>http://www.bobholt.me/2012/08/how-i-got-here</link>
+      <comments>http://www.bobholt.me/2012/08/how-i-got-here/#comments</comments>
+      <pubDate>Sun, 26 Aug 2012 00:00:00 GMT</pubDate>
+      <dc:creator>Bob Holt</dc:creator>
+
+
+      <guid isPermaLink="true">http://www.bobholt.me/2012/08/how-i-got-here</guid>
+			<description><![CDATA[<p>Who is this Bob Holt character?</p>
+<p><span class="more"></span></p>
+<p>I’ve been doing something or other with the web since 1997. In 1996, I’m lucky enough to have two computer science-major roommates who are willing to teach me HTML and force me to do it using only a UNIX console. The next fall, I work for the Georgia Tech Research Corporation rebuilding the Office of Contract Administration’s website.</p>
+<p>I slowly add CSS to my repertoire, but always avoid JavaScript, because as we all know, it was a pain to deal with for a very long time.</p>
+<p>Scroll ahead a few years, and I go from doing websites on the side of my ‘real job’ to being a full-time web developer. I’m working in a .NET shop and get the task of researching this “jQuery” thing to see if it’s any good. It is. I go to the jQuery Conference at the NERD Center in Boston, and I see <a href="http://rmurphey.com/" title="Rebecca Murphey">Rebecca Murphey</a>, <a href="http://paulirish.com/" title="Paul Irish">Paul Irish</a>, and a bunch of other folks talk about JavaScript. A lot of that stuff goes over my head. I continue to code in exactly the way Rebecca’s talk told me not to, but at least I’ve been exposed to a better way.</p>
+<p>Cut to not so very long ago.</p>
+<p>I’m a .NET developer who only really wants to do .NET, but I’m willing to give other things a shot. I get tapped to jump into a project mid-stream as a Java developer. I’ve never coded a line of Java in my life, but I’m assured I’ll pick it up. When I get on the project, though, the more pressing need is for a JavaScript developer. I have—big air quotes here—”JAVASCRIPT EXPERIENCE,” so I’m given the task of tracking down the bugs in an interactive charting solution that’s based on data retrieved from a still-in-development web service. I have to fix it that day. No excuses. And I don’t even have my environment set up yet.</p>
+<p>Somehow I hack something together.</p>
+<p>It probably looks a lot like that jQuery spaghetti code, but luckily it’s inside a sensibly architected framework. So I start learning from my surroundings. And I’m lucky enough to sit next to <a href="http://htmlcssjavascript.com" title="Rob Larsen">Rob Larsen</a> on the same project. I’m able to download knowledge from him for six months while meeting insane deadline after insane deadline. Architecture, design patterns, performance considerations, and sensible refactoring in JavaScript are all things I pick up. He rants about something the code is or isn’t doing, I figure out what he’s talking about, and go fix wherever I might have made the same mistake. Rinse and repeat.</p>
+<p>At some point I asked Rob for recommendations on books that would help me understand the architecture of what we’re working on, and he recommends Douglas Crockford’s <a href="http://www.amazon.com/gp/product/0596517742/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0596517742&amp;linkCode=as2&amp;tag=bobseclectibo-20">JavaScript: The Good Parts</a>, and particularly Stoyan Stefanov’s <a href="http://www.amazon.com/gp/product/1847194141/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1847194141&amp;linkCode=as2&amp;tag=bobseclectibo-20">Object-Oriented JavaScript</a> and <a href="http://www.amazon.com/gp/product/0596806752/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0596806752&amp;linkCode=as2&amp;tag=bobseclectibo-20">JavaScript Patterns</a>. Those Stefanov books are still some of the best JavaScript books I’ve ever read.</p>
+<p>So am I a JavaScript expert? No. But I’d say I’m in that upper-intermediate level where you only need another swift kick to reach enlightenment. I’m architecting small, medium, and large-scale JavaScript applications in modular, event-driven ways. And it’s really fun.</p>
+<p>I’m no expert, but I think I have something to offer: hence this blog. If anything, I hope to help those still learning the basics of JavaScript to pick things up a bit quicker than they might otherwise.</p>
+<p>And I promise this is about as much about me as you’ll ever have to read. Coming up: doing stuff with JavaScript, and/or helping others to do the same.</p>
+]]></description>
+		</item>
+		<item>
+		<title>Book Report: Growing Object-Oriented Software Guided by Tests</title>
+      <link>http://www.bobholt.me/2012/08/book-report-growing-object-oriented-software-guided-by-tests</link>
+      <comments>http://www.bobholt.me/2012/08/book-report-growing-object-oriented-software-guided-by-tests/#comments</comments>
+      <pubDate>Thu, 30 Aug 2012 00:00:00 GMT</pubDate>
+      <dc:creator>Bob Holt</dc:creator>
+
+
+      <guid isPermaLink="true">http://www.bobholt.me/2012/08/book-report-growing-object-oriented-software-guided-by-tests</guid>
+			<description><![CDATA[<p><a href="http://www.amazon.com/gp/product/0321503627/ref=as_li_tf_il?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321503627&amp;linkCode=as2&amp;tag=bobseclectibo-20" style="display:inline!important"><img class="alignright" style="border: 0px;" title="Buy Growing Object-Oriented Software Guided by Tests on Amazon" src="http://ws.assoc-amazon.com/widgets/q?_encoding=UTF8&amp;ASIN=0321503627&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=bobseclectibo-20" alt="Buy Growing Object-Oriented Software Guided by Tests on Amazon" width="120" height="160" border="0" /></a><img style="border: none !important; margin: 0px !important;" src="http://www.assoc-amazon.com/e/ir?t=bobseclectibo-20&amp;l=as2&amp;o=1&amp;a=0321503627" alt="" width="1" height="1" border="0" />I just finished reading&nbsp;<a href="http://www.amazon.com/gp/product/0321503627/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321503627&amp;linkCode=as2&amp;tag=bobseclectibo-20"><em>Growing Object-Oriented Software, Guided by Tests</em></a><img style="border: none !important; margin: 0px !important;" src="http://www.assoc-amazon.com/e/ir?t=bobseclectibo-20&amp;l=as2&amp;o=1&amp;a=0321503627" alt="" width="1" height="1" border="0" />&nbsp;by <a title="Steve Freeman" href="http://www.higherorderlogic.com/">Steve Freeman</a> and <a title="Nat Pryce" href="http://www.natpryce.com/">Nat Pryce</a>. <a title="Brandon Keepers" href="http://opensoul.org/">Brandon Keepers</a>&nbsp;recommended this book in his talk <a title="The Plight of Pinocchio: JavaScript's quest to become a real language" href="http://opensoul.org/blog/archives/2012/05/16/the-plight-of-pinocchio/">&quot;The Plight of Pinocchio: JavaScript&#39;s quest to become a real language&quot;</a> at <a title="BackboneConf" href="http://backboneconf.com/">BackboneConf</a> in June. It&#39;s a pretty good start for thinking about Test Driven Development and application design.</p>
+<p><span class="more"></span></p>
+<h3>The Good Stuff</h3>
+
+<p>The book does a great job of explaining good application design: separation of concerns, encapsulation, and modular design connected through messaging. Some of the points raised here immediately struck a chord with me. Inspired by this book, I&#39;ve done some refactoring of my current project over the last couple of days, which resulted in a more stable application (in my opinion) and removed about 2,000 lines of code.</p>
+<p>The book also hits on some of the good conceptual stuff to keep in mind when developing tests. I&#39;m definitely inspired to implement testing in my current and future projects. I&#39;ve played with <a title="QUnit" href="http://qunitjs.com/">QUnit</a> before, and I&#39;m going to give <a title="Jasmine" href="http://pivotal.github.com/jasmine/">Jasmine</a> a shot.</p>
+<h3>The Lesser Stuff</h3>
+
+<p>My biggest complaint—though your mileage may vary—was that this was far more reliant on Java syntax than advertised. I was expecting a far more conceptual book. About half the book is a step-by-step walk-through of developing an application using Test Driven Development. I was able to pick out a lot of the concepts, but the examples were heavily dependent on reading Java and understanding how the Java-specific testing suites the authors used worked. To be fair, there is a good overview of the tools used, but as someone who doesn&#39;t deal with Java every day, I found myself completely skipping the code examples and scanning for the concepts.</p>
+<h3>The Verdict</h3>
+
+<p>If you&#39;re a Java programmer looking to start unit-testing your code, I would say this is a 100% no-doubt must-read. If you&#39;re programming any other language, I&#39;d say it&#39;s useful to a point, but maybe keep an eye out for a more language-agnostic guide. I know I will.</p>
+]]></description>
+		</item>
+	</channel>
+</rss>
