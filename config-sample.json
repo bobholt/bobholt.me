@@ -8,11 +8,6 @@
 	},
 
 	"bundles": {
-		"/js/all.js": [
-			"/js/vendor/prism.js",		
-			"/js/plugins.js",
-			"/js/main.js"
-		],
 		"/css/main.css": [
 			"/css/less/main.less"	
 		]
@@ -40,7 +35,7 @@
 
 	"thirdparty_snippets": {
 		"google_analytics": {
-			"property_id": "UA-xxxxxx-x"
+			"property_id": "UA-XXXXXXX-X"
 		},
 
 		"web_fonts": {
@@ -54,18 +49,18 @@
 		},
 
 		"tweet_button": {
-			"via": "bobholt"
+			"via": "my-name"
 		}
 	},
 
 	"sitemap_generator": {
-		"url_root": "http://www.bobholt.me"	
+		"url_root": "http://www.my-name.come"	
 	},
 
 	"publish" : {
 		"strategy" : "s3", 
 		"options" : {
-			"bucket" : "www.bobholt.me",
+			"bucket" : "www.my-name.com",
 			"key" : "key",
 			"secret" : "secret",
 			"x-amz-acl": "public-read"

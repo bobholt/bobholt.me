@@ -14,3 +14,8 @@ results
 .DS_Store
 npm-debug.log
 node_modules
+
+public
+www-built
+www-ghpages
+config.json

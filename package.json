@@ -1,11 +1,26 @@
-{ "name" : "punch-blog",
-	"version" : "1.0.0",
-	"dependencies" : {
-	 	"punch": ">= 0.5.28",
-	 	"punch-blog-content-handler": ">= 0.0.9",
-	 	"punch-current-page-helper": ">= 0.0.1",
-	 	"punch-thirdparty-snippets-helper": ">= 0.0.1",
-		"punch-sitemap-generator": ">= 0.0.5",
-		"underscore": ">= 1.4.2"
- 	} 
+{
+  "amd": {},
+  "volo": {
+    "baseUrl": "templates/js/vendor",
+    "dependencies": {
+      "jquery": "github:jquery/jquery/1.10.2",
+      "prism": "github:LeaVerou/prism/gh-pages",
+      "Modernizr": "github:Modernizr/Modernizr/v2.6.2"
+    }
+  },
+  "name": "punch-blog",
+  "version": "1.0.0",
+  "dependencies": {
+    "punch": ">= 0.5.28",
+    "punch-blog-content-handler": ">= 0.0.9",
+    "punch-current-page-helper": ">= 0.0.1",
+    "punch-thirdparty-snippets-helper": ">= 0.0.1",
+    "punch-sitemap-generator": ">= 0.0.5",
+    "underscore": ">= 1.4.2",
+    "punch-engine-handlebars": "0.0.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-volo": "0.0.2"
+  }
 }
