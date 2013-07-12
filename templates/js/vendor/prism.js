@@ -1,6 +1,3 @@
-//Wrapped in an outer function to preserve global this
-(function (root) { var amdExports; define([], function () { (function () {
-
 
 
 /* **********************************************
@@ -559,9 +556,3 @@ Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(f
 });
 
 })();
-
-amdExports = Prism;
-
-}.call(root));
-    return amdExports;
-}); }(this));

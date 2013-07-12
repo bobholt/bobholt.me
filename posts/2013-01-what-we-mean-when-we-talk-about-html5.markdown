@@ -7,7 +7,8 @@ category: HTML5
 tags:
 ---
 
-I recently wrote a <a href="http://gmblog.sapient.com/?p=1106" title="What We Mean When We Talk About HTML5">blog post</a> for Sapient Global Markets on HTML5 for the general business audience. It was picked up by Slashdot today:
+I recently wrote a [blog post](http://gmblog.sapient.com/?p=1106 "What We Mean When We Talk About HTML5") for Sapient Global Markets on HTML5 for the general business audience. It was picked up by Slashdot today:
+
 <span class="more"></span>
 
 <div class="rpuEmbedCode">

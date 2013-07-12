@@ -19,7 +19,6 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 				{{#stylesheet_bundle}}/css/main.css{{/stylesheet_bundle}} 
-        <script src="/js/vendor/Modernizr.js"></script>
 
 				<!-- fonts -->
 				{{{web_font_loader_snippet}}}
@@ -33,12 +32,12 @@
 
 				<header>
 					<h1><a href="/">{{{ site-title }}}</a></h1>
+          <h2>{{{ tagline }}}</h2>
 				</header>
 
 				<nav role="main_nav">
         <ul>
-          <li><a id="resume" class="link_with_icon {{#current}}/resume{{/current}}" href="/resume"><span role="icon" aria-hidden="true" class="icon-user"></span><span role="title">Résumé</span></a></li>
-          <li><a id="contact" class="link_with_icon {{#current}}/contact{{/current}}" href="/contact"><span role="icon" aria-hidden="true" class="icon-book"></span><span role="title">Contact</span></a></li>
+          <li><a id="contact" class="link_with_icon {{#current}}/contact{{/current}}" href="/contact"><span role="icon" aria-hidden="true" class="icon-user"></span><span role="title">Contact</span></a></li>
           <li><a id="archive" class="link_with_icon {{#current}}/archive{{/current}}" href="/archive"><span role="icon" aria-hidden="true" class="icon-book"></span><span role="title">Archive</span></a></li>
         </ul>
       </nav>

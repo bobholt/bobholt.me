@@ -7,7 +7,7 @@ category: HTML5
 tags:
 ---
 
-Slashdot picked up the <a href="http://gmblog.sapient.com/?p=1243" title="Responsive Web Design">second installment</a> of my series of HTML5 blog posts I have written for Sapient Global Markets:
+Slashdot picked up the [second installment](http://gmblog.sapient.com/?p=1243 "Responsive Web Design") of my series of HTML5 blog posts I have written for Sapient Global Markets:
 
 <span class="more"></span>
 

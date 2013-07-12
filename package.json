@@ -4,8 +4,7 @@
     "baseUrl": "templates/js/vendor",
     "dependencies": {
       "jquery": "github:jquery/jquery/1.10.2",
-      "prism": "github:LeaVerou/prism/gh-pages",
-      "Modernizr": "github:Modernizr/Modernizr/v2.6.2"
+      "prism": "github:LeaVerou/prism/gh-pages"
     }
   },
   "name": "punch-blog",
@@ -16,8 +15,7 @@
     "punch-current-page-helper": ">= 0.0.1",
     "punch-thirdparty-snippets-helper": ">= 0.0.1",
     "punch-sitemap-generator": ">= 0.0.5",
-    "underscore": ">= 1.4.2",
-    "punch-engine-handlebars": "0.0.2"
+    "underscore": ">= 1.4.2"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
