@@ -18,7 +18,12 @@ var fetch_content = function(callback) {
 
 	blog_content_handler.getAllPosts(function(err, posts_obj, posts_last_modified) {
 		if (!err) {
-			var all_posts = _.values(posts_obj).reverse();
+
+			// Sort the posts by published date
+			var all_posts = _.sortBy(_.values(posts_obj), function(obj){
+				return -obj.published_date;
+			});
+
 			last_modified = posts_last_modified;
 
 			var recent_posts_list = all_posts.length > homepage_posts ? all_posts.slice(all_posts.length - homepage_posts) : all_posts;
@@ -26,8 +31,9 @@ var fetch_content = function(callback) {
 			var fetch_full_posts = function() {
 				if (recent_posts_list.length) {
 					blog_content_handler.getPost(path.join(recent_posts_list.shift().permalink, "index"), function(err, post_contents, modified_date) {
+
 						var post_paras = post_contents.content.replace(/\n/g, " ").match(/(<p[^>]*>.*?<\/p>)/g);
-						
+
 						if (teaser_length < 1) {
 							paras_to_show = post_paras.length;
 						} else {
@@ -41,13 +47,13 @@ var fetch_content = function(callback) {
 							recent_posts.push(post_contents);
 						}
 
-						return fetch_full_posts()
+						return fetch_full_posts();
 
 					});
 				} else {
 					return callback();
 				}
-			}
+			};
 
 			return fetch_full_posts();
 
@@ -56,7 +62,7 @@ var fetch_content = function(callback) {
 			return callback();
 		}
 	});
-}
+};
 
 var tag_helpers = {
 
@@ -91,4 +97,4 @@ module.exports = {
 		});
 	}
 
-}
+};

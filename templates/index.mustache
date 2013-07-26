@@ -2,8 +2,10 @@
 
     <div class="posts">
 
+			{{> sidebar }}
+
 			{{#recent_posts}}
-      <article class="hentry"> 
+      <article class="hentry clearfix"> 
         <h2 class="entry-title"><a href="{{ permalink }}">{{{ title }}}</a></h2>
 				<time class="updated" datetime="{{ published_date }}" pubdate>{{#long_date}}{{published_date}}{{/long_date}}</time>
 
@@ -17,9 +19,5 @@
 			{{/recent_posts}}
 
 		</div>
-		
-		<div id="browse_archive">
-			<a href="/archive">Browse Archive</a>
-		</div>
-    
+
 {{> footer }}

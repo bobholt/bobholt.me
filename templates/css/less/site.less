@@ -35,9 +35,9 @@ font-size : 62.5%;
 -ms-text-size-adjust : 100%; }
 
 body { 
-margin : 2em auto;
+margin : 0 auto;
 padding : 0;
-width : 90%;
+max-width: 940px;
 background-color : transparent;
 font-family : @basefont;
 .font-size();
@@ -45,10 +45,11 @@ line-height : @baselineheight;
 color : @textcolor; }
 
 header {
-text-align: center;
 	h1 {
-	font-size: 7rem;
-	margin-bottom: 0;
+	float: left;
+	font-size: 3rem;
+	margin-top: 0.5em;
+	width: 75%;
 		a {
 		color: @textcolor;
 
@@ -62,8 +63,26 @@ text-align: center;
 
 		}
 	}
+	.tagline {
+		border-bottom: 1px solid #e5e5e5;
+		border-top: 5px solid #444;
+		clear: both;
+		color: #333;
+		line-height: 1.5em;
+		margin: 0 0 30px 0;
+		padding: 18px 4.25531914893617% 20px 4.25531914893617%;
+		text-transform: none;
+		width: 91.48936170212766%;
+		text-align: center;
+	}
 }
 
 footer {
+	border-top: 5px solid #444;
+	padding: 2em 0 3em;
 	text-align: center;
+	clear: both;
+	color: @lightgrey;
+	font-family: @altfont;
+	font-size: 1.1rem;
 }

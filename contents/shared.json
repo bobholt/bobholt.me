@@ -2,5 +2,7 @@
 	"site-title": "Bob Holt",
 	"tagline": "JavaScript Fancier",
 	"host": "www.bobholt.me",
-	"creator": "Bob Holt"
+	"creator": "Bob Holt",
+	"bio": "<p>I'm Bob Holt, a JavaScript engineer based in Boston. I'm a programmer at <a href=\"http://www.bocoup.com/\"><strong>Bocoup</strong></a>.</p><p>I used to be a C# .NET developer and I've done some PHP. I don't do those things any more (but it's fine if you do).</p><p>I'm project lead for <a href=\"https://github.com/archfirst/keel\">Keel</a> and a contributor to <a href=\"https://github.com/rwldrn/johnny-five\">Johnny-Five</a>, <a href=\"http://learn.jquery.com\">learn.jquery.com</a>, <a href=\"https://github.com/archfirst/bullsfirst-jquery-backbone\">Bullsfirst</a>, <a href=\"https://github.com/aurajs/aura\">Aura</a>, <a href=\"https://github.com/roblarsen/CeeJS\">CeeJS</a>, and the <a href=\"https://github.com/h5bp/ant-build-script\">HTML5 Boilerplate Ant Build Script</a></p>",
+	"links": "[{'site':'GitHub'},{'site':'Twitter'},{'site':'Google+'},{'site':'LinkedIn'}]"
 }

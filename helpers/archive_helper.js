@@ -12,13 +12,15 @@ var fetch_all_posts = function(callback) {
 
 	blog_content_handler.getAllPosts(function(err, posts_obj, posts_last_modified) {
 		if (!err) {
-			all_posts = _.values(posts_obj);
+			all_posts = _.sortBy(_.values(posts_obj), function(obj){
+				return -obj.published_date;
+			});
 			last_modified = posts_last_modified;
 		}
 
 		return callback();
 	});
-}
+};
 
 var tag_helpers = {
 
@@ -58,5 +60,5 @@ module.exports = {
 		}
 	}
 
-}
+};
 

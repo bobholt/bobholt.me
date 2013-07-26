@@ -9,25 +9,25 @@
 
 // navigation menu
 nav[role=main_nav] {
-	width: 100%;
-	margin: 1em 0 2em 0;
+	float: right;
+	margin: 1em 0 0;
 	text-align: center;
+	text-transform: uppercase;
+	width: 25%;
 
 	ul {
 		width: 90%;
 		margin: 0 auto;
 		padding: 0;
 		list-style: none;
-		border-top: 1px solid @bordercolor;
-		border-bottom: 1px solid @bordercolor;
 
 		li {
 			display: inline-block;
+			font-size: 1.1rem;
 			vertical-align: middle;
 			padding: 0.5em;
-			font-size: 1em;
 			a {
-			color: @textcolor;	
+			color: @linkcolor;	
 			&:hover { color: @linkcolor; 
 			text-decoration: none;	}	
 			&.current { color: @linkcolor; }
@@ -40,13 +40,27 @@ nav[role=main_nav] {
 // post
 article.hentry {
 
+	border-bottom: 1px solid #e5e5e5;
+	width: 68%;
+	float: left;
+
+	&:last-child {
+		border-bottom: none;
+	};
+
 	h2.entry-title {
-		font-size: 1.8em;
 		margin-bottom: 0;
+		text-transform: uppercase;
+
+		a {
+			color: @textcolor;
+		}
 	}
 
 	time {
 		color: @lightgrey;
+		font-family: @altfont;
+		font-size: 1.1rem;
 	}
 
 	.entry-content {
@@ -54,7 +68,16 @@ article.hentry {
 		p {
 			line-height: 1.6;
 		}
-		a { text-decoration: underline; }
+		a { 
+			text-decoration: underline;
+		}
+
+		&:hover {
+		color: @textcolor;}
+
+		&:visited {
+		color: @textcolor;}
+
 		img { margin: 0 auto; display: block; }
 		ul { margin-left: 0; padding-left: 2em; }
 		iframe, video { margin: 0 auto; display: block; }
@@ -70,8 +93,12 @@ article.hentry {
 }
 
 .posts article {
-	margin-bottom: 3em;
-	a.more { text-decoration: underline; }
+	margin: 0 0 1em 0;
+	padding: 0 0 1em 0;
+	a.more { font-size: 1.3rem; }
+	h2.entry-title {
+		font-size: 1em;
+	}
 }
 
 .posts[role=archive] {
@@ -85,6 +112,13 @@ article.hentry {
 		}
 	}
 }
+
+.sidebar {
+	color: rgb(136, 136, 136);
+	float: right;
+	width: 27.65%;
+}
+
 
 #browse_archive {
 	text-align: center;
