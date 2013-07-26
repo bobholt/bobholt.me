@@ -2,8 +2,6 @@
 
     <div class="posts">
 
-			{{> sidebar }}
-
 			{{#recent_posts}}
       <article class="hentry clearfix"> 
         <h2 class="entry-title"><a href="{{ permalink }}">{{{ title }}}</a></h2>
@@ -19,5 +17,8 @@
 			{{/recent_posts}}
 
 		</div>
+
+		{{> sidebar }}
+
 
 {{> footer }}

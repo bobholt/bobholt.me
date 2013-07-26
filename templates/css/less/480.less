@@ -8,3 +8,42 @@
 // ==========================================================
 
 /* 480 =================================================== */
+
+header h1 {
+	margin-bottom: 0.85em;
+	text-align: left;
+	float: left;
+	width: 50%;
+}
+
+nav[role=main_nav] {
+	float: right;
+	width: 50%;
+	margin-top: 1em;
+
+	ul {
+		text-align: right;
+		width: 100%;
+	}
+}
+
+.sidebar {
+
+	ul {
+
+		text-align: center;
+
+		li {
+
+			display: inline-block;
+			line-height: 2em;
+			margin-left: 2em;
+			padding-right: 2em;
+			border-right: solid 1px rgb(136, 136, 136);
+
+			&:last-child {
+				border-right: none;
+			}
+		}
+	}
+}

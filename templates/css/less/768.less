@@ -8,3 +8,44 @@
 // ==========================================================
 
 /* 768 =================================================== */
+article.hentry {
+	width: 68%;
+	float: left;
+
+	&:last-child {
+		border-bottom: none;
+	};
+}
+
+.posts {
+	width: 68%;
+	float: left;
+
+	article.hentry {
+		width: 100%;
+		float: none;
+	}
+}
+
+.sidebar {
+	float: right;
+	width: 27.65%;
+
+	img:first-child {
+		float: none;
+		margin: 0 auto 1.692307em auto;
+	};
+
+	ul {
+		text-align: left;
+		margin-left: 0;
+		padding-left: 1.6rem;
+
+		li {
+			border: none;
+			display: list-item;
+			margin: 0;
+		}
+	}
+
+}
