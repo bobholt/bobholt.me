@@ -1,0 +1,39 @@
+{{> header }}
+
+		<div class="posts">
+			<p>No recruiters, please.</p>
+
+			<form action="http://localhost:3000/contact" method="post">
+			 
+				<div>
+					<label for="name">Name<span>(required)</span></label>
+					<input type="text" name="name" id="name" value="" class="name">
+				</div>
+			 
+				<div>
+					<label for="email">Email<span>(required)</span></label>
+					<input type="email" name="email" id="email" value="" class="email">
+				</div>
+			 
+				<div>
+					<label for="website">Website</label>
+					<input type="text" name="website" id="website" value="" class="url">
+				</div>
+			 
+				<div>
+					<label for="contact-form-comment-comment">Comment<span>(required)</span></label>
+					<textarea name="comment" id="comment" rows="20"></textarea>
+				</div>
+
+			 	<p class="contact-submit">
+					<input type="submit" value="Submit »">
+					<input type="hidden" name="_referer" value="/contact/">
+				</p>
+
+			</form>
+		</div>
+
+		{{> sidebar }}
+
+
+{{> footer }}
