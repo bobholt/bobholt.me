@@ -1,8 +1,6 @@
 {
-  "dependencies": {
-    "moment": "2.x",
-    "underscore": "1.4.x",
-    "typogr": "0.5.x"
-  },
-  "repository": "none"
+  "name": "hexo",
+  "version": "2.3.0",
+  "private": true,
+  "dependencies": {}
 }

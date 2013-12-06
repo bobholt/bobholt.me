@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Using the Revealing Module Pattern | Bob Holt</title>
+  <meta name="author" content="Bob Holt">
+  
+  <meta name="description" content="The first well-architected JavaScript application I worked on used what is commonly called the Revealing Module Pattern. I‘ve used this pattern on projects ranging from 100 to 100,000 lines of code. I think I’ve found its breaking points, but also its sweet spots.">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Using the Revealing Module Pattern"/>
+  <meta property="og:site_name" content="Bob Holt"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Bob Holt" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  
+</head>
+
+
+<body>
+  <div id="container" class="container">
+    <header>
+  <section class="branding">
+    <h1 id="site-title" class="title">
+      <a href="/">Bob Holt</a>
+    </h1>
+  </section>
+
+  
+    <section class="subtitle">
+      <p>I make things with JavaScript</p>
+    </section>
+  
+</header>
+
+    <section id="content" class="blog">
+      <article class="post">
+  <header>
+    
+      <span class="page-title">
+  
+    <h1 class="title">Using the Revealing Module Pattern</h1>
+  
+</span>
+    
+    
+
+    <div class="byline">
+      
+        <time datetime="2012-08-28T01:33:06.000Z">27 Aug 2012</time>
+      
+      
+  
+  &middot; <i>in</i> <a href="/category/Application Architecture/">Application Architecture</a>
+
+
+    </div>
+    <div class="clearfix"></div>
+  </header>
+
+  <section class="entry">
+    
+      <p>The first well-architected JavaScript application I worked on used what is commonly called the Revealing Module Pattern. I‘ve used this pattern on projects ranging from 100 to 100,000 lines of code. I think I’ve found its breaking points, but also its sweet spots.</p>
+<a id="more"></a>
+
+<p>If you&#39;re unfamiliar with the revealing module pattern, you can find it discussed in a few different places, but Addy Osmani does a pretty good job of giving it a quick overview in his <a title="Addy Osmani: Revealing Module Pattern" href="http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript" target="_blank"><em>Learning JavaScript Design Patterns</em></a> book.</p>
+<p>If you don‘t like following links, here’s a super-quick rundown:</p>
+<figure class="highlight lang-javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre></td><td class="code"><pre>(<span class="keyword">function</span>(){
+
+  <span class="string">"use strict"</span>;
+
+  <span class="keyword">var</span> MYAPP = window.MYAPP = window.MYAPP || {};
+
+  MYAPP.common = {
+
+    commonVariable: <span class="string">''</span>,
+
+    commonMethod: <span class="keyword">function</span>(){ <span class="comment">/* ... */</span> }
+
+  }
+
+  MYAPP.module = <span class="keyword">function</span>(){
+
+    <span class="keyword">var</span> moduleVariable = <span class="string">''</span>;
+
+    <span class="keyword">var</span> privateFunction = <span class="keyword">function</span>(){ <span class="comment">/* ... */</span> };
+
+    <span class="keyword">var</span> init = <span class="keyword">function</span>(){ <span class="comment">/* ... */</span> };
+
+    <span class="keyword">return</span> {
+
+      init: init
+
+    }
+
+  };
+
+}());
+</pre></td></tr></table></figure>
+
+<p><small>Edit: Updated line 5. Thanks to Jay Martin, who pointed out I wasn&#39;t exposing MYAPP back to the global namespace if I originally created it within the functional scope (if it fell back to a new object).</small></p>
+<p>The revealing module pattern creates an application made up of modules which expose an interface that an application-level controller can call. I prefer to use&nbsp;Paul Irish&#39;s <a title="Paul Irish: DOM-based Routing" href="http://paulirish.com/2009/markup-based-unobtrusive-comprehensive-dom-ready-execution/" target="_blank">DOM-based Routing</a>, which gives us a nice way to kick off our scripts without loading up a complex routing solution. I leave <code>MYAPP.common</code> as a plain object (no closure) because I expect to use everything in there from anywhere in my application.</p>
+<p>For better code organization, you can break these modules up into multiple files (just remember to minify and concatenate in production). If you find yourself needing to add something other than ‘init’ into your modules‘ return objects, it’s a good sign you should pull it out into your common object or some other shared object.</p>
+<h3>Use Cases for the Revealing Module Pattern</h3>
+
+<p>A little warning: we‘re using this only for our single-use sites or applications—not public APIs or any kind of shared code base. We don’t pretend that the ‘privacy’ granted by the closure is anything more than a convenient illusion. Check out&nbsp;<a title="James Coglan: The Cost of Privacy" href="http://blog.jcoglan.com/2012/01/19/the-cost-of-privacy/" target="_blank">James Coglan&#39;s interesting post</a>&nbsp;arguing against relying on privacy in the module pattern.</p>
+<p>So why do we use it? In the days before AMD/<a href="http://requirejs.org/" title="RequireJS" target="_blank">RequireJS</a>/<a href="http://www.commonjs.org/" title="CommonJS" target="_blank">CommonJS</a>, this was a pretty good way of organizing and modularizing your code. These days, I&#39;m much more likely to use RequireJS along with <a href="http://backbonejs.org/" title="Backbone.js" target="_blank">Backbone.js</a> to do the same thing on a grander scale. But does it still have its place?</p>
+<p>In particular use cases, I think it certainly does. If a project shared more than one of these characteristics, I&#39;d consider it a good candidate for this pattern:</p>
+<h4>A small to mid-size site, somewhere in the 5-10 (give or take) page range</h4>
+
+<p>When paired with the DOM-based Routing solution above, it&#39;s pretty convenient to assign each page of a site to a module. A site of this size makes something like RequireJS often seem like overkill. The common object should carry common things like main navigation and footer functionality.</p>
+<h4>A site with minimal functionality&mdash;perhaps the progressive enhancement approach</h4>
+
+<p>Even when modularizing like this, it‘s easy to get lost if a module goes over a couple of hundred lines. Something smaller is easier to keep track of. Maybe you’re just adding fancy hover states or doing some DOM manipulation. This pattern is a good way to get on the road to extracting useful functions instead of passing anonymous callbacks all over your application.</p>
+<h4>A site that shares much of the functionality it does have all throughout</h4>
+
+<p>For example, I&#39;ve seen this pattern used with great success on a site of probably 15-20 pages where we were calling the same functionality (<a title="jQuery Masonry" href="http://isotope.metafizzy.co/" target="_blank">jQuery Masonry</a> and a custom collapsible sidebar) on nearly every page, but with a different configuration on each page. In this case, all the site‘s functionality was in the common object, and each page/module’s initialization function only needed to pass its own specific options into a common page initialization method. In this case, each module was no more than 10 lines, but gave us a great deal of control over how each page was laid out and initialized.</p>
+<h4>A site that shares almost none of its functionality</h4>
+
+<p>Sure this seems to contradict the earlier statement. The thing is, this pattern seems to work well on both sides of this seeming dichotomy (it‘s the middle of the road that’ll get you here). This is just the inverse of the earlier statement, where instead of loading up your common object with shared functionality, each page of the site/app has completely different functionality. So different in fact, that you will re-use almost none of the code. You tend to see sites like this a lot in my line of work (digital marketing), where a microsite might have a homepage carousel, a 2nd page quiz and a 3rd page contact form with no common thread holding them together.</p>
+<h3>Summary</h3>
+
+<p>Hopefully this has been a coherent overview of the revealing module pattern and when you might want to use it. I probably haven&#39;t started a project with this in the last 4-6 months, instead opting to start using Backbone.js and RequireJS for my code organization/modularization. However, if the right project came along again, I might consider it. I also much prefer that the other developers I work with (some of whom may or may not be ready or willing to jump into AMD just yet) to use this pattern on the projects they take the lead on and not to throw a thousand lines of chained jQuery and anonymous functions into a single file and push it live.</p>
+
+    
+  </section>
+
+</article>
+
+
+    </section>
+    <aside id="sidebar" class="sidebar"><form class="search" action="http://google.com/search" method="get" accept-charset="utf-8">
+  <input type="search" name="q" results="0" placeholder="Search">
+  <input type="hidden" name="q" value="site:bobholt.me">
+</form>
+
+
+<img class="headshot" src="http://www.gravatar.com/avatar/15b2f686144e036133d8c16e00f9624e?s=140" alt="Bob Holt">
+
+<section class="bio">
+
+  <p><b>Bob Holt</b> is <b>Director of Education</b> at <b><a href="http://www.bocoup.com/">Bocoup</a></b>.
+
+  <p>He is project lead for <a href="https://github.com/archfirst/keel">Keel</a>, a stabilizing framework for Backbone applications, in addition to contributing to <a href="https://github.com/jquery/learn.jquery.com">jQuery’s Learning site</a>, <a href="https://github.com/roblarsen/CeeJS">CeeJS</a>, and the <a href="https://github.com/h5bp/ant-build-script">HTML5 Boilerplate Ant Build Script</a>.
+
+  <p>Bob enjoys music, photography, and exploring the more remote areas of New England with his family.</p>
+
+  <ul>
+    <li><a href="https://github.com/bobholt">Github</a></li>
+    <li><a href="http://twitter.com/bobholt/">Twitter</a></li>
+    <li><a href="http://gplus.to/bobholt/">Google+</a></li>
+    <li><a href="http://www.linkedin.com/in/bobholt">LinkedIn</a></li>
+  </ul>
+
+</section></aside>
+    <footer id="footer" class="clearfix footer"><div class="alignleft">
+  
+  Copyright &copy; 2013 Bob Holt
+  
+</div>
+<div class="clearfix"></div></footer>
+  </div>
+  <script src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/fancybox/jquery.fancybox.css">
+<script type="text/javascript" src="/fancybox/jquery.fancybox.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox({
+    prevEffect: 'none',
+    nextEffect: 'none',
+    closeBtn: false,
+    helpers: {
+        title: {type: 'inside'},
+        buttons: {
+            position: 'bottom'
+        }
+    }
+  });
+})(jQuery);
+</script>
+
+</body>
+</html>
