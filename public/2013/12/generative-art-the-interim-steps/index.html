@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Generative Art: The Interim Steps | Bob Holt</title>
+  <meta name="author" content="Bob Holt">
+  
+  <meta name="description" content="Re: my previous post, there were some questions about the eigenvectors I had created, and what had happened with them when I tried to reconstruc the images.
+I&amp;#39;ll attempt to illustrate that here.">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Generative Art: The Interim Steps"/>
+  <meta property="og:site_name" content="Bob Holt"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Bob Holt" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  
+</head>
+
+
+<body>
+  <div id="container" class="container">
+    <header>
+      <div id="branding" class="branding">
+  <h1 id="site-title" class="title">
+    <a href="/">Bob Holt</a>
+  </h1>
+</div>
+<div class="subtitle">
+  <p>I make things with JavaScript</p>
+</div>
+    </header>
+    <section id="content" class="blog">
+      <article class="post">
+  <header>
+    
+  
+    <span class="page-title">
+      <h1 class="title">Generative Art: The Interim Steps</h1>
+    </span>
+  
+
+    <div class="byline">
+      <time datetime="2013-12-20T17:07:12.000Z"><a href="/2013/12/generative-art-the-interim-steps/">20 Dec 2013</a></time> &middot; in 
+  
+  <a href="/category/Art/">Art</a>
+
+
+    </div>
+    
+  </header>
+  <section class="entry">
+    
+      <p>Re: my <a href="generative-art-failed-experiment-1">previous post</a>, there were some questions about the eigenvectors I had created, and what had happened with them when I tried to reconstruc the images.</p>
+<p>I&#39;ll attempt to illustrate that here.</p>
+<a id="more"></a>
+
+<p>Note that I may not show ALL of the code. Some of the functions I called are part of the assignments for the Coursera Machine Learning course (and are actually this week‘s assigments), and we’ve been asked not to make those solutions public. If you really want to see the implementations, pinky-swear that you‘re not taking the course, and I’ll email them to you.</p>
+<p>So back to the beginning. Once again, here are our original images:</p>
+<p style="float:left;margin-right: 4em;"><img src="/images/girl_before_a_mirror.jpg" alt="Girl before a Mirror"></p>
+
+<p style="float:left;"><img src="/images/0_through_9.jpg" alt="0 through 9"></p>
+
+<p style="clear: both;">So let&#39;s look at the first part of the code. The very first part is just like in the previous post:</p>
+
+<figure class="highlight lang-matlab"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="code"><pre><span class="comment">%% Initialization</span>
+clear ; close all; clc
+
+<span class="comment">%  This program Runs Principal Component Analysis on 2 images.</span>
+<span class="comment">%  The eigenvectors of the images are swapped, and the images</span>
+<span class="comment">%  reconstituted from the swapped eigenvectors.</span>
+<span class="comment">%</span>
+<span class="comment">%  Images are necessarily the same pixel size.</span>
+
+<span class="comment">%  Load images</span>
+<span class="comment">%  Values need a double datatype for matrix manipulation</span>
+P = double(imread(<span class="string">'girl_before_a_mirror.jpg'</span>));
+J = double(imread(<span class="string">'0_through_9.jpg'</span>));
+</pre></td></tr></table></figure>
+
+<p>We clear our existing data and read in the images.</p>
+<p>But this time, we&#39;re going to reshape the N-dimensional vectors into 2-dimensional matrices so we can run our Principal Component Analysis:</p>
+<figure class="highlight lang-matlab"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="code"><pre><span class="comment">%  Get the size of the images so we can reshape the matrix</span>
+p_img_size = <span class="built_in">size</span>(P);
+j_img_size = <span class="built_in">size</span>(J);
+
+<span class="comment">%  Reshape the N-dimensional vectors representing the images' color</span>
+<span class="comment">%  values into an Nx3 matrix where N = number of pixels.</span>
+<span class="comment">%  Each row will contain the Red, Green and Blue pixel values</span>
+<span class="comment">%  This gives us our dataset matrix X that we will use K-Means on.</span>
+XP = <span class="built_in">reshape</span>(P, p_img_size(<span class="number">1</span>) * p_img_size(<span class="number">2</span>), <span class="number">3</span>);
+XJ = <span class="built_in">reshape</span>(J, j_img_size(<span class="number">1</span>) * j_img_size(<span class="number">2</span>), <span class="number">3</span>);
+
+<span class="comment">%  Run PCA - implementation obscured, but we run the built-in `svd`</span>
+<span class="comment">%  function on the covariance matrix of the matrix we pass in.</span>
+<span class="comment">%  This returns the eigenvector (U*) and eigenvalues (S*)</span>
+<span class="matrix">[UP, SP]</span> = pca(XP);
+<span class="matrix">[UJ, SJ]</span> = pca(XJ);
+</pre></td></tr></table></figure>
+
+<p>All of the code up until this point will be reused in our experiments. We read in the images, translate the vectors to a 2-D matrix, and run PCA. Now comes the fun part: we need to project the images into the eigen space.</p>
+<figure class="highlight lang-matlab"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="comment">%  Project images to the eigen space using the top k eigenvectors</span>
+<span class="comment">%  Again, the implementation is obscured, but we essentially</span>
+<span class="comment">%  matrix-multiply our features across the first K columns of the</span>
+<span class="comment">%  eigenvector matrix.</span>
+K = <span class="built_in">size</span>(UP, <span class="number">2</span>); <span class="comment">% 3</span>
+ZP = projectData(XP, UP, K);
+ZJ = projectData(XJ, UJ, K);
+</pre></td></tr></table></figure>
+
+<p>It doesn&#39;t make any noticeable difference which eigenvectors we use here, though they are different. They just may be so similar as to not matter:</p>
+<figure class="highlight lang-matlab"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre>UP =
+  -<span class="number">0.65103</span>   <span class="number">0.69800</span>   <span class="number">0.29826</span>
+  -<span class="number">0.57221</span>  -<span class="number">0.19312</span>  -<span class="number">0.79704</span>
+  -<span class="number">0.49873</span>  -<span class="number">0.68956</span>   <span class="number">0.52513</span>
+
+UJ =
+  -<span class="number">0.64694</span>   <span class="number">0.69146</span>   <span class="number">0.32149</span>
+  -<span class="number">0.54319</span>  -<span class="number">0.12199</span>  -<span class="number">0.83070</span>
+  -<span class="number">0.53518</span>  -<span class="number">0.71204</span>   <span class="number">0.45452</span>
+</pre></td></tr></table></figure>
+
+<p>Finally, we recover images by reversing our projection and writing the results to disk. It‘s here that I tried recovering each image using the other’s eigenvectors, to no noticeable change:</p>
+<figure class="highlight lang-matlab"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="code"><pre><span class="comment">%  Recover images from the eigen space using the top K eigen vectors and</span>
+<span class="comment">%  visualize only using those K dimensions</span>
+<span class="comment">%  Once again, the implementation is obscured, but we reverse projectData</span>
+<span class="comment">%  by multiplying the projected data by the same</span>
+
+XP_rec  = recoverData(ZP, UP, K);
+XP_recovered = <span class="built_in">reshape</span>(XP_rec, p_img_size(<span class="number">1</span>), p_img_size(<span class="number">2</span>), <span class="number">3</span>);
+
+XP_swap  = recoverData(ZP, UJ, K);
+XP_swapped = <span class="built_in">reshape</span>(XP_rec, p_img_size(<span class="number">1</span>), p_img_size(<span class="number">2</span>), <span class="number">3</span>);
+
+XJ_rec  = recoverData(ZJ, UJ, K);
+XJ_recovered = <span class="built_in">reshape</span>(XJ_rec, j_img_size(<span class="number">1</span>), j_img_size(<span class="number">2</span>), <span class="number">3</span>);
+
+XJ_swap  = recoverData(ZJ, UP, K);
+XJ_swapped = <span class="built_in">reshape</span>(XJ_rec, j_img_size(<span class="number">1</span>), j_img_size(<span class="number">2</span>), <span class="number">3</span>);
+
+imwrite(uint8(XP_recovered), <span class="string">'picasso_orig.jpg'</span>);
+imwrite(uint8(XP_swapped), <span class="string">'picasso_swap.jpg'</span>);
+imwrite(uint8(XJ_recovered), <span class="string">'johns_orig.jpg'</span>);
+imwrite(uint8(XJ_swapped), <span class="string">'johns_swap.jpg'</span>);
+</pre></td></tr></table></figure>
+
+<p>But as you can see, there&#39;s no discernable difference:</p>
+<p style="float:left;margin-right: 4em;"><img src="/images/picasso_orig.jpg" alt="Girl before a Mirror - same eigenvectors"></p>
+
+<p style="float:left;"><img src="/images/picasso_swap.jpg" alt="Girl before a Mirror - Jasper Johns eigenvectors"></p>
+
+<p style="clear:both;float:left;margin-right: 4em;"><img src="/images/johns_orig.jpg" alt="0 through 9 - same eigenvectors"></p>
+
+<p style="float:left;"><img src="/images/johns_swap.jpg" alt="0 through 9 - Picasso eigenvectors"></p>
+
+<p style="clear:both;">Now we can do some interesting things by reducing the number of components we use to project and rebuild the images (the K value above). There‘s still no difference when we go to reconstruct, so I’ll just show each image once from now on.</p>
+
+<p>What if we reduce <code>K</code> from 3 (the size of the eigenvector matrix) to 2? We get kind of a neat muted palette:</p>
+<p style="float:left;"><img src="/images/picasso_K2.jpg" alt="Girl before a Mirror - K = 2"></p>
+
+<p style="float:left;"><img src="/images/johns_K2.jpg" alt="0 through 9 - K = 2"></p>
+
+<p style="clear:both;">And when <code>K = 1</code>, we get a pretty good grayscale.</p>
+
+<p style="float:left;"><img src="/images/picasso_K1.jpg" alt="Girl before a Mirror - K = 1"></p>
+
+<p style="float:left;"><img src="/images/johns_K1.jpg" alt="0 through 9 - K = 1"></p>
+
+<p style="clear:both;">We can also do some interesting color shifting by transposing our eigenvector matrices at certain times.</p>
+
+<p>If we transpose when we project the data (when K = 3), we get a huge green shift:</p>
+<figure class="highlight lang-matlab"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>ZP = projectData(XP, <span class="transposed_variable">UP'</span>, K);
+ZJ = projectData(XJ, <span class="transposed_variable">UJ'</span>, K);
+</pre></td></tr></table></figure>
+
+<p style="float:left;"><img src="/images/picasso_greenshift.jpg" alt="Girl before a Mirror - Transpose on Projection"></p>
+
+<p style="float:left;"><img src="/images/johns_greenshift.jpg" alt="0 through 9 - Transpose on Projection"></p>
+
+<p style="clear:both;">Alternately, if we transpose the matrix when we go to recover, we get a big red shift:</p>
+
+<figure class="highlight lang-matlab"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>XP_rec  = recoverData(ZP, <span class="transposed_variable">UP'</span>, K);
+XJ_rec  = recoverData(ZJ, <span class="transposed_variable">UJ'</span>, K);
+</pre></td></tr></table></figure>
+
+<p style="float:left;"><img src="/images/picasso_redshift.jpg" alt="Girl before a Mirror - Transpose on Recovery"></p>
+
+<p style="float:left;"><img src="/images/johns_redshift.jpg" alt="0 through 9 - Transpose on Recovery"></p>
+
+<p style="clear:both;">Again, nothing we couldn&#39;t have done in a few seconds in Photoshop, but pretty fun to play with, at least.</p>
+    
+  </section>
+  <footer>
+
+    <div class="clearfix"></div>
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+    </section>
+    <aside id="sidebar" class="sidebar"><nav class="search">
+  <form action="http://google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:bobholt.me">
+  </form>
+</nav>
+<img class="headshot" src="http://www.gravatar.com/avatar/15b2f686144e036133d8c16e00f9624e?s=140" alt="Bob Holt">
+<section class="bio">
+
+  <p><b>Bob Holt</b> is <b>Director of Education</b> at <b><a href="http://www.bocoup.com/">Bocoup</a></b>.</p>
+
+  <p>He is project lead for <a href="https://github.com/archfirst/keel">Keel</a>, a stabilizing framework for Backbone applications, in addition to contributing to <a href="https://github.com/jquery/learn.jquery.com">jQuery’s Learning site</a>, <a href="https://github.com/roblarsen/CeeJS">CeeJS</a>, and the <a href="https://github.com/h5bp/ant-build-script">HTML5 Boilerplate Ant Build Script</a>.</p>
+
+  <p>Bob enjoys music, photography, and exploring the more remote areas of New England with his family.</p>
+
+  <ul>
+    <li><a href="https://github.com/bobholt">Github</a></li>
+    <li><a href="http://twitter.com/bobholt/">Twitter</a></li>
+    <li><a href="http://gplus.to/bobholt/">Google+</a></li>
+    <li><a href="http://www.linkedin.com/in/bobholt">LinkedIn</a></li>
+  </ul>
+
+</section>
+</aside>
+    <footer id="footer" class="clearfix footer"><div class="alignleft">
+  
+  Copyright &copy; 2013 Bob Holt
+  
+</div>
+<div class="clearfix"></div></footer>
+  </div>
+  <script src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/fancybox/jquery.fancybox.css">
+<script type="text/javascript" src="/fancybox/jquery.fancybox.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox({
+    prevEffect: 'none',
+    nextEffect: 'none',
+    closeBtn: false,
+    helpers: {
+        title: {type: 'inside'},
+        buttons: {
+            position: 'bottom'
+        }
+    }
+  });
+})(jQuery);
+</script>
+
+</body>
+</html>
