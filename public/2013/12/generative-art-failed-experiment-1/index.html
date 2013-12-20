@@ -70,16 +70,89 @@ This is the result.">
 <p>It didn&#39;t turn out that way.</p>
 <p>I picked two pieces somewhat off the top of my head. I was looking for pieces with a lot of color, different styles, but roughly the same aspect ratio (breaking them down into numerical matrices and swapping, requires the matrices to be of the exact same dimensions).</p>
 <p>I ended up choosing Picasso&#39;s <i>Girl before a Mirror</i> and Jasper Johns&#39; <i>0 through 9</i>.</p>
-<p style="float:left;"><img src="/images/girl_before_a_mirror.jpg" alt="Girl before a Mirror"></p>
+<p style="float:left;margin-right: 4em;"><img src="/images/girl_before_a_mirror.jpg" alt="Girl before a Mirror"></p>
 
-<p style="float:right;"><img src="/images/0_through_9.jpg" alt="0 through 9"></p>
+<p style="float:left;"><img src="/images/0_through_9.jpg" alt="0 through 9"></p>
 
 <p style="clear: both;">It turned out that there‘s no discernible difference when you recombine the image using the other image’s <a href="https://en.wikipedia.org/wiki/Eigenvectors" target="_blank">eigenvectors</a>. I don&#39;t know if this is due to the limited number of dimensions in my data (3 columns in the matrix, corresponding to Red, Green, and Blue values in each pixel), a misunderstanding on my part how the eigenvectors work, or a coding error.</p>
 
-<p>However, I did find that if you “normalize” the data (in the manner of <code>x = (x - mean(X)) / stdev(x - mean(X))</code> where <code>X</code> is the entire data set and <code>x</code> is a single point in that set), you get values for each point that turns the image into a really vivid primary-color-heavy version of itself.</p>
-<p>This in itself wasn&#39;t that interesting, but I was getting tired, so I wrote some code to just take the average of the two images for every pixel. This ends up creating a kind of double-exposure effect.</p>
-<p><img src="/images/eigenmean.jpg" alt="The Eigenmean"></p>
+<p>However, I did find that if you “normalize” the data (in the manner of <code>x = (x - mean(X)) / stdev(x - mean(X))</code> where <code>X</code> is the entire data set and <code>x</code> is a single point in that set), you get values for each point that turns the image into a really vivid primary-color-heavy version of itself. In this case, the PCA step is unnecessary - it&#39;s not doing anything for us.</p>
+<p>This in itself wasn&#39;t that interesting, but I was getting tired, so I wrote some code to just take the average of the two images for every pixel. This ends up creating a kind of double-exposure effect, which when combined with the vivid colors is at least a vaguely interesting result.</p>
+<p><img src="/images/vividmean.jpg" alt="The Eigenmean"></p>
 <p>It took me about 2 hours of playing around to get an effect I could have done in 2 minutes in Photoshop. But hey, I&#39;ve got some code I can reuse for other experiments.</p>
+<p>Oh. here&#39;s the code (MatLab is expensive, but Octave is free):</p>
+<figure class="highlight lang-matlab"><figcaption><span>vividmean.m</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre><span class="comment">%% Initialization</span>
+clear ; close all; clc
+
+<span class="comment">%  Load images.</span>
+<span class="comment">%  Images are necessarily the same pixel size.</span>
+P = double(imread(<span class="string">'girl_before_a_mirror.jpg'</span>));
+J = double(imread(<span class="string">'0_through_9.jpg'</span>));
+
+<span class="comment">%  Normalize X by subtracting the mean value from each feature</span>
+<span class="comment">%  and dividing by the standard deviation</span>
+P_norm = featureNormalize(P);
+J_norm = featureNormalize(J);
+
+<span class="comment">%  Write out normalized image data</span>
+imwrite((P_norm + J_norm) ./ <span class="number">2</span>, <span class="string">'vividmean.jpg'</span>);
+</pre></td></tr></table></figure>
+
+<figure class="highlight lang-matlab"><figcaption><span>featurenormalize.m</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="code"><pre><span class="comment">% Code by Andrew Ng - provided in Coursera Machine Learning Course</span>
+<span class="comment">% https://www.coursera.org/course/ml</span>
+<span class="function"><span class="keyword">function</span> <span class="params">[X_norm, mu, sigma]</span> = <span class="title">featureNormalize</span><span class="params">(X)</span></span>
+<span class="comment">%FEATURENORMALIZE Normalizes the features in X</span>
+<span class="comment">%   FEATURENORMALIZE(X) returns a normalized version of X where</span>
+<span class="comment">%   the mean value of each feature is 0 and the standard deviation</span>
+<span class="comment">%   is 1. This is often a good preprocessing step to do when</span>
+<span class="comment">%   working with learning algorithms.</span>
+
+mu = mean(X);
+X_norm = <span class="built_in">bsxfun</span>(@minus, X, mu);
+
+sigma = std(X_norm);
+X_norm = <span class="built_in">bsxfun</span>(@rdivide, X_norm, sigma);
+
+
+<span class="comment">% ============================================================</span>
+
+<span class="keyword">end</span>
+</pre></td></tr></table></figure>
+
 
     
   </section>
@@ -119,7 +192,7 @@ This is the result.">
 </aside>
     <footer id="footer" class="clearfix footer"><div class="alignleft">
   
-  &copy; 2013 Bob Holt
+  Copyright &copy; 2013 Bob Holt
   
 </div>
 <div class="clearfix"></div></footer>
