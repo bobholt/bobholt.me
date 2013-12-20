@@ -220,26 +220,26 @@ imwrite(uint8(XJ_swapped), <span class="string">'johns_swap.jpg'</span>);
 </pre></td></tr></table></figure>
 
 <p>But as you can see, there&#39;s no discernable difference:</p>
-<p style="float:left;margin-right: 4em;"><img src="/images/picasso_orig.jpg" alt="Girl before a Mirror - same eigenvectors"></p>
+<p style="float:left;margin-right: 5%;width: 45%;"><img src="/images/picasso_orig.jpg" alt="Girl before a Mirror - same eigenvectors"></p>
 
-<p style="float:left;"><img src="/images/picasso_swap.jpg" alt="Girl before a Mirror - Jasper Johns eigenvectors"></p>
+<p style="float:left;width: 45%;"><img src="/images/picasso_swap.jpg" alt="Girl before a Mirror - Jasper Johns eigenvectors"></p>
 
-<p style="clear:both;float:left;margin-right: 4em;"><img src="/images/johns_orig.jpg" alt="0 through 9 - same eigenvectors"></p>
+<p style="clear:both;float:left;margin-right: 5%;width: 45%;"><img src="/images/johns_orig.jpg" alt="0 through 9 - same eigenvectors"></p>
 
-<p style="float:left;"><img src="/images/johns_swap.jpg" alt="0 through 9 - Picasso eigenvectors"></p>
+<p style="float:left;width: 45%;"><img src="/images/johns_swap.jpg" alt="0 through 9 - Picasso eigenvectors"></p>
 
 <p style="clear:both;">Now we can do some interesting things by reducing the number of components we use to project and rebuild the images (the K value above). There‘s still no difference when we go to reconstruct, so I’ll just show each image once from now on.</p>
 
 <p>What if we reduce <code>K</code> from 3 (the size of the eigenvector matrix) to 2? We get kind of a neat muted palette:</p>
-<p style="float:left;"><img src="/images/picasso_K2.jpg" alt="Girl before a Mirror - K = 2"></p>
+<p style="float:left;margin-right: 5%;width: 45%;"><img src="/images/picasso_K2.jpg" alt="Girl before a Mirror - K = 2"></p>
 
-<p style="float:left;"><img src="/images/johns_K2.jpg" alt="0 through 9 - K = 2"></p>
+<p style="float:left;width: 45%;"><img src="/images/johns_K2.jpg" alt="0 through 9 - K = 2"></p>
 
 <p style="clear:both;">And when <code>K = 1</code>, we get a pretty good grayscale.</p>
 
-<p style="float:left;"><img src="/images/picasso_K1.jpg" alt="Girl before a Mirror - K = 1"></p>
+<p style="float:left;margin-right: 5%;width: 45%;"><img src="/images/picasso_K1.jpg" alt="Girl before a Mirror - K = 1"></p>
 
-<p style="float:left;"><img src="/images/johns_K1.jpg" alt="0 through 9 - K = 1"></p>
+<p style="float:left;width: 45%;"><img src="/images/johns_K1.jpg" alt="0 through 9 - K = 1"></p>
 
 <p style="clear:both;">We can also do some interesting color shifting by transposing our eigenvector matrices at certain times.</p>
 
@@ -250,9 +250,9 @@ imwrite(uint8(XJ_swapped), <span class="string">'johns_swap.jpg'</span>);
 ZJ = projectData(XJ, <span class="transposed_variable">UJ'</span>, K);
 </pre></td></tr></table></figure>
 
-<p style="float:left;"><img src="/images/picasso_greenshift.jpg" alt="Girl before a Mirror - Transpose on Projection"></p>
+<p style="float:left;margin-right: 5%;width: 45%;"><img src="/images/picasso_greenshift.jpg" alt="Girl before a Mirror - Transpose on Projection"></p>
 
-<p style="float:left;"><img src="/images/johns_greenshift.jpg" alt="0 through 9 - Transpose on Projection"></p>
+<p style="float:left;width: 45%;"><img src="/images/johns_greenshift.jpg" alt="0 through 9 - Transpose on Projection"></p>
 
 <p style="clear:both;">Alternately, if we transpose the matrix when we go to recover, we get a big red shift:</p>
 
@@ -262,9 +262,9 @@ ZJ = projectData(XJ, <span class="transposed_variable">UJ'</span>, K);
 XJ_rec  = recoverData(ZJ, <span class="transposed_variable">UJ'</span>, K);
 </pre></td></tr></table></figure>
 
-<p style="float:left;"><img src="/images/picasso_redshift.jpg" alt="Girl before a Mirror - Transpose on Recovery"></p>
+<p style="float:left;margin-right: 5%;width: 45%;"><img src="/images/picasso_redshift.jpg" alt="Girl before a Mirror - Transpose on Recovery"></p>
 
-<p style="float:left;"><img src="/images/johns_redshift.jpg" alt="0 through 9 - Transpose on Recovery"></p>
+<p style="float:left;width: 45%;"><img src="/images/johns_redshift.jpg" alt="0 through 9 - Transpose on Recovery"></p>
 
 <p style="clear:both;">Again, nothing we couldn&#39;t have done in a few seconds in Photoshop, but pretty fun to play with, at least.</p>
     
