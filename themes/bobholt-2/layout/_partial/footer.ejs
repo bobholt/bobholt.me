@@ -1,0 +1,8 @@
+<div class="alignleft">
+  <% if (config.author){ %>
+  Copyright &copy; <%= new Date().getFullYear() %> <%= config.author %>
+  <% } else { %>
+  Copyright &copy; <%= new Date().getFullYear() %> <%= config.title %>
+  <% } %>
+</div>
+<div class="clearfix"></div>

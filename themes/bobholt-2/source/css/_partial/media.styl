@@ -1,0 +1,144 @@
+/* MOBILE + TABLET STYLES
+----------------------------------------------- */
+@media only screen and (max-width: 920px)
+  .container
+    position static
+    margin 0 auto 2em
+    padding 20px 20px
+    max-width 100%
+    overflow hidden
+
+    .blog
+      float left
+      width 100%
+      min-height auto
+      margin-left 0
+
+/* MOBILE STYLES
+----------------------------------------------- */
+@media only screen and (max-width: 767px)
+  .branding
+    img
+      width 80px
+      float left
+      max-width 100%
+      margin 0 10px 20px 0
+
+    h1
+      float right
+      max-width 190px
+      margin 0
+      padding-top 25px
+      text-align right
+
+  nav
+    clear right
+    float right
+    margin 0 0 20px
+    padding 5px 0
+    border none
+    box-shadow none
+
+    ul
+      text-align right
+
+    li
+      display inline
+      margin 0
+
+      a
+        color rgba(0, 0, 0, 0.25)
+
+      &:after
+        content "/";
+        margin 0 4px 0 8px
+        color rgba(0, 0, 0, 0.15)
+        font-weight normal
+
+      &:last-child:after
+        content ""
+        margin 0
+        font-weight normal
+
+      &:first-child
+        padding-left 10px
+
+  /* HEADER CONDITIONALS */
+  article p,
+  article li
+    width 100%
+
+  article blockquote,
+  article ul,
+  article ol
+    width 90%
+
+  article ul.normal,
+  article ol.normal
+    margin-left 20px
+
+  article figure
+    width: 100%
+
+  article .alignleft,
+  article .alignright
+    display inline-block
+    float none
+    width auto
+    margin 0 0 1em 0
+
+  article .alignleft img,
+  article .alignright img
+    width 100%
+
+
+  article footer .alignright
+    display block
+    margin 0
+
+  .widget
+    display none
+
+/* TABLET (PORTRAIT)
+----------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 920px)
+  .branding
+    img
+      float left
+      max-width 100%
+      margin-bottom 30px
+
+    h1
+      float left
+      max-width 200px
+      margin 0 0 10px 20px
+      padding 3.6em 0 0 1.5em
+      text-align: right
+
+  nav
+    clear both
+    position absolute
+    top 3.4em
+    right 0
+    max-width 40%
+    padding 0
+    border none
+    text-align right
+    box-shadow none
+    li
+      display inline
+      margin-right 10px
+
+  .widget
+    display none
+
+  article
+    figure
+      width auto
+
+/*  RETINA DISPLAY OVERRIDES
+------------------------------------------------*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
+  article.link p > a:after
+    background-position -5px top
+    background-size 22px
