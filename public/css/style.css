@@ -88,6 +88,14 @@ nav,
 section {
   display: block;
 }
+b,
+strong {
+  font-weight: bold;
+}
+i,
+em {
+  font-style: italic;
+}
 blockquote,
 q {
   quotes: none;
@@ -122,6 +130,7 @@ body {
   color: #333;
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-size: 100%;
+  line-height: 1.5em;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
 }
@@ -162,7 +171,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: rgba(0,0,0,0.95);
+  color: #dd5424;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -173,18 +182,13 @@ a:hover,
 a:focus {
   color: rgba(0,0,0,0.5);
 }
-a:hover img,
-a:focus img {
-  opacity: 0.85;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-  filter: alpha(opacity=85);
-}
-a img {
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #555;
 }
 ::-webkit-scrollbar-track-piece {
   background-color: #f5f5f5;
@@ -290,7 +294,7 @@ input-moz-placeholder {
   position: relative;
   float: left;
   width: 74.4680851%;
-  margin-left: 2.1276596%;
+  margin-right: 2.1276596%;
   margin-bottom: 4.5em;
   min-height: 250px;
 }
@@ -303,14 +307,8 @@ input-moz-placeholder {
   }
   .container .blog {
     width: 74.3548387%;
-    margin-left: 2.5806452%;
+    margin-right: 2.5806452%;
   }
-}
-nav {
-  padding: 1em 0 1.1em;
-  border-bottom: 1px solid #ececec;
-  -webkit-box-shadow: 0 5px 8px -5px rgba(0,0,0,0.075);
-  box-shadow: 0 5px 8px -5px rgba(0,0,0,0.075);
 }
 nav ul {
   font-size: 0.75em;
@@ -434,12 +432,8 @@ nav li a {
 .post .entry {
   line-height: 1.6;
 }
-.post .entry a {
-  color: #149ee7;
-}
 .post .entry a:hover {
   text-decoration: underline;
-  color: rgba(20,158,231,0.5);
 }
 .post .entry p,
 .post .entry blockquote,
@@ -538,6 +532,7 @@ nav li a {
   display: block;
   color: #aaa;
   font-size: 0.9em;
+  margin-bottom: 1em;
 }
 .post .entry .video-container {
   position: relative;
