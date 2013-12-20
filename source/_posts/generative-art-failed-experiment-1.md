@@ -37,7 +37,7 @@ This in itself wasn't that interesting, but I was getting tired, so I wrote some
 
 It took me about 2 hours of playing around to get an effect I could have done in 2 minutes in Photoshop. But hey, I've got some code I can reuse for other experiments.
 
-Oh. here's the code (MatLab is expensive, but Octave is free):
+Oh. here's the code ([MatLab](http://www.mathworks.com/products/matlab/) is expensive, but [Octave](http://www.gnu.org/software/octave/) is free (though less friendly)):
 
 ``` matlab vividmean.m
 %% Initialization
