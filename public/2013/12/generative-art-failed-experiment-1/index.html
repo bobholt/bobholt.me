@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Generative Art: Failed Experiment 1 | Bob Holt</title>
+  <meta name="author" content="Bob Holt">
+  
+  <meta name="description" content="I‘m taking Andrew Ng’s Machine Learning course on Coursera. At the same time, I&amp;#39;ve been thinking a lot about digital art and creative coding. I decided to try to combine the two.
+This is the result.">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Generative Art: Failed Experiment 1"/>
+  <meta property="og:site_name" content="Bob Holt"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Bob Holt" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  
+</head>
+
+
+<body>
+  <div id="container" class="container">
+    <header>
+      <div id="branding" class="branding">
+  <h1 id="site-title" class="title">
+    <a href="/">Bob Holt</a>
+  </h1>
+</div>
+<div class="subtitle">
+  <p>I make things with JavaScript</p>
+</div>
+    </header>
+    <section id="content" class="blog">
+      <article class="post">
+  <header>
+    
+  
+    <span class="page-title">
+      <h1 class="title">Generative Art: Failed Experiment 1</h1>
+    </span>
+  
+
+    <div class="byline">
+      <time datetime="2013-12-19T16:12:37.000Z"><a href="/2013/12/generative-art-failed-experiment-1/">19 Dec 2013</a></time> &middot; in 
+  
+  <a href="/category/Art/">Art</a>
+
+
+    </div>
+    
+  </header>
+  <section class="entry">
+    
+      <p>I‘m taking Andrew Ng’s <a href="https://www.coursera.org/course/ml" target="_blank">Machine Learning</a> course on Coursera. At the same time, I&#39;ve been thinking a lot about digital art and creative coding. I decided to try to combine the two.</p>
+<p>This is the result.</p>
+<a id="more"></a>
+
+<p>I consider this a failure, not because it isn‘t interesting, but simply because it didn’t turn out in the way I had anticipated.</p>
+<p>The most recent assignment I completed in the machine learning course involved using Octave/MatLab to read an image, break it down to an N-Dimensional array of RGB values for each pixel, run a <a href="https://en.wikipedia.org/wiki/Principal_component_analysis" target="_blank">principal component analysis</a> to find the important bits, and recombine them.</p>
+<p>My idea was to take two pieces of art, break them down, and recombine them using the other work&#39;s key, hopefully resulting in something vaguely familiar, but completely different from either work.</p>
+<p>It didn&#39;t turn out that way.</p>
+<p>I picked two pieces somewhat off the top of my head. I was looking for pieces with a lot of color, different styles, but roughly the same aspect ratio (breaking them down into numerical matrices and swapping, requires the matrices to be of the exact same dimensions).</p>
+<p>I ended up choosing Picasso&#39;s <i>Girl before a Mirror</i> and Jasper Johns&#39; <i>0 through 9</i>.</p>
+<p style="float:left;"><img src="/images/girl_before_a_mirror.jpg" alt="Girl before a Mirror"></p>
+
+<p style="float:right;"><img src="/images/0_through_9.jpg" alt="0 through 9"></p>
+
+<p style="clear: both;">It turned out that there‘s no discernible difference when you recombine the image using the other image’s <a href="https://en.wikipedia.org/wiki/Eigenvectors" target="_blank">eigenvectors</a>. I don&#39;t know if this is due to the limited number of dimensions in my data (3 columns in the matrix, corresponding to Red, Green, and Blue values in each pixel), a misunderstanding on my part how the eigenvectors work, or a coding error.</p>
+
+<p>However, I did find that if you “normalize” the data (in the manner of <code>x = (x - mean(X)) / stdev(x - mean(X))</code> where <code>X</code> is the entire data set and <code>x</code> is a single point in that set), you get values for each point that turns the image into a really vivid primary-color-heavy version of itself.</p>
+<p>This in itself wasn&#39;t that interesting, but I was getting tired, so I wrote some code to just take the average of the two images for every pixel. This ends up creating a kind of double-exposure effect.</p>
+<p><img src="/images/eigenmean.jpg" alt="The Eigenmean"></p>
+<p>It took me about 2 hours of playing around to get an effect I could have done in 2 minutes in Photoshop. But hey, I&#39;ve got some code I can reuse for other experiments.</p>
+
+    
+  </section>
+  <footer>
+
+    <div class="clearfix"></div>
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+    </section>
+    <aside id="sidebar" class="sidebar"><nav class="search">
+  <form action="http://google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:bobholt.me">
+  </form>
+</nav>
+<img class="headshot" src="http://www.gravatar.com/avatar/15b2f686144e036133d8c16e00f9624e?s=140" alt="Bob Holt">
+<section class="bio">
+
+  <p><b>Bob Holt</b> is <b>Director of Education</b> at <b><a href="http://www.bocoup.com/">Bocoup</a></b>.</p>
+
+  <p>He is project lead for <a href="https://github.com/archfirst/keel">Keel</a>, a stabilizing framework for Backbone applications, in addition to contributing to <a href="https://github.com/jquery/learn.jquery.com">jQuery’s Learning site</a>, <a href="https://github.com/roblarsen/CeeJS">CeeJS</a>, and the <a href="https://github.com/h5bp/ant-build-script">HTML5 Boilerplate Ant Build Script</a>.</p>
+
+  <p>Bob enjoys music, photography, and exploring the more remote areas of New England with his family.</p>
+
+  <ul>
+    <li><a href="https://github.com/bobholt">Github</a></li>
+    <li><a href="http://twitter.com/bobholt/">Twitter</a></li>
+    <li><a href="http://gplus.to/bobholt/">Google+</a></li>
+    <li><a href="http://www.linkedin.com/in/bobholt">LinkedIn</a></li>
+  </ul>
+
+</section>
+</aside>
+    <footer id="footer" class="clearfix footer"><div class="alignleft">
+  
+  &copy; 2013 Bob Holt
+  
+</div>
+<div class="clearfix"></div></footer>
+  </div>
+  <script src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/fancybox/jquery.fancybox.css">
+<script type="text/javascript" src="/fancybox/jquery.fancybox.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox({
+    prevEffect: 'none',
+    nextEffect: 'none',
+    closeBtn: false,
+    helpers: {
+        title: {type: 'inside'},
+        buttons: {
+            position: 'bottom'
+        }
+    }
+  });
+})(jQuery);
+</script>
+
+</body>
+</html>

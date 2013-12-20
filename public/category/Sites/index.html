@@ -16,7 +16,7 @@
     <meta property="og:image" content="undefined"/>
   
 
-  <link href="/favicon.ico" rel="icon">
+  <link href="/favicon.png" rel="icon">
   <link rel="alternate" href="/atom.xml" title="Bob Holt" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -27,19 +27,15 @@
 <body>
   <div id="container" class="container">
     <header>
-  <section class="branding">
-    <h1 id="site-title" class="title">
-      <a href="/">Bob Holt</a>
-    </h1>
-  </section>
-
-  
-    <section class="subtitle">
-      <p>I make things with JavaScript</p>
-    </section>
-  
-</header>
-
+      <div id="branding" class="branding">
+  <h1 id="site-title" class="title">
+    <a href="/">Bob Holt</a>
+  </h1>
+</div>
+<div class="subtitle">
+  <p>I make things with JavaScript</p>
+</div>
+    </header>
     <section id="content" class="blog">
       
 <h2 class="archive-title">Categories: Sites</h2>
@@ -49,35 +45,50 @@
     <article class="post">
   <header>
     
-      
   
     <h1 class="title"><a href="/2012/09/how-it-was-built-mit-reap/">How We Built It: MIT REAP</a></h1>
   
 
-    
-    
-
     <div class="byline">
-      
-        <time datetime="2012-09-11T02:59:10.000Z">10 Sep 2012</time>
-      
-      
+      <time datetime="2012-09-11T02:59:10.000Z"><a href="/2012/09/how-it-was-built-mit-reap/">10 Sep 2012</a></time> &middot; in 
   
-  &middot; <i>in</i> <a href="/category/Sites/">Sites</a>
+  <a href="/category/Sites/">Sites</a>
 
 
     </div>
-    <div class="clearfix"></div>
+    
   </header>
-
   <section class="entry">
     
       <p><a title="Genuine Interactive" href="http://www.genuineinteractive.com/" target="_blank">Genuine Interactive</a> recently built a new site for the <a title="MIT REAP" href="http://reap.mit.edu/" target="_blank">MIT Regional Entrepreneurship Acceleration Program</a> (MIT REAP). We tried some new libraries and architecture for the first time, so let&#39;s take a look.</p>
 
-      <p><a href="/2012/09/how-it-was-built-mit-reap/#more" class="more-link">Read More</a></p>
     
   </section>
+  <footer>
 
+    <div class="clearfix"></div>
+    
+      <div class="alignleft widget">
+        
+        
+          <time datetime="2012-09-11T02:59:10.000Z"><a href="/2012/09/how-it-was-built-mit-reap/">10 Sep 2012</a></time>
+        
+        
+  
+  <a href="/category/Sites/">Sites</a>
+
+
+        
+
+      </div>
+      
+        <div class="alignright">
+          <a href="/2012/09/how-it-was-built-mit-reap/#more" class="more-link">Read More</a>
+        </div>
+      
+    
+    <div class="clearfix"></div>
+  </footer>
 </article>
 
 
@@ -86,19 +97,18 @@
   
 
     </section>
-    <aside id="sidebar" class="sidebar"><form class="search" action="http://google.com/search" method="get" accept-charset="utf-8">
-  <input type="search" name="q" results="0" placeholder="Search">
-  <input type="hidden" name="q" value="site:bobholt.me">
-</form>
-
-
+    <aside id="sidebar" class="sidebar"><nav class="search">
+  <form action="http://google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:bobholt.me">
+  </form>
+</nav>
 <img class="headshot" src="http://www.gravatar.com/avatar/15b2f686144e036133d8c16e00f9624e?s=140" alt="Bob Holt">
-
 <section class="bio">
 
-  <p><b>Bob Holt</b> is <b>Director of Education</b> at <b><a href="http://www.bocoup.com/">Bocoup</a></b>.
+  <p><b>Bob Holt</b> is <b>Director of Education</b> at <b><a href="http://www.bocoup.com/">Bocoup</a></b>.</p>
 
-  <p>He is project lead for <a href="https://github.com/archfirst/keel">Keel</a>, a stabilizing framework for Backbone applications, in addition to contributing to <a href="https://github.com/jquery/learn.jquery.com">jQuery’s Learning site</a>, <a href="https://github.com/roblarsen/CeeJS">CeeJS</a>, and the <a href="https://github.com/h5bp/ant-build-script">HTML5 Boilerplate Ant Build Script</a>.
+  <p>He is project lead for <a href="https://github.com/archfirst/keel">Keel</a>, a stabilizing framework for Backbone applications, in addition to contributing to <a href="https://github.com/jquery/learn.jquery.com">jQuery’s Learning site</a>, <a href="https://github.com/roblarsen/CeeJS">CeeJS</a>, and the <a href="https://github.com/h5bp/ant-build-script">HTML5 Boilerplate Ant Build Script</a>.</p>
 
   <p>Bob enjoys music, photography, and exploring the more remote areas of New England with his family.</p>
 
@@ -109,10 +119,11 @@
     <li><a href="http://www.linkedin.com/in/bobholt">LinkedIn</a></li>
   </ul>
 
-</section></aside>
+</section>
+</aside>
     <footer id="footer" class="clearfix footer"><div class="alignleft">
   
-  Copyright &copy; 2013 Bob Holt
+  &copy; 2013 Bob Holt
   
 </div>
 <div class="clearfix"></div></footer>
