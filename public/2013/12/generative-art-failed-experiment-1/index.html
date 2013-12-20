@@ -78,7 +78,7 @@ This is the result.">
 
 <p>However, I did find that if you “normalize” the data (in the manner of <code>x = (x - mean(X)) / stdev(x - mean(X))</code> where <code>X</code> is the entire data set and <code>x</code> is a single point in that set), you get values for each point that turns the image into a really vivid primary-color-heavy version of itself. In this case, the PCA step is unnecessary - it&#39;s not doing anything for us.</p>
 <p>This in itself wasn&#39;t that interesting, but I was getting tired, so I wrote some code to just take the average of the two images for every pixel. This ends up creating a kind of double-exposure effect, which when combined with the vivid colors is at least a vaguely interesting result.</p>
-<p><img src="/images/vividmean.jpg" alt="The Eigenmean"></p>
+<p><img src="/images/vividmean.jpg" alt="The Vividmean"></p>
 <p>It took me about 2 hours of playing around to get an effect I could have done in 2 minutes in Photoshop. But hey, I&#39;ve got some code I can reuse for other experiments.</p>
 <p>Oh. here&#39;s the code (<a href="http://www.mathworks.com/products/matlab/" target="_blank">MatLab</a> is expensive, but <a href="http://www.gnu.org/software/octave/" target="_blank">Octave</a> is free (though less friendly)):</p>
 <figure class="highlight lang-matlab"><figcaption><span>vividmean.m</span></figcaption><table><tr><td class="gutter"><pre>1

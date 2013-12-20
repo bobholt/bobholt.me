@@ -33,7 +33,7 @@ However, I did find that if you "normalize" the data (in the manner of `x = (x -
 
 This in itself wasn't that interesting, but I was getting tired, so I wrote some code to just take the average of the two images for every pixel. This ends up creating a kind of double-exposure effect, which when combined with the vivid colors is at least a vaguely interesting result.
 
-![The Eigenmean](/images/vividmean.jpg)
+![The Vividmean](/images/vividmean.jpg)
 
 It took me about 2 hours of playing around to get an effect I could have done in 2 minutes in Photoshop. But hey, I've got some code I can reuse for other experiments.
 
