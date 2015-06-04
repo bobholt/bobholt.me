@@ -3,8 +3,8 @@ id: 73
 date: 2012-08-30 00:04:29
 tags:
 categories:
-- Book Reports
-- Testing
+  - Book Reports
+  - Testing
 ---
 
 <a href="http://www.amazon.com/gp/product/0321503627/ref=as_li_tf_il?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321503627&amp;linkCode=as2&amp;tag=bobseclectibo-20" style="display:inline!important"><img class="alignright" style="border: 0px;" title="Buy Growing Object-Oriented Software Guided by Tests on Amazon" src="http://ws.assoc-amazon.com/widgets/q?_encoding=UTF8&amp;ASIN=0321503627&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=bobseclectibo-20" alt="Buy Growing Object-Oriented Software Guided by Tests on Amazon" width="120" height="160" border="0" /></a><img style="border: none !important; margin: 0px !important;" src="http://www.assoc-amazon.com/e/ir?t=bobseclectibo-20&amp;l=as2&amp;o=1&amp;a=0321503627" alt="" width="1" height="1" border="0" />I just finished reading&nbsp;<a href="http://www.amazon.com/gp/product/0321503627/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321503627&amp;linkCode=as2&amp;tag=bobseclectibo-20"><em>Growing Object-Oriented Software, Guided by Tests</em></a><img style="border: none !important; margin: 0px !important;" src="http://www.assoc-amazon.com/e/ir?t=bobseclectibo-20&amp;l=as2&amp;o=1&amp;a=0321503627" alt="" width="1" height="1" border="0" />&nbsp;by <a title="Steve Freeman" href="http://www.higherorderlogic.com/">Steve Freeman</a> and <a title="Nat Pryce" href="http://www.natpryce.com/">Nat Pryce</a>. <a title="Brandon Keepers" href="http://opensoul.org/">Brandon Keepers</a>&nbsp;recommended this book in his talk <a title="The Plight of Pinocchio: JavaScript's quest to become a real language" href="http://opensoul.org/blog/archives/2012/05/16/the-plight-of-pinocchio/">"The Plight of Pinocchio: JavaScript's quest to become a real language"</a> at <a title="BackboneConf" href="http://backboneconf.com/">BackboneConf</a> in June. It's a pretty good start for thinking about Test Driven Development and application design.

@@ -3,7 +3,7 @@ id: 24
 date: 2012-08-26 23:09:26
 tags:
 categories:
-- Bob
+  - Bob
 ---
 
 Who is this Bob Holt character?

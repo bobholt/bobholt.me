@@ -3,7 +3,7 @@ id: 183
 date: 2013-03-08 15:49:56
 tags:
 categories:
-- HTML5
+  - HTML5
 ---
 
 Slashdot picked up the <a href="http://gmblog.sapient.com/?p=1243" title="Responsive Web Design">second installment</a> of my series of HTML5 blog posts I have written for Sapient Global Markets:

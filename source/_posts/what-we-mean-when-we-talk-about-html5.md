@@ -3,7 +3,7 @@ id: 162
 date: 2013-01-28 15:21:30
 tags:
 categories:
-- HTML5
+  - HTML5
 ---
 
 I recently wrote a <a href="http://gmblog.sapient.com/?p=1106" title="What We Mean When We Talk About HTML5">blog post</a> for Sapient Global Markets on HTML5 for the general business audience. It was picked up by Slashdot today:

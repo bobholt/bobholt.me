@@ -1,8 +1,8 @@
-title: Generative Art: Failed Experiment 1
+title: Generative Art - Failed Experiment 1
 date: 2013-12-19 11:12:37
 tags:
 categories:
-- Art
+  - Art
 ---
 
 I'm taking Andrew Ng's [Machine Learning](https://www.coursera.org/course/ml) course on Coursera. At the same time, I've been thinking a lot about digital art and creative coding. I decided to try to combine the two.

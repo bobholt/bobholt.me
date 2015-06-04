@@ -3,7 +3,7 @@ id: 7
 date: 2012-08-25 21:21:38
 tags:
 categories:
-- Meta
+  - Meta
 ---
 
 Here it is: a new site and new blog. The outdated portfolio is gone, and I’m going to give this JS-related blog thing a go.

@@ -2,11 +2,11 @@ menu:
   Home: /
   Archives: /archives
 
-widgets: 
-- search
-- category
-- tag
-- other
+widgets:
+  - search
+  - category
+  - tag
+  - other
 
 twitter:
   username:

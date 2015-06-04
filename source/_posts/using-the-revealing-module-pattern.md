@@ -3,7 +3,7 @@ id: 46
 date: 2012-08-27 21:33:06
 tags:
 categories:
-- Application Architecture
+  - Application Architecture
 ---
 
 The first well-architected JavaScript application I worked on used what is commonly called the Revealing Module Pattern. I've used this pattern on projects ranging from 100 to 100,000 lines of code. I think I've found its breaking points, but also its sweet spots.

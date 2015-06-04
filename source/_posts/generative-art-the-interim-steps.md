@@ -1,8 +1,8 @@
-title: Generative Art: The Interim Steps
+title: Generative Art - The Interim Steps
 date: 2013-12-20 12:07:12
 tags:
 categories:
-- Art
+  - Art
 ---
 
 Re: my [previous post](generative-art-failed-experiment-1), there were some questions about the eigenvectors I had created, and what had happened with them when I tried to reconstruc the images.

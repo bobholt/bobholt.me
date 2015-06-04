@@ -3,7 +3,7 @@ id: 90
 date: 2012-09-10 22:59:10
 tags:
 categories:
-- Sites
+  - Sites
 ---
 
 <a title="Genuine Interactive" href="http://www.genuineinteractive.com/">Genuine Interactive</a> recently built a new site for the <a title="MIT REAP" href="http://reap.mit.edu/">MIT Regional Entrepreneurship Acceleration Program</a> (MIT REAP). We tried some new libraries and architecture for the first time, so let's take a look.

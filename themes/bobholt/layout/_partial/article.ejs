@@ -4,7 +4,7 @@
     <div class="byline">
       <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time> &middot; in <%- partial('post/category') %>
     </div>
-    <% if (item.photos){ %>
+    <% if (item.photos && item.photos.length){ %>
       <%- partial('post/gallery') %>
     <% } %>
   </header>
