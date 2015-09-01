@@ -618,7 +618,7 @@ nav li a {
   margin: 0 auto;
   padding: 26px 0 30px 0;
   border-top: 5px solid #444;
-  font-size: 0.8461538461538461em;
+  font-size: 0.846153846153846em;
   color: #aaa;
 }
 article .gist table {
@@ -958,8 +958,7 @@ pre .xml .cdata {
 }
 .gist .highlight .line[style*="background-color: rgb(255,
 .gist .highlight 255,
-.gist .highlight 204)"],
-.gist .highlight .diff-table tr:hover .line {
+.gist .highlight 204)"] {
   background: #3b392f !important;
 }
 @media only screen and (max-width: 920px) {
