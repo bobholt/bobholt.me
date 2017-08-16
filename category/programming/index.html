@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://bobholt.me/xmlrpc.php">
+
+<title>Programming &#8211; Bob Holt</title>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s.gravatar.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Bob Holt &raquo; Feed" href="http://bobholt.me/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Bob Holt &raquo; Comments Feed" href="http://bobholt.me/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Bob Holt &raquo; Programming Category Feed" href="http://bobholt.me/category/programming/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.bobholt.me\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.5"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='crayon-css'  href='http://bobholt.me/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-theme-classic-css'  href='http://bobholt.me/wp-content/plugins/crayon-syntax-highlighter/themes/classic/classic.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-font-courier-new-css'  href='http://bobholt.me/wp-content/plugins/crayon-syntax-highlighter/fonts/courier-new.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='chld_thm_cfg_parent-css'  href='http://bobholt.me/wp-content/themes/orvis/style.css?ver=4.7.5' type='text/css' media='all' />
+<link rel='stylesheet' id='orvis-fonts-css'  href='https://fonts.googleapis.com/css?family=Karla%3A400%2C700%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='orvis-style-css'  href='http://bobholt.me/wp-content/themes/orvis-bobholt/style.css?ver=1.1.0.1473909930' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://bobholt.me/wp-content/plugins/jetpack/css/jetpack.css?ver=4.4.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://bobholt.me/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://bobholt.me/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"http:\/\/www.bobholt.me\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=_2.7.2_beta'></script>
+<link rel='https://api.w.org/' href='http://bobholt.me/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bobholt.me/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://bobholt.me/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 4.7.5" />
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'>
+<link rel='dns-prefetch' href='//i0.wp.com'>
+<link rel='dns-prefetch' href='//i1.wp.com'>
+<link rel='dns-prefetch' href='//i2.wp.com'>
+<style type='text/css'>img#wpstats{display:none}</style><style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #111122; }
+</style>
+</head>
+
+<body class="archive category category-programming category-2 custom-background">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-wrapper">
+			<div class="site-branding">
+
+									<p class="site-title"><a href="http://bobholt.me/" rel="home">Bob Holt</a></p>
+								<p class="site-description">I Make Things</p>
+			</div><!-- .site-branding -->
+
+							<button id="menu-toggle" class="menu-toggle">Menu</button>
+				<div id="site-menu" class="site-menu">
+					<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+						<div class="menu-main-container"><ul id="menu-main" class="primary-menu"><li id="menu-item-704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-704"><a href="http://bobholt.me/">Home</a></li>
+<li id="menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a href="http://bobholt.me/about/">About</a></li>
+<li id="menu-item-100" class="menu-item menu-item-type-taxonomy menu-item-object-jetpack-portfolio-type menu-item-100"><a href="http://bobholt.me/project-type/knitting/">Knitting</a></li>
+<li id="menu-item-101" class="menu-item menu-item-type-taxonomy menu-item-object-jetpack-portfolio-type menu-item-101"><a href="http://bobholt.me/project-type/pottery/">Pottery</a></li>
+<li id="menu-item-761" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-761"><a href="http://bobholt.me/category/programming/">Programming</a></li>
+<li id="menu-item-706" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-706"><a href="http://bobholt.me/blog/">Blog</a></li>
+</ul></div>					</nav><!-- .main-navigation -->
+				</div><!-- .site-menu -->
+					</div><!-- .site-header-wrapper -->
+
+			</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+
+			<header class="page-header">
+				<h1 class="page-title">Programming</h1>			</header><!-- .page-header -->
+
+
+
+
+<article id="post-50" class="post-50 post type-post status-publish format-standard hentry category-programming">
+	<header class="entry-header">
+
+		<h2 class="entry-title"><a href="http://bobholt.me/2013/12/generative-art-the-interim-steps/" rel="bookmark">Generative Art &#8211; The Interim Steps</a></h2>
+		<div class="entry-meta"><span class="cat-links"><a href="http://bobholt.me/category/programming/" rel="category tag">Programming</a></span></div>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Re: my <a href="generative-art-failed-experiment-1">previous post</a>, there were some questions about the eigenvectors I had created, and what had happened with them when I tried to reconstruct the images.</p>
+<p>I’ll attempt to illustrate that here.</p>
+<p> <a href="http://bobholt.me/2013/12/generative-art-the-interim-steps/#more-50" class="more-link">Continue reading <span class="screen-reader-text">&#8220;Generative Art &#8211; The Interim Steps&#8221;</span> <span class="meta-nav">&rarr;</span></a></p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="posted-on"><a href="http://bobholt.me/2013/12/generative-art-the-interim-steps/" rel="bookmark"><time class="entry-date published" datetime="2013-12-20T00:00:00+00:00">20 December 2013</time><time class="updated" datetime="2016-09-17T15:29:20+00:00">17 September 2016</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="http://bobholt.me/author/bob/">bob</a></span></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+<article id="post-47" class="post-47 post type-post status-publish format-standard hentry category-programming">
+	<header class="entry-header">
+
+		<h2 class="entry-title"><a href="http://bobholt.me/2013/12/generative-art-failed-experiment-1/" rel="bookmark">Generative Art &#8211; Failed Experiment 1</a></h2>
+		<div class="entry-meta"><span class="cat-links"><a href="http://bobholt.me/category/programming/" rel="category tag">Programming</a></span></div>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<section class="entry">I’m taking Andrew Ng’s <a href="https://www.coursera.org/course/ml">Machine Learning</a> course on Coursera. At the same time, I’ve been thinking a lot about digital art and creative coding. I decided to try to combine the two.</p>
+<p>This is the result.</p>
+<p> <a href="http://bobholt.me/2013/12/generative-art-failed-experiment-1/#more-47" class="more-link">Continue reading <span class="screen-reader-text">&#8220;Generative Art &#8211; Failed Experiment 1&#8221;</span> <span class="meta-nav">&rarr;</span></a></section>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="posted-on"><a href="http://bobholt.me/2013/12/generative-art-failed-experiment-1/" rel="bookmark"><time class="entry-date published" datetime="2013-12-19T00:00:00+00:00">19 December 2013</time><time class="updated" datetime="2016-09-17T15:29:20+00:00">17 September 2016</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="http://bobholt.me/author/bob/">bob</a></span></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+<article id="post-44" class="post-44 post type-post status-publish format-standard hentry category-programming">
+	<header class="entry-header">
+
+		<h2 class="entry-title"><a href="http://bobholt.me/2013/05/staffing-for-html5/" rel="bookmark">Staffing for HTML5</a></h2>
+		<div class="entry-meta"><span class="cat-links"><a href="http://bobholt.me/category/programming/" rel="category tag">Programming</a></span></div>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>And now the <a href="https://www.sapientglobalmarkets.com/blog/staffing-for-html5">third installment</a> in the series I have been writing for Sapient Global Markets and posted on Slashdot.</p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="posted-on"><a href="http://bobholt.me/2013/05/staffing-for-html5/" rel="bookmark"><time class="entry-date published" datetime="2013-05-15T00:00:00+00:00">15 May 2013</time><time class="updated" datetime="2016-09-17T15:29:20+00:00">17 September 2016</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="http://bobholt.me/author/bob/">bob</a></span></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+<article id="post-41" class="post-41 post type-post status-publish format-standard hentry category-programming">
+	<header class="entry-header">
+
+		<h2 class="entry-title"><a href="http://bobholt.me/2013/03/responsive-web-design-opportunities-and-challenges/" rel="bookmark">Responsive Web Design: Opportunities and Challenges</a></h2>
+		<div class="entry-meta"><span class="cat-links"><a href="http://bobholt.me/category/programming/" rel="category tag">Programming</a></span></div>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Slashdot picked up the <a href="https://www.sapientglobalmarkets.com/blog/responsive-web-design" title="Responsive Web Design">second installment</a> of my series of HTML5 blog posts I have written for Sapient Global Markets.</p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="posted-on"><a href="http://bobholt.me/2013/03/responsive-web-design-opportunities-and-challenges/" rel="bookmark"><time class="entry-date published" datetime="2013-03-08T00:00:00+00:00">8 March 2013</time><time class="updated" datetime="2016-09-17T15:29:20+00:00">17 September 2016</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="http://bobholt.me/author/bob/">bob</a></span></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+<article id="post-38" class="post-38 post type-post status-publish format-standard hentry category-programming">
+	<header class="entry-header">
+
+		<h2 class="entry-title"><a href="http://bobholt.me/2013/01/what-we-mean-when-we-talk-about-html5/" rel="bookmark">What We Mean When We Talk About HTML5</a></h2>
+		<div class="entry-meta"><span class="cat-links"><a href="http://bobholt.me/category/programming/" rel="category tag">Programming</a></span></div>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>I recently wrote a <a href="https://www.sapientglobalmarkets.com/blog/what-we-mean-when-we-talk-about-html5" title="What We Mean When We Talk About HTML5">blog post</a> for Sapient Global Markets on HTML5 for the general business audience. It was picked up by Slashdot today.</p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="posted-on"><a href="http://bobholt.me/2013/01/what-we-mean-when-we-talk-about-html5/" rel="bookmark"><time class="entry-date published" datetime="2013-01-28T00:00:00+00:00">28 January 2013</time><time class="updated" datetime="2016-09-17T15:29:20+00:00">17 September 2016</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="http://bobholt.me/author/bob/">bob</a></span></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+<article id="post-35" class="post-35 post type-post status-publish format-standard has-post-thumbnail hentry category-programming">
+	<header class="entry-header">
+
+	<a class="post-thumbnail" href="http://bobholt.me/2012/12/a-departure/" aria-hidden="true">
+		<img width="636" height="310" src="https://i2.wp.com/www.bobholt.me/wp-content/uploads/2016/09/genuine-636x310.jpg?resize=636%2C310" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="A Departure" srcset="https://i2.wp.com/www.bobholt.me/wp-content/uploads/2016/09/genuine-636x310.jpg?resize=636%2C310 636w, https://i2.wp.com/www.bobholt.me/wp-content/uploads/2016/09/genuine-636x310.jpg?resize=300%2C146 300w" sizes="(max-width: 636px) 100vw, 636px" />	</a>
+
+
+		<h2 class="entry-title"><a href="http://bobholt.me/2012/12/a-departure/" rel="bookmark">A Departure</a></h2>
+		<div class="entry-meta"><span class="cat-links"><a href="http://bobholt.me/category/programming/" rel="category tag">Programming</a></span></div>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Today is my last day at Genuine Interactive.</p>
+<p>Don’t bury the lede, right?</p>
+<p> <a href="http://bobholt.me/2012/12/a-departure/#more-35" class="more-link">Continue reading <span class="screen-reader-text">&#8220;A Departure&#8221;</span> <span class="meta-nav">&rarr;</span></a></p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="posted-on"><a href="http://bobholt.me/2012/12/a-departure/" rel="bookmark"><time class="entry-date published" datetime="2012-12-07T00:00:00+00:00">7 December 2012</time><time class="updated" datetime="2016-09-17T15:29:20+00:00">17 September 2016</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="http://bobholt.me/author/bob/">bob</a></span></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+<article id="post-32" class="post-32 post type-post status-publish format-standard hentry category-programming">
+	<header class="entry-header">
+
+		<h2 class="entry-title"><a href="http://bobholt.me/2012/09/how-we-built-it-mit-reap/" rel="bookmark">How We Built It: MIT REAP</a></h2>
+		<div class="entry-meta"><span class="cat-links"><a href="http://bobholt.me/category/programming/" rel="category tag">Programming</a></span></div>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><a title="Genuine Interactive" href="http://www.genuineinteractive.com/">Genuine Interactive</a> recently built a new site for the <a title="MIT REAP" href="http://reap.mit.edu/">MIT Regional Entrepreneurship Acceleration Program</a> (MIT REAP). We tried some new libraries and architecture for the first time, so let’s take a look.</p>
+<p> <a href="http://bobholt.me/2012/09/how-we-built-it-mit-reap/#more-32" class="more-link">Continue reading <span class="screen-reader-text">&#8220;How We Built It: MIT REAP&#8221;</span> <span class="meta-nav">&rarr;</span></a></p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="posted-on"><a href="http://bobholt.me/2012/09/how-we-built-it-mit-reap/" rel="bookmark"><time class="entry-date published" datetime="2012-09-11T00:00:00+00:00">11 September 2012</time><time class="updated" datetime="2016-09-17T15:29:20+00:00">17 September 2016</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="http://bobholt.me/author/bob/">bob</a></span></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+<article id="post-17" class="post-17 post type-post status-publish format-standard hentry category-programming">
+	<header class="entry-header">
+
+		<h2 class="entry-title"><a href="http://bobholt.me/2012/08/book-report-growing-object-oriented-software-guided-by-tests/" rel="bookmark">Book Report: Growing Object-Oriented Software Guided by Tests</a></h2>
+		<div class="entry-meta"><span class="cat-links"><a href="http://bobholt.me/category/programming/" rel="category tag">Programming</a></span></div>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><a style="display: inline!important;" href="http://www.amazon.com/gp/product/0321503627/ref=as_li_tf_il?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321503627&amp;linkCode=as2&amp;tag=bobseclectibo-20"><img class="alignright" style="border: 0px;" title="Buy Growing Object-Oriented Software Guided by Tests on Amazon" src="http://ws.assoc-amazon.com/widgets/q?_encoding=UTF8&amp;ASIN=0321503627&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=bobseclectibo-20" alt="Buy Growing Object-Oriented Software Guided by Tests on Amazon" width="120" height="160" border="0" /></a>I just finished reading <a href="http://www.amazon.com/gp/product/0321503627/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321503627&amp;linkCode=as2&amp;tag=bobseclectibo-20"><em>Growing Object-Oriented Software, Guided by Tests</em></a> by Steve Freeman and <a title="Nat Pryce" href="http://www.natpryce.com/">Nat Pryce</a>. <a title="Brandon Keepers" href="http://opensoul.org/">Brandon Keepers</a> recommended this book in his talk <a title="The Plight of Pinocchio: JavaScript's quest to become a real language" href="http://opensoul.org/blog/archives/2012/05/16/the-plight-of-pinocchio/">“The Plight of Pinocchio: JavaScript’s quest to become a real language”</a> at <a title="BackboneConf" href="http://backboneconf.com/">BackboneConf</a> in June. It’s a pretty good start for thinking about Test Driven Development and application design.</p>
+<p> <a href="http://bobholt.me/2012/08/book-report-growing-object-oriented-software-guided-by-tests/#more-17" class="more-link">Continue reading <span class="screen-reader-text">&#8220;Book Report: Growing Object-Oriented Software Guided by Tests&#8221;</span> <span class="meta-nav">&rarr;</span></a></p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="posted-on"><a href="http://bobholt.me/2012/08/book-report-growing-object-oriented-software-guided-by-tests/" rel="bookmark"><time class="entry-date published" datetime="2012-08-30T00:00:00+00:00">30 August 2012</time><time class="updated" datetime="2017-08-16T16:47:13+00:00">16 August 2017</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="http://bobholt.me/author/bob/">bob</a></span></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+<article id="post-29" class="post-29 post type-post status-publish format-standard hentry category-programming">
+	<header class="entry-header">
+
+		<h2 class="entry-title"><a href="http://bobholt.me/2012/08/using-the-revealing-module-pattern/" rel="bookmark">Using the Revealing Module Pattern</a></h2>
+		<div class="entry-meta"><span class="cat-links"><a href="http://bobholt.me/category/programming/" rel="category tag">Programming</a></span></div>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>The first well-architected JavaScript application I worked on used what is commonly called the Revealing Module Pattern. I’ve used this pattern on projects ranging from 100 to 100,000 lines of code. I think I’ve found its breaking points, but also its sweet spots.</p>
+<p> <a href="http://bobholt.me/2012/08/using-the-revealing-module-pattern/#more-29" class="more-link">Continue reading <span class="screen-reader-text">&#8220;Using the Revealing Module Pattern&#8221;</span> <span class="meta-nav">&rarr;</span></a></p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="posted-on"><a href="http://bobholt.me/2012/08/using-the-revealing-module-pattern/" rel="bookmark"><time class="entry-date published" datetime="2012-08-28T00:00:00+00:00">28 August 2012</time><time class="updated" datetime="2016-09-17T15:29:21+00:00">17 September 2016</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="http://bobholt.me/author/bob/">bob</a></span></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+<article id="post-23" class="post-23 post type-post status-publish format-standard hentry category-programming">
+	<header class="entry-header">
+
+		<h2 class="entry-title"><a href="http://bobholt.me/2012/08/how-i-got-here/" rel="bookmark">How I Got Here</a></h2>
+		<div class="entry-meta"><span class="cat-links"><a href="http://bobholt.me/category/programming/" rel="category tag">Programming</a></span></div>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Who is this Bob Holt character?</p>
+<p> <a href="http://bobholt.me/2012/08/how-i-got-here/#more-23" class="more-link">Continue reading <span class="screen-reader-text">&#8220;How I Got Here&#8221;</span> <span class="meta-nav">&rarr;</span></a></p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="posted-on"><a href="http://bobholt.me/2012/08/how-i-got-here/" rel="bookmark"><time class="entry-date published" datetime="2012-08-27T00:00:00+00:00">27 August 2012</time><time class="updated" datetime="2016-09-17T15:29:21+00:00">17 September 2016</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="http://bobholt.me/author/bob/">bob</a></span></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+
+	<nav class="navigation posts-navigation" role="navigation">
+		<h2 class="screen-reader-text">Posts navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="http://bobholt.me/category/programming/page/2/" >Older posts</a></div></div>
+	</nav>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+	<aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="http://bobholt.me/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></aside><aside id="wpcom_social_media_icons_widget-2" class="widget widget_wpcom_social_media_icons_widget"><ul><li><a href="https://www.facebook.com/bob.the.holt/" class="genericon genericon-facebook" target="_blank"><span class="screen-reader-text">View bob.the.holt&#8217;s profile on Facebook</span></a></li><li><a href="https://instagram.com/_bobholt_/" class="genericon genericon-instagram" target="_blank"><span class="screen-reader-text">View _bobholt_&#8217;s profile on Instagram</span></a></li><li><a href="https://www.pinterest.com/bobholt/" class="genericon genericon-pinterest" target="_blank"><span class="screen-reader-text">View bobholt&#8217;s profile on Pinterest</span></a></li><li><a href="https://github.com/bobholt/" class="genericon genericon-github" target="_blank"><span class="screen-reader-text">View bobholt&#8217;s profile on GitHub</span></a></li><li><a href="https://vimeo.com/bobholt/" class="genericon genericon-vimeo" target="_blank"><span class="screen-reader-text">View bobholt&#8217;s profile on Vimeo</span></a></li></ul></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://bobholt.me/2016/10/fiberserker-episode-3-anything-you-do-three-times-is-a-tradition/">Fiberserker Episode 3: Anything You Do Three Times is a Tradition</a>
+						</li>
+					<li>
+				<a href="http://bobholt.me/2016/10/fiberserker-episode-2-i-dont-mind-talking-about-my-underwear-on-this-show/">Fiberserker Episode 2: I Don&#8217;t Mind Talking About My Underwear on This Show</a>
+						</li>
+					<li>
+				<a href="http://bobholt.me/2016/10/fiberserker-episode-1-skeleton-queen-eating-ramen/">Fiberserker Episode 1: Skeleton Queen Eating Ramen</a>
+						</li>
+					<li>
+				<a href="http://bobholt.me/2016/03/starting-peppers/">Starting Peppers</a>
+						</li>
+					<li>
+				<a href="http://bobholt.me/2016/02/seed-cabinet/">Seed Cabinet</a>
+						</li>
+				</ul>
+		</aside>		<aside id="wpcom-goodreads-2" class="widget widget_goodreads"><h2 class="widget-title">Recent Reads</h2><div class="gr_custom_widget" id="gr_custom_widget_7885844_read"></div>
+<script src="https://www.goodreads.com/review/custom_widget/7885844.Recent+Reads:%20read?cover_position=&#038;cover_size=small&#038;num_books=5&#038;order=d&#038;shelf=read&#038;sort=date_added&#038;widget_bg_transparent=&#038;widget_id=7885844_read"></script>
+</aside></div><!-- #secondary -->
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-footer-wrapper">
+
+			<div class="site-info">
+				<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+				<span class="sep"></span>
+				Theme: Orvis by <a href="https://wordpress.com/themes/" rel="designer">Automattic</a>.			</div><!-- .site-info -->
+		</div><!-- .site-footer-wrapper -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+	<div style="display:none">
+	</div>
+<link rel='stylesheet' id='genericons-css'  href='http://bobholt.me/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css?ver=3.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://bobholt.me/wp-content/plugins/jetpack/modules/photon/photon.js?ver=20130122'></script>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201733'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2017Augaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.7.5'></script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/themes/orvis/js/skip-link-focus-fix.js?ver=20151231'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/themes/orvis/js/functions.js?ver=20151231'></script>
+<script type='text/javascript' src='http://bobholt.me/wp-includes/js/wp-embed.min.js?ver=4.7.5'></script>
+<script type='text/javascript' src='http://stats.wp.com/e-201733.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:4.4.2',blog:'116681722',post:'0',tz:'-4',srv:'www.bobholt.me'} ]);
+	_stq.push([ 'clickTrackerInit', '116681722', '0' ]);
+</script>
+
+</body>
+</html>
+<!-- Dynamic page generated in 0.511 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2017-08-16 17:21:21 -->
+
+<!-- Compression = gzip -->
+<!-- super cache -->

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://bobholt.me/xmlrpc.php">
+
+<title>Generative Art &#8211; The Interim Steps &#8211; Bob Holt</title>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s.gravatar.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Bob Holt &raquo; Feed" href="http://bobholt.me/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Bob Holt &raquo; Comments Feed" href="http://bobholt.me/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Bob Holt &raquo; Generative Art &#8211; The Interim Steps Comments Feed" href="http://bobholt.me/2013/12/generative-art-the-interim-steps/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.bobholt.me\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.5"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='crayon-css'  href='http://bobholt.me/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-theme-classic-css'  href='http://bobholt.me/wp-content/plugins/crayon-syntax-highlighter/themes/classic/classic.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-font-courier-new-css'  href='http://bobholt.me/wp-content/plugins/crayon-syntax-highlighter/fonts/courier-new.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='chld_thm_cfg_parent-css'  href='http://bobholt.me/wp-content/themes/orvis/style.css?ver=4.7.5' type='text/css' media='all' />
+<link rel='stylesheet' id='orvis-fonts-css'  href='https://fonts.googleapis.com/css?family=Karla%3A400%2C700%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='orvis-style-css'  href='http://bobholt.me/wp-content/themes/orvis-bobholt/style.css?ver=1.1.0.1473909930' type='text/css' media='all' />
+<link rel='stylesheet' id='social-logos-css'  href='http://bobholt.me/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://bobholt.me/wp-content/plugins/jetpack/css/jetpack.css?ver=4.4.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://bobholt.me/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://bobholt.me/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/plugins/jetpack/modules/related-posts/related-posts.js?ver=20150408'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"http:\/\/www.bobholt.me\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=_2.7.2_beta'></script>
+<link rel='https://api.w.org/' href='http://bobholt.me/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bobholt.me/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://bobholt.me/wp-includes/wlwmanifest.xml" />
+<link rel='prev' title='Generative Art &#8211; Failed Experiment 1' href='http://bobholt.me/2013/12/generative-art-failed-experiment-1/' />
+<link rel='next' title='Gardening' href='http://bobholt.me/2015/04/gardening/' />
+<meta name="generator" content="WordPress 4.7.5" />
+<link rel="canonical" href="http://bobholt.me/2013/12/generative-art-the-interim-steps/" />
+<link rel='shortlink' href='http://wp.me/p7TAfg-O' />
+<link rel="alternate" type="application/json+oembed" href="http://bobholt.me/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.bobholt.me%2F2013%2F12%2Fgenerative-art-the-interim-steps%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://bobholt.me/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.bobholt.me%2F2013%2F12%2Fgenerative-art-the-interim-steps%2F&#038;format=xml" />
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'>
+<link rel='dns-prefetch' href='//i0.wp.com'>
+<link rel='dns-prefetch' href='//i1.wp.com'>
+<link rel='dns-prefetch' href='//i2.wp.com'>
+<style type='text/css'>img#wpstats{display:none}</style><style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #111122; }
+</style>
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Generative Art &#8211; The Interim Steps" />
+<meta property="og:url" content="http://bobholt.me/2013/12/generative-art-the-interim-steps/" />
+<meta property="og:description" content="Re: my previous post, there were some questions about the eigenvectors I had created, and what had happened with them when I tried to reconstruc the images.
+I’ll attempt to illustrate that here." />
+<meta property="article:published_time" content="2013-12-20T05:00:00+00:00" />
+<meta property="article:modified_time" content="2016-09-17T19:29:20+00:00" />
+<meta property="og:site_name" content="Bob Holt" />
+<meta property="og:image" content="http://bobholt.me/wp-content/uploads/2016/09/johns_redshift-230x300.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary" />
+</head>
+
+<body class="post-template-default single single-post postid-50 single-format-standard custom-background">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-wrapper">
+			<div class="site-branding">
+
+									<p class="site-title"><a href="http://bobholt.me/" rel="home">Bob Holt</a></p>
+								<p class="site-description">I Make Things</p>
+			</div><!-- .site-branding -->
+
+							<button id="menu-toggle" class="menu-toggle">Menu</button>
+				<div id="site-menu" class="site-menu">
+					<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+						<div class="menu-main-container"><ul id="menu-main" class="primary-menu"><li id="menu-item-704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-704"><a href="http://bobholt.me/">Home</a></li>
+<li id="menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a href="http://bobholt.me/about/">About</a></li>
+<li id="menu-item-100" class="menu-item menu-item-type-taxonomy menu-item-object-jetpack-portfolio-type menu-item-100"><a href="http://bobholt.me/project-type/knitting/">Knitting</a></li>
+<li id="menu-item-101" class="menu-item menu-item-type-taxonomy menu-item-object-jetpack-portfolio-type menu-item-101"><a href="http://bobholt.me/project-type/pottery/">Pottery</a></li>
+<li id="menu-item-761" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-761"><a href="http://bobholt.me/category/programming/">Programming</a></li>
+<li id="menu-item-706" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-706"><a href="http://bobholt.me/blog/">Blog</a></li>
+</ul></div>					</nav><!-- .main-navigation -->
+				</div><!-- .site-menu -->
+					</div><!-- .site-header-wrapper -->
+
+			</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+
+
+<article id="post-50" class="post-50 post type-post status-publish format-standard hentry category-programming">
+	<header class="entry-header">
+
+		<h1 class="entry-title">Generative Art &#8211; The Interim Steps</h1>
+		<div class="entry-meta"><span class="cat-links"><a href="http://bobholt.me/category/programming/" rel="category tag">Programming</a></span></div>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Re: my <a href="generative-art-failed-experiment-1">previous post</a>, there were some questions about the eigenvectors I had created, and what had happened with them when I tried to reconstruct the images.</p>
+<p>I’ll attempt to illustrate that here.</p>
+<p><span id="more-50"></span>Note that I may not show ALL of the code. Some of the functions I called are part of the assignments for the Coursera Machine Learning course (and are actually this week’s assignments), and we’ve been asked not to make those solutions public. If you really want to see the implementations, pinky-swear that you’re not taking the course, and I’ll email them to you.</p>
+<p>So back to the beginning. Once again, here are our original images:</p>
+<p><img class="alignleft wp-image-58 size-medium" src="https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/girl_before_a_mirror.jpg?resize=242%2C300" alt="Girl before a Mirror" srcset="https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/girl_before_a_mirror.jpg?resize=242%2C300 242w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/girl_before_a_mirror.jpg?w=323 323w" sizes="(max-width: 242px) 100vw, 242px" data-recalc-dims="1" /><img class="alignleft wp-image-55 size-medium" src="https://i2.wp.com/www.bobholt.me/wp-content/uploads/2016/09/0_through_9.jpg?resize=230%2C300" alt="0 through 9" srcset="https://i2.wp.com/www.bobholt.me/wp-content/uploads/2016/09/0_through_9.jpg?resize=230%2C300 230w, https://i2.wp.com/www.bobholt.me/wp-content/uploads/2016/09/0_through_9.jpg?w=306 306w" sizes="(max-width: 230px) 100vw, 230px" data-recalc-dims="1" /></p>
+<p><br style="clear: both;" /></p>
+<p>So let’s look at the first part of the code. The very first part is just like in the previous post:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5994d72034020291981566" class="crayon-syntax crayon-theme-classic crayon-font-courier-new crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">MATLAB</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2; font-size: 12px !important; line-height: 15px !important;">
+%% Initialization
+clear; close all; clc
+
+%  This program Runs Principal Component Analysis on 2 images.
+%  The eigenvectors of the images are swapped, and the images
+%  reconstituted from the swapped eigenvectors.
+
+%  Images are necessarily the same pixel size.
+
+%  Load images
+%  Values need a double datatype for matrix manipulation
+P = double(imread('girl_before_a_mirror.jpg'));
+J = double(imread('0_through_9.jpg'));</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5994d72034020291981566-1">1</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-2">2</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-3">3</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-4">4</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-5">5</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-6">6</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-7">7</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-8">8</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-9">9</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-10">10</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-11">11</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-12">12</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-13">13</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-14">14</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-15">15</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-16">16</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-17">17</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-18">18</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-19">19</div><div class="crayon-num" data-line="crayon-5994d72034020291981566-20">20</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><div class="crayon-line" id="crayon-5994d72034020291981566-1"><span class="crayon-ta">%</span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-i">Initialization</span></div><div class="crayon-line" id="crayon-5994d72034020291981566-2">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034020291981566-3"><span class="crayon-r ">clear</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-r ">close</span><span class="crayon-h"> </span><span class="crayon-st">all</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-r ">clc</span></div><div class="crayon-line" id="crayon-5994d72034020291981566-4">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034020291981566-5"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">This</span><span class="crayon-h"> </span><span class="crayon-i">program</span><span class="crayon-h"> </span><span class="crayon-i">Runs</span><span class="crayon-h"> </span><span class="crayon-i">Principal</span><span class="crayon-h"> </span><span class="crayon-i">Component</span><span class="crayon-h"> </span><span class="crayon-i">Analysis</span><span class="crayon-h"> </span><span class="crayon-i">on</span><span class="crayon-h"> </span><span class="crayon-cn">2</span><span class="crayon-h"> </span><span class="crayon-v">images</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-5994d72034020291981566-6">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034020291981566-7"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">The</span><span class="crayon-h"> </span><span class="crayon-i">eigenvectors</span><span class="crayon-h"> </span><span class="crayon-i">of</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">images</span><span class="crayon-h"> </span><span class="crayon-i">are</span><span class="crayon-h"> </span><span class="crayon-v">swapped</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-st">and</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">images</span></div><div class="crayon-line" id="crayon-5994d72034020291981566-8">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034020291981566-9"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">reconstituted</span><span class="crayon-h"> </span><span class="crayon-i">from</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">swapped</span><span class="crayon-h"> </span><span class="crayon-v">eigenvectors</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-5994d72034020291981566-10">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034020291981566-11">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034020291981566-12"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">Images</span><span class="crayon-h"> </span><span class="crayon-i">are</span><span class="crayon-h"> </span><span class="crayon-i">necessarily</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">same</span><span class="crayon-h"> </span><span class="crayon-i">pixel</span><span class="crayon-h"> </span><span class="crayon-v">size</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-5994d72034020291981566-13">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034020291981566-14">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034020291981566-15"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">Load</span><span class="crayon-h"> </span><span class="crayon-i">images</span></div><div class="crayon-line" id="crayon-5994d72034020291981566-16">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034020291981566-17"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">Values</span><span class="crayon-h"> </span><span class="crayon-i">need</span><span class="crayon-h"> </span><span class="crayon-i">a</span><span class="crayon-h"> </span><span class="crayon-i">double</span><span class="crayon-h"> </span><span class="crayon-i">datatype</span><span class="crayon-h"> </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-i">matrix</span><span class="crayon-h"> </span><span class="crayon-i">manipulation</span></div><div class="crayon-line" id="crayon-5994d72034020291981566-18">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034020291981566-19"><span class="crayon-i">P</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">double</span><span class="crayon-sy">(</span><span class="crayon-r">imread</span><span class="crayon-sy">(</span><span class="crayon-s">'girl_before_a_mirror.jpg'</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034020291981566-20"><span class="crayon-r ">J</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">double</span><span class="crayon-sy">(</span><span class="crayon-r">imread</span><span class="crayon-sy">(</span><span class="crayon-s">'0_through_9.jpg'</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0112 seconds] -->
+<p>We clear our existing data and read in the images.</p>
+<p>But this time, we’re going to reshape the N-dimensional vectors into 2-dimensional matrices so we can run our Principal Component Analysis:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5994d72034032656739549" class="crayon-syntax crayon-theme-classic crayon-font-courier-new crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">MATLAB</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2; font-size: 12px !important; line-height: 15px !important;">
+%  Get the size of the images so we can reshape the matrix
+p_img_size = size(P);
+j_img_size = size(J);
+
+%  Reshape the N-dimensional vectors representing the images' color
+%  values into an Nx3 matrix where N = number of pixels.
+%  Each row will contain the Red, Green and Blue pixel values
+%  This gives us our dataset matrix X that we will use K-Means on.
+XP = reshape(P, p_img_size(1) * p_img_size(2), 3);
+XJ = reshape(J, j_img_size(1) * j_img_size(2), 3);
+
+%  Run PCA - implementation obscured, but we run the built-in `svd`
+%  function on the covariance matrix of the matrix we pass in.
+%  This returns the eigenvector (U*) and eigenvalues (S*)
+[UP, SP] = pca(XP);
+[UJ, SJ] = pca(XJ);</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5994d72034032656739549-1">1</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-2">2</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-3">3</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-4">4</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-5">5</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-6">6</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-7">7</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-8">8</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-9">9</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-10">10</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-11">11</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-12">12</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-13">13</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-14">14</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-15">15</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-16">16</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-17">17</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-18">18</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-19">19</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-20">20</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-21">21</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-22">22</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-23">23</div><div class="crayon-num" data-line="crayon-5994d72034032656739549-24">24</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><div class="crayon-line" id="crayon-5994d72034032656739549-1"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">Get</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">size</span><span class="crayon-h"> </span><span class="crayon-i">of</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">images</span><span class="crayon-h"> </span><span class="crayon-i">so</span><span class="crayon-h"> </span><span class="crayon-i">we</span><span class="crayon-h"> </span><span class="crayon-i">can</span><span class="crayon-h"> </span><span class="crayon-i">reshape</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">matrix</span></div><div class="crayon-line" id="crayon-5994d72034032656739549-2">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034032656739549-3"><span class="crayon-i">p_img_size</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">size</span><span class="crayon-sy">(</span><span class="crayon-i">P</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034032656739549-4"><span class="crayon-i">j_img_size</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">size</span><span class="crayon-sy">(</span><span class="crayon-r ">J</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034032656739549-5">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034032656739549-6"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">Reshape</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-v">N</span><span class="crayon-o">-</span><span class="crayon-i">dimensional</span><span class="crayon-h"> </span><span class="crayon-i">vectors</span><span class="crayon-h"> </span><span class="crayon-i">representing</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">images</span>'<span class="crayon-h"> </span><span class="crayon-i">color</span></div><div class="crayon-line" id="crayon-5994d72034032656739549-7">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034032656739549-8"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">values</span><span class="crayon-h"> </span><span class="crayon-i">into</span><span class="crayon-h"> </span><span class="crayon-i">an</span><span class="crayon-h"> </span><span class="crayon-i">Nx3</span><span class="crayon-h"> </span><span class="crayon-i">matrix</span><span class="crayon-h"> </span><span class="crayon-i">where</span><span class="crayon-h"> </span><span class="crayon-v">N</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-i">number</span><span class="crayon-h"> </span><span class="crayon-i">of</span><span class="crayon-h"> </span><span class="crayon-v">pixels</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-5994d72034032656739549-9">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034032656739549-10"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">Each</span><span class="crayon-h"> </span><span class="crayon-i">row</span><span class="crayon-h"> </span><span class="crayon-i">will</span><span class="crayon-h"> </span><span class="crayon-i">contain</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-v">Red</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">Green</span><span class="crayon-h"> </span><span class="crayon-st">and</span><span class="crayon-h"> </span><span class="crayon-i">Blue</span><span class="crayon-h"> </span><span class="crayon-i">pixel</span><span class="crayon-h"> </span><span class="crayon-i">values</span></div><div class="crayon-line" id="crayon-5994d72034032656739549-11">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034032656739549-12"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">This</span><span class="crayon-h"> </span><span class="crayon-i">gives</span><span class="crayon-h"> </span><span class="crayon-i">us</span><span class="crayon-h"> </span><span class="crayon-i">our</span><span class="crayon-h"> </span><span class="crayon-i">dataset</span><span class="crayon-h"> </span><span class="crayon-i">matrix</span><span class="crayon-h"> </span><span class="crayon-i">X</span><span class="crayon-h"> </span><span class="crayon-i">that</span><span class="crayon-h"> </span><span class="crayon-i">we</span><span class="crayon-h"> </span><span class="crayon-i">will</span><span class="crayon-h"> </span><span class="crayon-i">use</span><span class="crayon-h"> </span><span class="crayon-v">K</span><span class="crayon-o">-</span><span class="crayon-i">Means</span><span class="crayon-h"> </span><span class="crayon-v">on</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-5994d72034032656739549-13">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034032656739549-14"><span class="crayon-i">XP</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">reshape</span><span class="crayon-sy">(</span><span class="crayon-i">P</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-r">p_img_size</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-r">p_img_size</span><span class="crayon-sy">(</span><span class="crayon-cn">2</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034032656739549-15"><span class="crayon-i">XJ</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">reshape</span><span class="crayon-sy">(</span><span class="crayon-r ">J</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-r">j_img_size</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-r">j_img_size</span><span class="crayon-sy">(</span><span class="crayon-cn">2</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034032656739549-16">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034032656739549-17"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">Run</span><span class="crayon-h"> </span><span class="crayon-v">PCA</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-h"> </span><span class="crayon-i">implementation</span><span class="crayon-h"> </span><span class="crayon-v">obscured</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">but</span><span class="crayon-h"> </span><span class="crayon-i">we</span><span class="crayon-h"> </span><span class="crayon-i">run</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-v">built</span><span class="crayon-o">-</span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-s">`svd`</span></div><div class="crayon-line" id="crayon-5994d72034032656739549-18">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034032656739549-19"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">function</span><span class="crayon-h"> </span><span class="crayon-i">on</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">covariance</span><span class="crayon-h"> </span><span class="crayon-i">matrix</span><span class="crayon-h"> </span><span class="crayon-i">of</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">matrix</span><span class="crayon-h"> </span><span class="crayon-i">we</span><span class="crayon-h"> </span><span class="crayon-i">pass</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-5994d72034032656739549-20">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034032656739549-21"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">This</span><span class="crayon-h"> </span><span class="crayon-i">returns</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-e">eigenvector</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-v">U</span><span class="crayon-o">*</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-st">and</span><span class="crayon-h"> </span><span class="crayon-e">eigenvalues</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-v">S</span><span class="crayon-o">*</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-5994d72034032656739549-22">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034032656739549-23"><span class="crayon-sy">[</span><span class="crayon-i">UP</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">SP</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">pca</span><span class="crayon-sy">(</span><span class="crayon-i">XP</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034032656739549-24"><span class="crayon-sy">[</span><span class="crayon-i">UJ</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">SJ</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">pca</span><span class="crayon-sy">(</span><span class="crayon-i">XJ</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0139 seconds] -->
+<p>All of the code up until this point will be reused in our experiments. We read in the images, translate the vectors to a 2-D matrix, and run PCA. Now comes the fun part: we need to project the images into the eigen space.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5994d7203403a798758489" class="crayon-syntax crayon-theme-classic crayon-font-courier-new crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">MATLAB</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2; font-size: 12px !important; line-height: 15px !important;">
+%  Project images to the eigen space using the top k eigenvectors
+%  Again, the implementation is obscured, but we essentially
+%  matrix-multiply our features across the first K columns of the
+%  eigenvector matrix.
+K = size(UP, 2); % 3
+ZP = projectData(XP, UP, K);
+ZJ = projectData(XJ, UJ, K);</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5994d7203403a798758489-1">1</div><div class="crayon-num" data-line="crayon-5994d7203403a798758489-2">2</div><div class="crayon-num" data-line="crayon-5994d7203403a798758489-3">3</div><div class="crayon-num" data-line="crayon-5994d7203403a798758489-4">4</div><div class="crayon-num" data-line="crayon-5994d7203403a798758489-5">5</div><div class="crayon-num" data-line="crayon-5994d7203403a798758489-6">6</div><div class="crayon-num" data-line="crayon-5994d7203403a798758489-7">7</div><div class="crayon-num" data-line="crayon-5994d7203403a798758489-8">8</div><div class="crayon-num" data-line="crayon-5994d7203403a798758489-9">9</div><div class="crayon-num" data-line="crayon-5994d7203403a798758489-10">10</div><div class="crayon-num" data-line="crayon-5994d7203403a798758489-11">11</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><div class="crayon-line" id="crayon-5994d7203403a798758489-1"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">Project</span><span class="crayon-h"> </span><span class="crayon-i">images</span><span class="crayon-h"> </span><span class="crayon-i">to</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">eigen</span><span class="crayon-h"> </span><span class="crayon-i">space</span><span class="crayon-h"> </span><span class="crayon-i">using</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">top</span><span class="crayon-h"> </span><span class="crayon-i">k</span><span class="crayon-h"> </span><span class="crayon-i">eigenvectors</span></div><div class="crayon-line" id="crayon-5994d7203403a798758489-2">&nbsp;</div><div class="crayon-line" id="crayon-5994d7203403a798758489-3"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">Again</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">implementation</span><span class="crayon-h"> </span><span class="crayon-i">is</span><span class="crayon-h"> </span><span class="crayon-v">obscured</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">but</span><span class="crayon-h"> </span><span class="crayon-i">we</span><span class="crayon-h"> </span><span class="crayon-i">essentially</span></div><div class="crayon-line" id="crayon-5994d7203403a798758489-4">&nbsp;</div><div class="crayon-line" id="crayon-5994d7203403a798758489-5"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">matrix</span><span class="crayon-o">-</span><span class="crayon-i">multiply</span><span class="crayon-h"> </span><span class="crayon-i">our</span><span class="crayon-h"> </span><span class="crayon-i">features</span><span class="crayon-h"> </span><span class="crayon-i">across</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">first</span><span class="crayon-h"> </span><span class="crayon-i">K</span><span class="crayon-h"> </span><span class="crayon-i">columns</span><span class="crayon-h"> </span><span class="crayon-i">of</span><span class="crayon-h"> </span><span class="crayon-i">the</span></div><div class="crayon-line" id="crayon-5994d7203403a798758489-6">&nbsp;</div><div class="crayon-line" id="crayon-5994d7203403a798758489-7"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">eigenvector</span><span class="crayon-h"> </span><span class="crayon-v">matrix</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-5994d7203403a798758489-8">&nbsp;</div><div class="crayon-line" id="crayon-5994d7203403a798758489-9"><span class="crayon-i">K</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">size</span><span class="crayon-sy">(</span><span class="crayon-i">UP</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">2</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-c">% 3</span></div><div class="crayon-line" id="crayon-5994d7203403a798758489-10"><span class="crayon-i">ZP</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">projectData</span><span class="crayon-sy">(</span><span class="crayon-i">XP</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">UP</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">K</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d7203403a798758489-11"><span class="crayon-i">ZJ</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">projectData</span><span class="crayon-sy">(</span><span class="crayon-i">XJ</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">UJ</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">K</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0074 seconds] -->
+<p>It doesn’t make any noticeable difference which eigenvectors we use here, though they are different. They just may be so similar as to not matter:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5994d72034040398242473" class="crayon-syntax crayon-theme-classic crayon-font-courier-new crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">MATLAB</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2; font-size: 12px !important; line-height: 15px !important;">
+UP =
+  -0.65103   0.69800   0.29826
+  -0.57221  -0.19312  -0.79704
+  -0.49873  -0.68956   0.52513
+
+UJ =
+  -0.64694   0.69146   0.32149
+  -0.54319  -0.12199  -0.83070
+  -0.53518  -0.71204   0.45452</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5994d72034040398242473-1">1</div><div class="crayon-num" data-line="crayon-5994d72034040398242473-2">2</div><div class="crayon-num" data-line="crayon-5994d72034040398242473-3">3</div><div class="crayon-num" data-line="crayon-5994d72034040398242473-4">4</div><div class="crayon-num" data-line="crayon-5994d72034040398242473-5">5</div><div class="crayon-num" data-line="crayon-5994d72034040398242473-6">6</div><div class="crayon-num" data-line="crayon-5994d72034040398242473-7">7</div><div class="crayon-num" data-line="crayon-5994d72034040398242473-8">8</div><div class="crayon-num" data-line="crayon-5994d72034040398242473-9">9</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><div class="crayon-line" id="crayon-5994d72034040398242473-1"><span class="crayon-i">UP</span><span class="crayon-h"> </span><span class="crayon-o">=</span></div><div class="crayon-line" id="crayon-5994d72034040398242473-2"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-cn">0.65103</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">0.69800</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">0.29826</span></div><div class="crayon-line" id="crayon-5994d72034040398242473-3"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-cn">0.57221</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-cn">0.19312</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-cn">0.79704</span></div><div class="crayon-line" id="crayon-5994d72034040398242473-4"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-cn">0.49873</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-cn">0.68956</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">0.52513</span></div><div class="crayon-line" id="crayon-5994d72034040398242473-5">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034040398242473-6"><span class="crayon-i">UJ</span><span class="crayon-h"> </span><span class="crayon-o">=</span></div><div class="crayon-line" id="crayon-5994d72034040398242473-7"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-cn">0.64694</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">0.69146</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">0.32149</span></div><div class="crayon-line" id="crayon-5994d72034040398242473-8"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-cn">0.54319</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-cn">0.12199</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-cn">0.83070</span></div><div class="crayon-line" id="crayon-5994d72034040398242473-9"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-cn">0.53518</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-cn">0.71204</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">0.45452</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0034 seconds] -->
+<p>Finally, we recover images by reversing our projection and writing the results to disk. It’s here that I tried recovering each image using the other’s eigenvectors, to no noticeable change:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5994d72034045914441830" class="crayon-syntax crayon-theme-classic crayon-font-courier-new crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-mixed-highlight" title="Contains Mixed Languages"></span><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">MATLAB</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2; font-size: 12px !important; line-height: 15px !important;">
+%  Recover images from the eigen space using the top K eigen vectors and
+%  visualize only using those K dimensions
+%  Once again, the implementation is obscured, but we reverse projectData
+%  by multiplying the projected data by the same
+
+XP_rec  = recoverData(ZP, UP, K);
+XP_recovered = reshape(XP_rec, p_img_size(1), p_img_size(2), 3);
+
+XP_swap  = recoverData(ZP, UJ, K);
+XP_swapped = reshape(XP_rec, p_img_size(1), p_img_size(2), 3);
+
+XJ_rec  = recoverData(ZJ, UJ, K);
+XJ_recovered = reshape(XJ_rec, j_img_size(1), j_img_size(2), 3);
+
+XJ_swap  = recoverData(ZJ, UP, K);
+XJ_swapped = reshape(XJ_rec, j_img_size(1), j_img_size(2), 3);
+
+imwrite(uint8(XP_recovered), 'picasso_orig.jpg');
+imwrite(uint8(XP_swapped), 'picasso_swap.jpg');
+imwrite(uint8(XJ_recovered), 'johns_orig.jpg');
+imwrite(uint8(XJ_swapped), 'johns_swap.jpg');</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5994d72034045914441830-1">1</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-2">2</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-3">3</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-4">4</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-5">5</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-6">6</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-7">7</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-8">8</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-9">9</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-10">10</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-11">11</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-12">12</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-13">13</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-14">14</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-15">15</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-16">16</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-17">17</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-18">18</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-19">19</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-20">20</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-21">21</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-22">22</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-23">23</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-24">24</div><div class="crayon-num" data-line="crayon-5994d72034045914441830-25">25</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><div class="crayon-line" id="crayon-5994d72034045914441830-1"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">Recover</span><span class="crayon-h"> </span><span class="crayon-i">images</span><span class="crayon-h"> </span><span class="crayon-i">from</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">eigen</span><span class="crayon-h"> </span><span class="crayon-i">space</span><span class="crayon-h"> </span><span class="crayon-i">using</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">top</span><span class="crayon-h"> </span><span class="crayon-i">K</span><span class="crayon-h"> </span><span class="crayon-i">eigen</span><span class="crayon-h"> </span><span class="crayon-i">vectors</span><span class="crayon-h"> </span><span class="crayon-st">and</span></div><div class="crayon-line" id="crayon-5994d72034045914441830-2">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034045914441830-3"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">visualize</span><span class="crayon-h"> </span><span class="crayon-i">only</span><span class="crayon-h"> </span><span class="crayon-i">using</span><span class="crayon-h"> </span><span class="crayon-i">those</span><span class="crayon-h"> </span><span class="crayon-i">K</span><span class="crayon-h"> </span><span class="crayon-i">dimensions</span></div><div class="crayon-line" id="crayon-5994d72034045914441830-4">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034045914441830-5"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">Once</span><span class="crayon-h"> </span><span class="crayon-v">again</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">implementation</span><span class="crayon-h"> </span><span class="crayon-i">is</span><span class="crayon-h"> </span><span class="crayon-v">obscured</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">but</span><span class="crayon-h"> </span><span class="crayon-i">we</span><span class="crayon-h"> </span><span class="crayon-i">reverse</span><span class="crayon-h"> </span><span class="crayon-i">projectData</span></div><div class="crayon-line" id="crayon-5994d72034045914441830-6">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034045914441830-7"><span class="crayon-ta">%</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-i">by</span><span class="crayon-h"> </span><span class="crayon-i">multiplying</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">projected</span><span class="crayon-h"> </span><span class="crayon-t">data</span><span class="crayon-h"> </span><span class="crayon-i">by</span><span class="crayon-h"> </span><span class="crayon-i">the</span><span class="crayon-h"> </span><span class="crayon-i">same</span></div><div class="crayon-line" id="crayon-5994d72034045914441830-8">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034045914441830-9">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034045914441830-10"><span class="crayon-i">XP_rec</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">recoverData</span><span class="crayon-sy">(</span><span class="crayon-i">ZP</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">UP</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">K</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034045914441830-11"><span class="crayon-i">XP_recovered</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">reshape</span><span class="crayon-sy">(</span><span class="crayon-i">XP_rec</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-r">p_img_size</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-r">p_img_size</span><span class="crayon-sy">(</span><span class="crayon-cn">2</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034045914441830-12">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034045914441830-13"><span class="crayon-i">XP_swap</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">recoverData</span><span class="crayon-sy">(</span><span class="crayon-i">ZP</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">UJ</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">K</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034045914441830-14"><span class="crayon-i">XP_swapped</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">reshape</span><span class="crayon-sy">(</span><span class="crayon-i">XP_rec</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-r">p_img_size</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-r">p_img_size</span><span class="crayon-sy">(</span><span class="crayon-cn">2</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034045914441830-15">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034045914441830-16"><span class="crayon-i">XJ_rec</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">recoverData</span><span class="crayon-sy">(</span><span class="crayon-i">ZJ</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">UJ</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">K</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034045914441830-17"><span class="crayon-i">XJ_recovered</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">reshape</span><span class="crayon-sy">(</span><span class="crayon-i">XJ_rec</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-r">j_img_size</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-r">j_img_size</span><span class="crayon-sy">(</span><span class="crayon-cn">2</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034045914441830-18">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034045914441830-19"><span class="crayon-i">XJ_swap</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">recoverData</span><span class="crayon-sy">(</span><span class="crayon-i">ZJ</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">UP</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">K</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034045914441830-20"><span class="crayon-i">XJ_swapped</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">reshape</span><span class="crayon-sy">(</span><span class="crayon-i">XJ_rec</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-r">j_img_size</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-r">j_img_size</span><span class="crayon-sy">(</span><span class="crayon-cn">2</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034045914441830-21">&nbsp;</div><div class="crayon-line" id="crayon-5994d72034045914441830-22"><span class="crayon-r">imwrite</span><span class="crayon-sy">(</span><span class="crayon-r">uint8</span><span class="crayon-sy">(</span><span class="crayon-i">XP_recovered</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">'picasso_orig.jpg'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034045914441830-23"><span class="crayon-r">imwrite</span><span class="crayon-sy">(</span><span class="crayon-r">uint8</span><span class="crayon-sy">(</span><span class="crayon-i">XP_swapped</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">'picasso_swap.jpg'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034045914441830-24"><span class="crayon-r">imwrite</span><span class="crayon-sy">(</span><span class="crayon-r">uint8</span><span class="crayon-sy">(</span><span class="crayon-i">XJ_recovered</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">'johns_orig.jpg'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72034045914441830-25"><span class="crayon-r">imwrite</span><span class="crayon-sy">(</span><span class="crayon-r">uint8</span><span class="crayon-sy">(</span><span class="crayon-i">XJ_swapped</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">'johns_swap.jpg'</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0144 seconds] -->
+<p>But as you can see, there’s no discernable difference:</p>
+<p><img class="size-medium wp-image-69 alignleft" src="https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_orig.jpg?resize=230%2C300" alt="picasso_orig" srcset="https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_orig.jpg?resize=230%2C300 230w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_orig.jpg?resize=768%2C1003 768w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_orig.jpg?resize=784%2C1024 784w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_orig.jpg?w=816 816w" sizes="(max-width: 230px) 100vw, 230px" data-recalc-dims="1" /><img class="size-medium wp-image-71 alignleft" src="https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_swap.jpg?resize=230%2C300" alt="picasso_swap" srcset="https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_swap.jpg?resize=230%2C300 230w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_swap.jpg?resize=768%2C1003 768w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_swap.jpg?resize=784%2C1024 784w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_swap.jpg?w=816 816w" sizes="(max-width: 230px) 100vw, 230px" data-recalc-dims="1" /></p>
+<div style="clear:both;"></div>
+<div style="clear:both;"></div>
+<p><img class="size-medium wp-image-62 alignleft" src="https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_orig.jpg?resize=230%2C300" alt="johns_orig" srcset="https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_orig.jpg?resize=230%2C300 230w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_orig.jpg?resize=768%2C1003 768w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_orig.jpg?resize=784%2C1024 784w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_orig.jpg?w=816 816w" sizes="(max-width: 230px) 100vw, 230px" data-recalc-dims="1" /><img class="size-medium wp-image-64 alignleft" src="https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_swap.jpg?resize=230%2C300" alt="johns_swap" srcset="https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_swap.jpg?resize=230%2C300 230w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_swap.jpg?resize=768%2C1003 768w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_swap.jpg?resize=784%2C1024 784w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_swap.jpg?w=816 816w" sizes="(max-width: 230px) 100vw, 230px" data-recalc-dims="1" /></p>
+<div style="clear:both;"></div>
+<p>Now we can do some interesting things by reducing the number of components we use to project and rebuild the images (the K value above). There’s still no difference when we go to reconstruct, so I’ll just show each image once from now on.</p>
+<p>What if we reduce <code>K</code> from 3 (the size of the eigenvector matrix) to 2? We get kind of a neat muted palette:</p>
+<p><img class="size-medium wp-image-68 alignleft" src="https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_K2.jpg?resize=230%2C300" alt="Girl before a Mirror - K = 2" srcset="https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_K2.jpg?resize=230%2C300 230w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_K2.jpg?resize=768%2C1003 768w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_K2.jpg?resize=784%2C1024 784w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_K2.jpg?w=816 816w" sizes="(max-width: 230px) 100vw, 230px" data-recalc-dims="1" /><img class="size-medium wp-image-61 alignleft" src="https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_K2.jpg?resize=230%2C300" alt="0 through 9 - K = 2" srcset="https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_K2.jpg?resize=230%2C300 230w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_K2.jpg?resize=768%2C1003 768w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_K2.jpg?resize=784%2C1024 784w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_K2.jpg?w=816 816w" sizes="(max-width: 230px) 100vw, 230px" data-recalc-dims="1" /></p>
+<div style="clear:both;"></div>
+<p>And when <code>K = 1</code>, we get a pretty good grayscale.</p>
+<p><img class="size-medium wp-image-67 alignleft" src="https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_K1.jpg?resize=230%2C300" alt="Girl before a Mirror - K = 1" srcset="https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_K1.jpg?resize=230%2C300 230w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_K1.jpg?resize=768%2C1003 768w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_K1.jpg?resize=784%2C1024 784w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_K1.jpg?w=816 816w" sizes="(max-width: 230px) 100vw, 230px" data-recalc-dims="1" /><img class="size-medium wp-image-60 alignleft" src="https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_K1.jpg?resize=230%2C300" alt="0 through 9 - K = 1" srcset="https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_K1.jpg?resize=230%2C300 230w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_K1.jpg?resize=768%2C1003 768w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_K1.jpg?resize=784%2C1024 784w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_K1.jpg?w=816 816w" sizes="(max-width: 230px) 100vw, 230px" data-recalc-dims="1" /></p>
+<div style="clear:both;"></div>
+<p>We can also do some interesting color shifting by transposing our eigenvector matrices at certain times.</p>
+<p>If we transpose when we project the data (when K = 3), we get a huge green shift:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5994d7203404e467125872" class="crayon-syntax crayon-theme-classic crayon-font-courier-new crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">MATLAB</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2; font-size: 12px !important; line-height: 15px !important;">
+ZP = projectData(XP, UP', K);
+ZJ = projectData(XJ, UJ', K);</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5994d7203404e467125872-1">1</div><div class="crayon-num" data-line="crayon-5994d7203404e467125872-2">2</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><div class="crayon-line" id="crayon-5994d7203404e467125872-1"><span class="crayon-i">ZP</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">projectData</span><span class="crayon-sy">(</span><span class="crayon-i">XP</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">UP</span><span class="crayon-s">', K);</span></div><div class="crayon-line" id="crayon-5994d7203404e467125872-2"><span class="crayon-s">ZJ = projectData(XJ, UJ'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">K</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0011 seconds] -->
+<p><img class="size-medium wp-image-66 alignleft" src="https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_greenshift.jpg?resize=230%2C300" alt="Girl before a Mirror - Transpose on Projection" srcset="https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_greenshift.jpg?resize=230%2C300 230w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_greenshift.jpg?resize=768%2C1003 768w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_greenshift.jpg?resize=784%2C1024 784w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_greenshift.jpg?w=816 816w" sizes="(max-width: 230px) 100vw, 230px" data-recalc-dims="1" /><img class="size-medium wp-image-59 alignleft" src="https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_greenshift.jpg?resize=230%2C300" alt="0 through 9 - Transpose on Projection" srcset="https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_greenshift.jpg?resize=230%2C300 230w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_greenshift.jpg?resize=768%2C1003 768w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_greenshift.jpg?resize=784%2C1024 784w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_greenshift.jpg?w=816 816w" sizes="(max-width: 230px) 100vw, 230px" data-recalc-dims="1" /></p>
+<div style="clear:both;"></div>
+<p>Alternately, if we transpose the matrix when we go to recover, we get a big red shift:</p>
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5994d72034054426202251" class="crayon-syntax crayon-theme-classic crayon-font-courier-new crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">MATLAB</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2; font-size: 12px !important; line-height: 15px !important;">
+XP_rec  = recoverData(ZP, UP', K);
+XJ_rec  = recoverData(ZJ, UJ', K);</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5994d72034054426202251-1">1</div><div class="crayon-num" data-line="crayon-5994d72034054426202251-2">2</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><div class="crayon-line" id="crayon-5994d72034054426202251-1"><span class="crayon-i">XP_rec</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-r">recoverData</span><span class="crayon-sy">(</span><span class="crayon-i">ZP</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">UP</span><span class="crayon-s">', K);</span></div><div class="crayon-line" id="crayon-5994d72034054426202251-2"><span class="crayon-s">XJ_rec&nbsp;&nbsp;= recoverData(ZJ, UJ'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-i">K</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0009 seconds] -->
+<p><img class="size-medium wp-image-70 alignleft" src="https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_redshift.jpg?resize=230%2C300" alt="Girl before a Mirror - Transpose on Recovery" srcset="https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_redshift.jpg?resize=230%2C300 230w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_redshift.jpg?resize=768%2C1003 768w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_redshift.jpg?resize=784%2C1024 784w, https://i1.wp.com/www.bobholt.me/wp-content/uploads/2016/09/picasso_redshift.jpg?w=816 816w" sizes="(max-width: 230px) 100vw, 230px" data-recalc-dims="1" /><img class="size-medium wp-image-63 alignleft" src="https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_redshift.jpg?resize=230%2C300" alt="0 through 9 - Transpose on Recovery" srcset="https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_redshift.jpg?resize=230%2C300 230w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_redshift.jpg?resize=768%2C1003 768w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_redshift.jpg?resize=784%2C1024 784w, https://i0.wp.com/www.bobholt.me/wp-content/uploads/2016/09/johns_redshift.jpg?w=816 816w" sizes="(max-width: 230px) 100vw, 230px" data-recalc-dims="1" /></p>
+<div style="clear:both;"></div>
+<p>Again, nothing we couldn’t have done in a few seconds in Photoshop, but pretty fun to play with, at least.</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-pinterest"><a rel="nofollow" data-shared="sharing-pinterest-50" class="share-pinterest sd-button share-icon no-text" href="http://bobholt.me/2013/12/generative-art-the-interim-steps/?share=pinterest" target="_blank" title="Click to share on Pinterest"><span></span><span class="sharing-screen-reader-text">Click to share on Pinterest (Opens in new window)</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-50" class="share-facebook sd-button share-icon no-text" href="http://bobholt.me/2013/12/generative-art-the-interim-steps/?share=facebook" target="_blank" title="Click to share on Facebook"><span></span><span class="sharing-screen-reader-text">Click to share on Facebook (Opens in new window)</span></a></li><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-50" class="share-twitter sd-button share-icon no-text" href="http://bobholt.me/2013/12/generative-art-the-interim-steps/?share=twitter" target="_blank" title="Click to share on Twitter"><span></span><span class="sharing-screen-reader-text">Click to share on Twitter (Opens in new window)</span></a></li><li class="share-end"></li></ul></div></div></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div>			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="posted-on"><a href="http://bobholt.me/2013/12/generative-art-the-interim-steps/" rel="bookmark"><time class="entry-date published" datetime="2013-12-20T00:00:00+00:00">20 December 2013</time><time class="updated" datetime="2016-09-17T15:29:20+00:00">17 September 2016</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="http://bobholt.me/author/bob/">bob</a></span></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="http://bobholt.me/2013/12/generative-art-failed-experiment-1/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">Generative Art &#8211; Failed Experiment 1</span></a></div><div class="nav-next"><a href="http://bobholt.me/2015/04/gardening/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">Gardening</span></a></div></div>
+	</nav>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+	<aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="http://bobholt.me/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></aside><aside id="wpcom_social_media_icons_widget-2" class="widget widget_wpcom_social_media_icons_widget"><ul><li><a href="https://www.facebook.com/bob.the.holt/" class="genericon genericon-facebook" target="_blank"><span class="screen-reader-text">View bob.the.holt&#8217;s profile on Facebook</span></a></li><li><a href="https://instagram.com/_bobholt_/" class="genericon genericon-instagram" target="_blank"><span class="screen-reader-text">View _bobholt_&#8217;s profile on Instagram</span></a></li><li><a href="https://www.pinterest.com/bobholt/" class="genericon genericon-pinterest" target="_blank"><span class="screen-reader-text">View bobholt&#8217;s profile on Pinterest</span></a></li><li><a href="https://github.com/bobholt/" class="genericon genericon-github" target="_blank"><span class="screen-reader-text">View bobholt&#8217;s profile on GitHub</span></a></li><li><a href="https://vimeo.com/bobholt/" class="genericon genericon-vimeo" target="_blank"><span class="screen-reader-text">View bobholt&#8217;s profile on Vimeo</span></a></li></ul></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://bobholt.me/2016/10/fiberserker-episode-3-anything-you-do-three-times-is-a-tradition/">Fiberserker Episode 3: Anything You Do Three Times is a Tradition</a>
+						</li>
+					<li>
+				<a href="http://bobholt.me/2016/10/fiberserker-episode-2-i-dont-mind-talking-about-my-underwear-on-this-show/">Fiberserker Episode 2: I Don&#8217;t Mind Talking About My Underwear on This Show</a>
+						</li>
+					<li>
+				<a href="http://bobholt.me/2016/10/fiberserker-episode-1-skeleton-queen-eating-ramen/">Fiberserker Episode 1: Skeleton Queen Eating Ramen</a>
+						</li>
+					<li>
+				<a href="http://bobholt.me/2016/03/starting-peppers/">Starting Peppers</a>
+						</li>
+					<li>
+				<a href="http://bobholt.me/2016/02/seed-cabinet/">Seed Cabinet</a>
+						</li>
+				</ul>
+		</aside>		<aside id="wpcom-goodreads-2" class="widget widget_goodreads"><h2 class="widget-title">Recent Reads</h2><div class="gr_custom_widget" id="gr_custom_widget_7885844_read"></div>
+<script src="https://www.goodreads.com/review/custom_widget/7885844.Recent+Reads:%20read?cover_position=&#038;cover_size=small&#038;num_books=5&#038;order=d&#038;shelf=read&#038;sort=date_added&#038;widget_bg_transparent=&#038;widget_id=7885844_read"></script>
+</aside></div><!-- #secondary -->
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-footer-wrapper">
+
+			<div class="site-info">
+				<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+				<span class="sep"></span>
+				Theme: Orvis by <a href="https://wordpress.com/themes/" rel="designer">Automattic</a>.			</div><!-- .site-info -->
+		</div><!-- .site-footer-wrapper -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+	<div style="display:none">
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"http:\/\/www.bobholt.me\/2013\/12\/generative-art-the-interim-steps\/":50};
+	</script>
+		<link rel='stylesheet' id='genericons-css'  href='http://bobholt.me/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css?ver=3.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://bobholt.me/wp-content/plugins/jetpack/modules/photon/photon.js?ver=20130122'></script>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201733'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2017Augaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.7.5'></script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/themes/orvis/js/skip-link-focus-fix.js?ver=20151231'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/themes/orvis/js/functions.js?ver=20151231'></script>
+<script type='text/javascript' src='http://bobholt.me/wp-includes/js/wp-embed.min.js?ver=4.7.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=4.4.2'></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+</script>
+<script type='text/javascript' src='http://stats.wp.com/e-201733.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:4.4.2',blog:'116681722',post:'50',tz:'-4',srv:'www.bobholt.me'} ]);
+	_stq.push([ 'clickTrackerInit', '116681722', '50' ]);
+</script>
+
+</body>
+</html>
+<!-- Dynamic page generated in 0.386 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2017-08-16 19:37:04 -->
+
+<!-- Compression = gzip -->
+<!-- super cache -->

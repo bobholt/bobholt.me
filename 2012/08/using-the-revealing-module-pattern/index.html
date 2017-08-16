@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://bobholt.me/xmlrpc.php">
+
+<title>Using the Revealing Module Pattern &#8211; Bob Holt</title>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s.gravatar.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Bob Holt &raquo; Feed" href="http://bobholt.me/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Bob Holt &raquo; Comments Feed" href="http://bobholt.me/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Bob Holt &raquo; Using the Revealing Module Pattern Comments Feed" href="http://bobholt.me/2012/08/using-the-revealing-module-pattern/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.bobholt.me\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.5"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='crayon-css'  href='http://bobholt.me/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-theme-classic-css'  href='http://bobholt.me/wp-content/plugins/crayon-syntax-highlighter/themes/classic/classic.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-font-courier-new-css'  href='http://bobholt.me/wp-content/plugins/crayon-syntax-highlighter/fonts/courier-new.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='chld_thm_cfg_parent-css'  href='http://bobholt.me/wp-content/themes/orvis/style.css?ver=4.7.5' type='text/css' media='all' />
+<link rel='stylesheet' id='orvis-fonts-css'  href='https://fonts.googleapis.com/css?family=Karla%3A400%2C700%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='orvis-style-css'  href='http://bobholt.me/wp-content/themes/orvis-bobholt/style.css?ver=1.1.0.1473909930' type='text/css' media='all' />
+<link rel='stylesheet' id='social-logos-css'  href='http://bobholt.me/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://bobholt.me/wp-content/plugins/jetpack/css/jetpack.css?ver=4.4.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://bobholt.me/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://bobholt.me/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/plugins/jetpack/modules/related-posts/related-posts.js?ver=20150408'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"http:\/\/www.bobholt.me\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=_2.7.2_beta'></script>
+<link rel='https://api.w.org/' href='http://bobholt.me/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bobholt.me/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://bobholt.me/wp-includes/wlwmanifest.xml" />
+<link rel='prev' title='How I Got Here' href='http://bobholt.me/2012/08/how-i-got-here/' />
+<link rel='next' title='Book Report: Growing Object-Oriented Software Guided by Tests' href='http://bobholt.me/2012/08/book-report-growing-object-oriented-software-guided-by-tests/' />
+<meta name="generator" content="WordPress 4.7.5" />
+<link rel="canonical" href="http://bobholt.me/2012/08/using-the-revealing-module-pattern/" />
+<link rel='shortlink' href='http://wp.me/p7TAfg-t' />
+<link rel="alternate" type="application/json+oembed" href="http://bobholt.me/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.bobholt.me%2F2012%2F08%2Fusing-the-revealing-module-pattern%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://bobholt.me/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.bobholt.me%2F2012%2F08%2Fusing-the-revealing-module-pattern%2F&#038;format=xml" />
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'>
+<link rel='dns-prefetch' href='//i0.wp.com'>
+<link rel='dns-prefetch' href='//i1.wp.com'>
+<link rel='dns-prefetch' href='//i2.wp.com'>
+<style type='text/css'>img#wpstats{display:none}</style><style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #111122; }
+</style>
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Using the Revealing Module Pattern" />
+<meta property="og:url" content="http://bobholt.me/2012/08/using-the-revealing-module-pattern/" />
+<meta property="og:description" content="The first well-architected JavaScript application I worked on used what is commonly called the Revealing Module Pattern. I’ve used this pattern on projects ranging from 100 to 100,000 lines of code…" />
+<meta property="article:published_time" content="2012-08-28T04:00:00+00:00" />
+<meta property="article:modified_time" content="2016-09-17T19:29:21+00:00" />
+<meta property="og:site_name" content="Bob Holt" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary" />
+</head>
+
+<body class="post-template-default single single-post postid-29 single-format-standard custom-background">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-wrapper">
+			<div class="site-branding">
+
+									<p class="site-title"><a href="http://bobholt.me/" rel="home">Bob Holt</a></p>
+								<p class="site-description">I Make Things</p>
+			</div><!-- .site-branding -->
+
+							<button id="menu-toggle" class="menu-toggle">Menu</button>
+				<div id="site-menu" class="site-menu">
+					<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+						<div class="menu-main-container"><ul id="menu-main" class="primary-menu"><li id="menu-item-704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-704"><a href="http://bobholt.me/">Home</a></li>
+<li id="menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a href="http://bobholt.me/about/">About</a></li>
+<li id="menu-item-100" class="menu-item menu-item-type-taxonomy menu-item-object-jetpack-portfolio-type menu-item-100"><a href="http://bobholt.me/project-type/knitting/">Knitting</a></li>
+<li id="menu-item-101" class="menu-item menu-item-type-taxonomy menu-item-object-jetpack-portfolio-type menu-item-101"><a href="http://bobholt.me/project-type/pottery/">Pottery</a></li>
+<li id="menu-item-761" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-761"><a href="http://bobholt.me/category/programming/">Programming</a></li>
+<li id="menu-item-706" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-706"><a href="http://bobholt.me/blog/">Blog</a></li>
+</ul></div>					</nav><!-- .main-navigation -->
+				</div><!-- .site-menu -->
+					</div><!-- .site-header-wrapper -->
+
+			</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+
+
+<article id="post-29" class="post-29 post type-post status-publish format-standard hentry category-programming">
+	<header class="entry-header">
+
+		<h1 class="entry-title">Using the Revealing Module Pattern</h1>
+		<div class="entry-meta"><span class="cat-links"><a href="http://bobholt.me/category/programming/" rel="category tag">Programming</a></span></div>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>The first well-architected JavaScript application I worked on used what is commonly called the Revealing Module Pattern. I’ve used this pattern on projects ranging from 100 to 100,000 lines of code. I think I’ve found its breaking points, but also its sweet spots.</p>
+<p><span id="more-29"></span>If you’re unfamiliar with the revealing module pattern, you can find it discussed in a few different places, but Addy Osmani does a pretty good job of giving it a quick overview in his <a title="Addy Osmani: Revealing Module Pattern" href="http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript"><em>Learning JavaScript Design Patterns</em></a> book.</p>
+<p>If you don’t like following links, here’s a super-quick rundown:</p>
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5994d72212fea975770360" class="crayon-syntax crayon-theme-classic crayon-font-courier-new crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">JavaScript</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2; font-size: 12px !important; line-height: 15px !important;">
+(function(){
+
+  "use strict";
+
+  var MYAPP = window.MYAPP = window.MYAPP || {};
+
+  MYAPP.common = {
+
+    commonVariable: '',
+
+    commonMethod: function(){ /* ... */ }
+
+  }
+
+  MYAPP.module = function(){
+
+    var moduleVariable = '';
+
+    var privateFunction = function(){ /* ... */ };
+
+    var init = function(){ /* ... */ };
+
+    return {
+
+      init: init
+
+    }
+
+  };
+
+}());</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5994d72212fea975770360-1">1</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-2">2</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-3">3</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-4">4</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-5">5</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-6">6</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-7">7</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-8">8</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-9">9</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-10">10</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-11">11</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-12">12</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-13">13</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-14">14</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-15">15</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-16">16</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-17">17</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-18">18</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-19">19</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-20">20</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-21">21</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-22">22</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-23">23</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-24">24</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-25">25</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-26">26</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-27">27</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-28">28</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-29">29</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-30">30</div><div class="crayon-num" data-line="crayon-5994d72212fea975770360-31">31</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><div class="crayon-line" id="crayon-5994d72212fea975770360-1"><span class="crayon-sy">(</span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-5994d72212fea975770360-2">&nbsp;</div><div class="crayon-line" id="crayon-5994d72212fea975770360-3"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-s">"use strict"</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72212fea975770360-4">&nbsp;</div><div class="crayon-line" id="crayon-5994d72212fea975770360-5"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-v">MYAPP</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">window</span><span class="crayon-sy">.</span><span class="crayon-v">MYAPP</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">window</span><span class="crayon-sy">.</span><span class="crayon-v">MYAPP</span><span class="crayon-h"> </span><span class="crayon-o">||</span><span class="crayon-h"> </span><span class="crayon-sy">{</span><span class="crayon-sy">}</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72212fea975770360-6">&nbsp;</div><div class="crayon-line" id="crayon-5994d72212fea975770360-7"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">MYAPP</span><span class="crayon-sy">.</span><span class="crayon-v">common</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-5994d72212fea975770360-8">&nbsp;</div><div class="crayon-line" id="crayon-5994d72212fea975770360-9"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">commonVariable</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">''</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="crayon-5994d72212fea975770360-10">&nbsp;</div><div class="crayon-line" id="crayon-5994d72212fea975770360-11"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">commonMethod</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-c">/* ... */</span><span class="crayon-h"> </span><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-5994d72212fea975770360-12">&nbsp;</div><div class="crayon-line" id="crayon-5994d72212fea975770360-13"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-5994d72212fea975770360-14">&nbsp;</div><div class="crayon-line" id="crayon-5994d72212fea975770360-15"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-v">MYAPP</span><span class="crayon-sy">.</span><span class="crayon-v">module</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-5994d72212fea975770360-16">&nbsp;</div><div class="crayon-line" id="crayon-5994d72212fea975770360-17"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-e ">moduleVariable</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-s">''</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72212fea975770360-18">&nbsp;</div><div class="crayon-line" id="crayon-5994d72212fea975770360-19"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-v">privateFunction</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-c">/* ... */</span><span class="crayon-h"> </span><span class="crayon-sy">}</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72212fea975770360-20">&nbsp;</div><div class="crayon-line" id="crayon-5994d72212fea975770360-21"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-t">var</span><span class="crayon-h"> </span><span class="crayon-v">init</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-t">function</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">{</span><span class="crayon-h"> </span><span class="crayon-c">/* ... */</span><span class="crayon-h"> </span><span class="crayon-sy">}</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72212fea975770360-22">&nbsp;</div><div class="crayon-line" id="crayon-5994d72212fea975770360-23"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-5994d72212fea975770360-24">&nbsp;</div><div class="crayon-line" id="crayon-5994d72212fea975770360-25"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">init</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-i">init</span></div><div class="crayon-line" id="crayon-5994d72212fea975770360-26">&nbsp;</div><div class="crayon-line" id="crayon-5994d72212fea975770360-27"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-5994d72212fea975770360-28">&nbsp;</div><div class="crayon-line" id="crayon-5994d72212fea975770360-29"><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-sy">}</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5994d72212fea975770360-30">&nbsp;</div><div class="crayon-line" id="crayon-5994d72212fea975770360-31"><span class="crayon-sy">}</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0031 seconds] -->
+<p> </p>
+<p><small>Edit: Updated line 5. Thanks to Jay Martin, who pointed out I wasn’t exposing MYAPP back to the global namespace if I originally created it within the functional scope (if it fell back to a new object).</small></p>
+<p>The revealing module pattern creates an application made up of modules which expose an interface that an application-level controller can call. I prefer to use Paul Irish’s <a title="Paul Irish: DOM-based Routing" href="http://paulirish.com/2009/markup-based-unobtrusive-comprehensive-dom-ready-execution/">DOM-based Routing</a>, which gives us a nice way to kick off our scripts without loading up a complex routing solution. I leave <code>MYAPP.common</code> as a plain object (no closure) because I expect to use everything in there from anywhere in my application.</p>
+<p>For better code organization, you can break these modules up into multiple files (just remember to minify and concatenate in production). If you find yourself needing to add something other than ‘init’ into your modules’ return objects, it’s a good sign you should pull it out into your common object or some other shared object.</p>
+<h3>Use Cases for the Revealing Module Pattern</h3>
+<p>A little warning: we’re using this only for our single-use sites or applications—not public APIs or any kind of shared code base. We don’t pretend that the ‘privacy’ granted by the closure is anything more than a convenient illusion. Check out <a title="James Coglan: The Cost of Privacy" href="http://blog.jcoglan.com/2012/01/19/the-cost-of-privacy/">James Coglan’s interesting post</a> arguing against relying on privacy in the module pattern.</p>
+<p>So why do we use it? In the days before AMD/<a href="http://requirejs.org/" title="RequireJS">RequireJS</a>/<a href="http://www.commonjs.org/" title="CommonJS">CommonJS</a>, this was a pretty good way of organizing and modularizing your code. These days, I’m much more likely to use RequireJS along with <a href="http://backbonejs.org/" title="Backbone.js">Backbone.js</a> to do the same thing on a grander scale. But does it still have its place?</p>
+<p>In particular use cases, I think it certainly does. If a project shared more than one of these characteristics, I’d consider it a good candidate for this pattern:</p>
+<h4>A small to mid-size site, somewhere in the 5-10 (give or take) page range</h4>
+<p>When paired with the DOM-based Routing solution above, it’s pretty convenient to assign each page of a site to a module. A site of this size makes something like RequireJS often seem like overkill. The common object should carry common things like main navigation and footer functionality.</p>
+<h4>A site with minimal functionality—perhaps the progressive enhancement approach</h4>
+<p>Even when modularizing like this, it’s easy to get lost if a module goes over a couple of hundred lines. Something smaller is easier to keep track of. Maybe you’re just adding fancy hover states or doing some DOM manipulation. This pattern is a good way to get on the road to extracting useful functions instead of passing anonymous callbacks all over your application.</p>
+<h4>A site that shares much of the functionality it does have all throughout</h4>
+<p>For example, I’ve seen this pattern used with great success on a site of probably 15-20 pages where we were calling the same functionality (<a title="jQuery Masonry" href="http://isotope.metafizzy.co/">jQuery Masonry</a> and a custom collapsible sidebar) on nearly every page, but with a different configuration on each page. In this case, all the site’s functionality was in the common object, and each page/module’s initialization function only needed to pass its own specific options into a common page initialization method. In this case, each module was no more than 10 lines, but gave us a great deal of control over how each page was laid out and initialized.</p>
+<h4>A site that shares almost none of its functionality</h4>
+<p>Sure this seems to contradict the earlier statement. The thing is, this pattern seems to work well on both sides of this seeming dichotomy (it’s the middle of the road that’ll get you here). This is just the inverse of the earlier statement, where instead of loading up your common object with shared functionality, each page of the site/app has completely different functionality. So different in fact, that you will re-use almost none of the code. You tend to see sites like this a lot in my line of work (digital marketing), where a microsite might have a homepage carousel, a 2nd page quiz and a 3rd page contact form with no common thread holding them together.</p>
+<h3>Summary</h3>
+<p>Hopefully this has been a coherent overview of the revealing module pattern and when you might want to use it. I probably haven’t started a project with this in the last 4-6 months, instead opting to start using Backbone.js and RequireJS for my code organization/modularization. However, if the right project came along again, I might consider it. I also much prefer that the other developers I work with (some of whom may or may not be ready or willing to jump into AMD just yet) to use this pattern on the projects they take the lead on and not to throw a thousand lines of chained jQuery and anonymous functions into a single file and push it live.</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-pinterest"><a rel="nofollow" data-shared="sharing-pinterest-29" class="share-pinterest sd-button share-icon no-text" href="http://bobholt.me/2012/08/using-the-revealing-module-pattern/?share=pinterest" target="_blank" title="Click to share on Pinterest"><span></span><span class="sharing-screen-reader-text">Click to share on Pinterest (Opens in new window)</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-29" class="share-facebook sd-button share-icon no-text" href="http://bobholt.me/2012/08/using-the-revealing-module-pattern/?share=facebook" target="_blank" title="Click to share on Facebook"><span></span><span class="sharing-screen-reader-text">Click to share on Facebook (Opens in new window)</span></a></li><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-29" class="share-twitter sd-button share-icon no-text" href="http://bobholt.me/2012/08/using-the-revealing-module-pattern/?share=twitter" target="_blank" title="Click to share on Twitter"><span></span><span class="sharing-screen-reader-text">Click to share on Twitter (Opens in new window)</span></a></li><li class="share-end"></li></ul></div></div></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div>			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="posted-on"><a href="http://bobholt.me/2012/08/using-the-revealing-module-pattern/" rel="bookmark"><time class="entry-date published" datetime="2012-08-28T00:00:00+00:00">28 August 2012</time><time class="updated" datetime="2016-09-17T15:29:21+00:00">17 September 2016</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="http://bobholt.me/author/bob/">bob</a></span></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="http://bobholt.me/2012/08/how-i-got-here/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">How I Got Here</span></a></div><div class="nav-next"><a href="http://bobholt.me/2012/08/book-report-growing-object-oriented-software-guided-by-tests/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">Book Report: Growing Object-Oriented Software Guided by Tests</span></a></div></div>
+	</nav>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+	<aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="http://bobholt.me/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></aside><aside id="wpcom_social_media_icons_widget-2" class="widget widget_wpcom_social_media_icons_widget"><ul><li><a href="https://www.facebook.com/bob.the.holt/" class="genericon genericon-facebook" target="_blank"><span class="screen-reader-text">View bob.the.holt&#8217;s profile on Facebook</span></a></li><li><a href="https://instagram.com/_bobholt_/" class="genericon genericon-instagram" target="_blank"><span class="screen-reader-text">View _bobholt_&#8217;s profile on Instagram</span></a></li><li><a href="https://www.pinterest.com/bobholt/" class="genericon genericon-pinterest" target="_blank"><span class="screen-reader-text">View bobholt&#8217;s profile on Pinterest</span></a></li><li><a href="https://github.com/bobholt/" class="genericon genericon-github" target="_blank"><span class="screen-reader-text">View bobholt&#8217;s profile on GitHub</span></a></li><li><a href="https://vimeo.com/bobholt/" class="genericon genericon-vimeo" target="_blank"><span class="screen-reader-text">View bobholt&#8217;s profile on Vimeo</span></a></li></ul></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">Recent Posts</h2>		<ul>
+					<li>
+				<a href="http://bobholt.me/2016/10/fiberserker-episode-3-anything-you-do-three-times-is-a-tradition/">Fiberserker Episode 3: Anything You Do Three Times is a Tradition</a>
+						</li>
+					<li>
+				<a href="http://bobholt.me/2016/10/fiberserker-episode-2-i-dont-mind-talking-about-my-underwear-on-this-show/">Fiberserker Episode 2: I Don&#8217;t Mind Talking About My Underwear on This Show</a>
+						</li>
+					<li>
+				<a href="http://bobholt.me/2016/10/fiberserker-episode-1-skeleton-queen-eating-ramen/">Fiberserker Episode 1: Skeleton Queen Eating Ramen</a>
+						</li>
+					<li>
+				<a href="http://bobholt.me/2016/03/starting-peppers/">Starting Peppers</a>
+						</li>
+					<li>
+				<a href="http://bobholt.me/2016/02/seed-cabinet/">Seed Cabinet</a>
+						</li>
+				</ul>
+		</aside>		<aside id="wpcom-goodreads-2" class="widget widget_goodreads"><h2 class="widget-title">Recent Reads</h2><div class="gr_custom_widget" id="gr_custom_widget_7885844_read"></div>
+<script src="https://www.goodreads.com/review/custom_widget/7885844.Recent+Reads:%20read?cover_position=&#038;cover_size=small&#038;num_books=5&#038;order=d&#038;shelf=read&#038;sort=date_added&#038;widget_bg_transparent=&#038;widget_id=7885844_read"></script>
+</aside></div><!-- #secondary -->
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-footer-wrapper">
+
+			<div class="site-info">
+				<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+				<span class="sep"></span>
+				Theme: Orvis by <a href="https://wordpress.com/themes/" rel="designer">Automattic</a>.			</div><!-- .site-info -->
+		</div><!-- .site-footer-wrapper -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+	<div style="display:none">
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"http:\/\/www.bobholt.me\/2012\/08\/using-the-revealing-module-pattern\/":29};
+	</script>
+		<link rel='stylesheet' id='genericons-css'  href='http://bobholt.me/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css?ver=3.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://bobholt.me/wp-content/plugins/jetpack/modules/photon/photon.js?ver=20130122'></script>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201733'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2017Augaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.7.5'></script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/themes/orvis/js/skip-link-focus-fix.js?ver=20151231'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/themes/orvis/js/functions.js?ver=20151231'></script>
+<script type='text/javascript' src='http://bobholt.me/wp-includes/js/wp-embed.min.js?ver=4.7.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bobholt.me/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=4.4.2'></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+</script>
+<script type='text/javascript' src='http://stats.wp.com/e-201733.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:4.4.2',blog:'116681722',post:'29',tz:'-4',srv:'www.bobholt.me'} ]);
+	_stq.push([ 'clickTrackerInit', '116681722', '29' ]);
+</script>
+
+</body>
+</html>
+<!-- Dynamic page generated in 0.153 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2017-08-16 19:37:06 -->
+
+<!-- Compression = gzip -->
+<!-- super cache -->
